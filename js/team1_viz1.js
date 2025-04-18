@@ -1,5 +1,5 @@
 const width = 940;
-const height = 600;
+const height = 1000;
 const margin = {top:40, right:80, bottom:20, left:120};
 let updateInterval = 500;
 
