@@ -20,7 +20,7 @@ const gridLineLabels = svg.append("g").attr("class","grid-label");
 
 const parseDate = d3.timeParse("%Y-%m-%d");
 
-d3.csv("../data/sof.csv").then(rawData=>{
+d3.csv("../data/bar_chart_race.csv").then(rawData=>{
     let processedData = rawData;
     if(rawData.columns.length == 3)
         processedData = processCSV(rawData);
