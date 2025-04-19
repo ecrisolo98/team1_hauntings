@@ -25,6 +25,8 @@ body {
     overflow-y: scroll;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-ul-second > li > a {
@@ -207,7 +209,6 @@ body {
 
 svg { 
     background-color: #f9f9f9; margin: 20px; 
-    align-items: center;
 }
  
 .question_element {
