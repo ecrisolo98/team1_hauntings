@@ -23,6 +23,8 @@
 
 body {
     overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-ul-second > li > a {
@@ -201,4 +203,17 @@ body {
 
 .center, .center-align {
     text-align: center;
+}
+
+svg { 
+    background-color: #f9f9f9; margin: 20px; 
+    align-items: center;
+}
+ 
+.question_element {
+    color: #90caf9;
+}
+
+.chart_type {
+    color: #0d47a1;
 }

@@ -1,7 +1,7 @@
 const width = 940;
 const height = 1000;
 const margin = {top:40, right:80, bottom:20, left:120};
-let updateInterval = 10000;
+let updateInterval = 5000;
 
 const svg = d3.select("body").append("svg")
 .attr("width",width)
