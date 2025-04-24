@@ -16,7 +16,7 @@
       console.log("Words array:", typeof words !== 'undefined' ? words : "NOT FOUND");
       console.log("d3.wordcloud exists:", typeof d3.wordcloud !== 'undefined');
       d3.wordcloud()
-        .size([500, 300])
+        .size([1500, 1300])
         .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
         .words(words)
         .onwordclick(function(d, i) {
