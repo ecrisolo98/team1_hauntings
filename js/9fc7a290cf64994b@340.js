@@ -1,12 +1,12 @@
 import define1 from "./450051d7f1174df8@255.js";
 
-function _1(md){return(
-md`<div style="color: grey; font: 13px/25.5px var(--sans-serif); text-transform: uppercase;"><h1 style="display: none;">Walmart’s growth</h1><a href="https://d3js.org/">D3</a> › <a href="/@d3/gallery">Gallery</a></div>
+// function _1(md){return(
+// md`<div style="color: grey; font: 13px/25.5px var(--sans-serif); text-transform: uppercase;"><h1 style="display: none;">Walmart’s growth</h1><a href="https://d3js.org/">D3</a> › <a href="/@d3/gallery">Gallery</a></div>
 
-# Walmart’s growth
+// # Walmart’s growth
 
-This animation shows the expansion of Walmart over the last fifty years. On July 2, 1962 in [Rogers, Arkansas](https://en.wikipedia.org/wiki/Rogers,_Arkansas), the first Walton’s <svg width=8 height=16><circle cx=4 cy=10 r=4 fill=blue></circle></svg> opened. [This dataset](http://users.econ.umn.edu/~holmes/data/WalMart/index.html) from 2006 includes about 3,100 Walmart locations <svg width=8 height=16><circle cx=4 cy=10 r=3.5 fill=none stroke=black></circle></svg> in the continguous United States.`
-)}
+// This animation shows the expansion of Walmart over the last fifty years. On July 2, 1962 in [Rogers, Arkansas](https://en.wikipedia.org/wiki/Rogers,_Arkansas), the first Walton’s <svg width=8 height=16><circle cx=4 cy=10 r=4 fill=blue></circle></svg> opened. [This dataset](http://users.econ.umn.edu/~holmes/data/WalMart/index.html) from 2006 includes about 3,100 Walmart locations <svg width=8 height=16><circle cx=4 cy=10 r=3.5 fill=none stroke=black></circle></svg> in the continguous United States.`
+// )}
 
 function _date(Scrubber,d3,data){return(
 Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {format: d3.utcFormat("%Y %b %-d"), loop: false})
@@ -64,7 +64,7 @@ chart.update(date)
 )}
 
 async function _data(FileAttachment,projection,parseDate){return(
-(await FileAttachment("walmart.tsv").tsv())
+(await FileAttachment("viz1data.csv").csv())
   .map(d => {
     const p = projection(d);
     p.date = parseDate(d.date);
@@ -74,7 +74,7 @@ async function _data(FileAttachment,projection,parseDate){return(
 )}
 
 function _parseDate(d3){return(
-d3.utcParse("%m/%d/%Y")
+d3.utcParse("%Y-%m-%d")
 )}
 
 function _projection(d3){return(
@@ -96,7 +96,7 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["walmart.tsv", {url: new URL("../data/ce607f28cac52d17fe11f7a2dcff0a21c3b74465957841bc8ac390b900fae923b824a86762af12f1a96e0213d613636092a65c611bd6b256b4e729106d4612fe.tsv", import.meta.url), mimeType: "text/tab-separated-values", toString}]
+    ["viz1data.csv", {url: new URL("../data/viz1data.csv", import.meta.url), mimeType: "text/tab-separated-values", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
