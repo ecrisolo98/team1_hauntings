@@ -27,6 +27,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding-top: 40px
 }
 
 .nav-ul-second > li > a {
