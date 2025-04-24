@@ -1,0 +1,5510 @@
+[
+  {
+    "text": "megalith",
+    "frequency": 461
+  },
+  {
+    "text": "megalithic structure",
+    "frequency": 461
+  },
+  {
+    "text": "pedestal",
+    "frequency": 464
+  },
+  {
+    "text": "plinth",
+    "frequency": 464
+  },
+  {
+    "text": "footstall",
+    "frequency": 464
+  },
+  {
+    "text": "obelisk",
+    "frequency": 431
+  },
+  {
+    "text": "mailbox",
+    "frequency": 179
+  },
+  {
+    "text": "letter box",
+    "frequency": 179
+  },
+  {
+    "text": "worm fence",
+    "frequency": 867
+  },
+  {
+    "text": "snake fence",
+    "frequency": 867
+  },
+  {
+    "text": "snake-rail fence",
+    "frequency": 867
+  },
+  {
+    "text": "Virginia fence",
+    "frequency": 867
+  },
+  {
+    "text": "pole",
+    "frequency": 169
+  },
+  {
+    "text": "mobile home",
+    "frequency": 416
+  },
+  {
+    "text": "manufactured home",
+    "frequency": 416
+  },
+  {
+    "text": "picket fence",
+    "frequency": 1137
+  },
+  {
+    "text": "paling",
+    "frequency": 1137
+  },
+  {
+    "text": "restaurant",
+    "frequency": 475
+  },
+  {
+    "text": "eating house",
+    "frequency": 475
+  },
+  {
+    "text": "eating place",
+    "frequency": 475
+  },
+  {
+    "text": "eatery",
+    "frequency": 475
+  },
+  {
+    "text": "bakery",
+    "frequency": 163
+  },
+  {
+    "text": "bakeshop",
+    "frequency": 163
+  },
+  {
+    "text": "bakehouse",
+    "frequency": 163
+  },
+  {
+    "text": "suspension bridge",
+    "frequency": 211
+  },
+  {
+    "text": "pier",
+    "frequency": 226
+  },
+  {
+    "text": "steel arch bridge",
+    "frequency": 114
+  },
+  {
+    "text": "television",
+    "frequency": 41
+  },
+  {
+    "text": "television system",
+    "frequency": 41
+  },
+  {
+    "text": "doormat",
+    "frequency": 167
+  },
+  {
+    "text": "welcome mat",
+    "frequency": 167
+  },
+  {
+    "text": "entertainment center",
+    "frequency": 18
+  },
+  {
+    "text": "wardrobe",
+    "frequency": 208
+  },
+  {
+    "text": "closet",
+    "frequency": 208
+  },
+  {
+    "text": "press",
+    "frequency": 208
+  },
+  {
+    "text": "refrigerator",
+    "frequency": 72
+  },
+  {
+    "text": "icebox",
+    "frequency": 72
+  },
+  {
+    "text": "palace",
+    "frequency": 1680
+  },
+  {
+    "text": "library",
+    "frequency": 1387
+  },
+  {
+    "text": "cloak",
+    "frequency": 220
+  },
+  {
+    "text": "viaduct",
+    "frequency": 377
+  },
+  {
+    "text": "water tower",
+    "frequency": 72
+  },
+  {
+    "text": "car mirror",
+    "frequency": 22
+  },
+  {
+    "text": "rugby ball",
+    "frequency": 4
+  },
+  {
+    "text": "soccer ball",
+    "frequency": 48
+  },
+  {
+    "text": "park bench",
+    "frequency": 522
+  },
+  {
+    "text": "switch",
+    "frequency": 30
+  },
+  {
+    "text": "electric switch",
+    "frequency": 30
+  },
+  {
+    "text": "electrical switch",
+    "frequency": 30
+  },
+  {
+    "text": "cash machine",
+    "frequency": 122
+  },
+  {
+    "text": "cash dispenser",
+    "frequency": 122
+  },
+  {
+    "text": "automated teller machine",
+    "frequency": 122
+  },
+  {
+    "text": "automatic teller machine",
+    "frequency": 122
+  },
+  {
+    "text": "automated teller",
+    "frequency": 122
+  },
+  {
+    "text": "automatic teller",
+    "frequency": 122
+  },
+  {
+    "text": "ATM",
+    "frequency": 122
+  },
+  {
+    "text": "sliding door",
+    "frequency": 621
+  },
+  {
+    "text": "dial telephone",
+    "frequency": 6
+  },
+  {
+    "text": "dial phone",
+    "frequency": 6
+  },
+  {
+    "text": "church",
+    "frequency": 1455
+  },
+  {
+    "text": "church building",
+    "frequency": 1455
+  },
+  {
+    "text": "boathouse",
+    "frequency": 861
+  },
+  {
+    "text": "lakeside",
+    "frequency": 799
+  },
+  {
+    "text": "lakeshore",
+    "frequency": 799
+  },
+  {
+    "text": "barn",
+    "frequency": 1025
+  },
+  {
+    "text": "lumbermill",
+    "frequency": 252
+  },
+  {
+    "text": "sawmill",
+    "frequency": 252
+  },
+  {
+    "text": "window screen",
+    "frequency": 442
+  },
+  {
+    "text": "theater curtain",
+    "frequency": 223
+  },
+  {
+    "text": "theatre curtain",
+    "frequency": 223
+  },
+  {
+    "text": "four-poster",
+    "frequency": 64
+  },
+  {
+    "text": "stage",
+    "frequency": 114
+  },
+  {
+    "text": "pool table",
+    "frequency": 35
+  },
+  {
+    "text": "billiard table",
+    "frequency": 35
+  },
+  {
+    "text": "snooker table",
+    "frequency": 35
+  },
+  {
+    "text": "monastery",
+    "frequency": 1049
+  },
+  {
+    "text": "crate",
+    "frequency": 58
+  },
+  {
+    "text": "prison",
+    "frequency": 2861
+  },
+  {
+    "text": "prison house",
+    "frequency": 2861
+  },
+  {
+    "text": "bookshop",
+    "frequency": 263
+  },
+  {
+    "text": "bookstore",
+    "frequency": 263
+  },
+  {
+    "text": "bookstall",
+    "frequency": 263
+  },
+  {
+    "text": "window shade",
+    "frequency": 372
+  },
+  {
+    "text": "baseball",
+    "frequency": 13
+  },
+  {
+    "text": "volleyball",
+    "frequency": 44
+  },
+  {
+    "text": "golf ball",
+    "frequency": 26
+  },
+  {
+    "text": "vault",
+    "frequency": 933
+  },
+  {
+    "text": "leatherback turtle",
+    "frequency": 4
+  },
+  {
+    "text": "leatherback",
+    "frequency": 4
+  },
+  {
+    "text": "leathery turtle",
+    "frequency": 4
+  },
+  {
+    "text": "Dermochelys coriacea",
+    "frequency": 4
+  },
+  {
+    "text": "hammerhead",
+    "frequency": 2
+  },
+  {
+    "text": "hammerhead shark",
+    "frequency": 2
+  },
+  {
+    "text": "sturgeon",
+    "frequency": 3
+  },
+  {
+    "text": "fountain",
+    "frequency": 103
+  },
+  {
+    "text": "tiger shark",
+    "frequency": 1
+  },
+  {
+    "text": "Galeocerdo cuvieri",
+    "frequency": 1
+  },
+  {
+    "text": "greenhouse",
+    "frequency": 118
+  },
+  {
+    "text": "nursery",
+    "frequency": 118
+  },
+  {
+    "text": "glasshouse",
+    "frequency": 118
+  },
+  {
+    "text": "dam",
+    "frequency": 203
+  },
+  {
+    "text": "dike",
+    "frequency": 203
+  },
+  {
+    "text": "dyke",
+    "frequency": 203
+  },
+  {
+    "text": "freight car",
+    "frequency": 153
+  },
+  {
+    "text": "file",
+    "frequency": 39
+  },
+  {
+    "text": "file cabinet",
+    "frequency": 39
+  },
+  {
+    "text": "filing cabinet",
+    "frequency": 39
+  },
+  {
+    "text": "safe",
+    "frequency": 109
+  },
+  {
+    "text": "vending machine",
+    "frequency": 26
+  },
+  {
+    "text": "radiator",
+    "frequency": 49
+  },
+  {
+    "text": "ashcan",
+    "frequency": 166
+  },
+  {
+    "text": "trash can",
+    "frequency": 166
+  },
+  {
+    "text": "garbage can",
+    "frequency": 166
+  },
+  {
+    "text": "wastebin",
+    "frequency": 166
+  },
+  {
+    "text": "ash bin",
+    "frequency": 166
+  },
+  {
+    "text": "ash-bin",
+    "frequency": 166
+  },
+  {
+    "text": "ashbin",
+    "frequency": 166
+  },
+  {
+    "text": "dustbin",
+    "frequency": 166
+  },
+  {
+    "text": "trash barrel",
+    "frequency": 166
+  },
+  {
+    "text": "trash bin",
+    "frequency": 166
+  },
+  {
+    "text": "gas pump",
+    "frequency": 40
+  },
+  {
+    "text": "gasoline pump",
+    "frequency": 40
+  },
+  {
+    "text": "petrol pump",
+    "frequency": 40
+  },
+  {
+    "text": "island dispenser",
+    "frequency": 40
+  },
+  {
+    "text": "brass",
+    "frequency": 466
+  },
+  {
+    "text": "memorial tablet",
+    "frequency": 466
+  },
+  {
+    "text": "plaque",
+    "frequency": 466
+  },
+  {
+    "text": "snowplow",
+    "frequency": 40
+  },
+  {
+    "text": "snowplough",
+    "frequency": 40
+  },
+  {
+    "text": "car wheel",
+    "frequency": 36
+  },
+  {
+    "text": "pickup",
+    "frequency": 52
+  },
+  {
+    "text": "pickup truck",
+    "frequency": 52
+  },
+  {
+    "text": "football helmet",
+    "frequency": 6
+  },
+  {
+    "text": "suit",
+    "frequency": 38
+  },
+  {
+    "text": "suit of clothes",
+    "frequency": 38
+  },
+  {
+    "text": "grand piano",
+    "frequency": 49
+  },
+  {
+    "text": "grand",
+    "frequency": 49
+  },
+  {
+    "text": "academic gown",
+    "frequency": 30
+  },
+  {
+    "text": "academic robe",
+    "frequency": 30
+  },
+  {
+    "text": "judge's robe",
+    "frequency": 30
+  },
+  {
+    "text": "castle",
+    "frequency": 631
+  },
+  {
+    "text": "flagpole",
+    "frequency": 459
+  },
+  {
+    "text": "flagstaff",
+    "frequency": 459
+  },
+  {
+    "text": "abaya",
+    "frequency": 98
+  },
+  {
+    "text": "vestment",
+    "frequency": 51
+  },
+  {
+    "text": "altar",
+    "frequency": 150
+  },
+  {
+    "text": "mosque",
+    "frequency": 50
+  },
+  {
+    "text": "crossword puzzle",
+    "frequency": 18
+  },
+  {
+    "text": "crossword",
+    "frequency": 18
+  },
+  {
+    "text": "hand-held computer",
+    "frequency": 2
+  },
+  {
+    "text": "hand-held microcomputer",
+    "frequency": 2
+  },
+  {
+    "text": "combination lock",
+    "frequency": 24
+  },
+  {
+    "text": "slot",
+    "frequency": 12
+  },
+  {
+    "text": "one-armed bandit",
+    "frequency": 12
+  },
+  {
+    "text": "remote control",
+    "frequency": 2
+  },
+  {
+    "text": "remote",
+    "frequency": 2
+  },
+  {
+    "text": "beacon",
+    "frequency": 268
+  },
+  {
+    "text": "lighthouse",
+    "frequency": 268
+  },
+  {
+    "text": "beacon light",
+    "frequency": 268
+  },
+  {
+    "text": "pharos",
+    "frequency": 268
+  },
+  {
+    "text": "jean",
+    "frequency": 17
+  },
+  {
+    "text": "blue jean",
+    "frequency": 17
+  },
+  {
+    "text": "denim",
+    "frequency": 17
+  },
+  {
+    "text": "crutch",
+    "frequency": 137
+  },
+  {
+    "text": "swab",
+    "frequency": 60
+  },
+  {
+    "text": "swob",
+    "frequency": 60
+  },
+  {
+    "text": "mop",
+    "frequency": 60
+  },
+  {
+    "text": "wall clock",
+    "frequency": 28
+  },
+  {
+    "text": "analog clock",
+    "frequency": 63
+  },
+  {
+    "text": "cinema",
+    "frequency": 664
+  },
+  {
+    "text": "movie theater",
+    "frequency": 664
+  },
+  {
+    "text": "movie theatre",
+    "frequency": 664
+  },
+  {
+    "text": "movie house",
+    "frequency": 664
+  },
+  {
+    "text": "picture palace",
+    "frequency": 664
+  },
+  {
+    "text": "barbershop",
+    "frequency": 318
+  },
+  {
+    "text": "trailer truck",
+    "frequency": 60
+  },
+  {
+    "text": "tractor trailer",
+    "frequency": 60
+  },
+  {
+    "text": "trucking rig",
+    "frequency": 60
+  },
+  {
+    "text": "rig",
+    "frequency": 60
+  },
+  {
+    "text": "articulated lorry",
+    "frequency": 60
+  },
+  {
+    "text": "semi",
+    "frequency": 60
+  },
+  {
+    "text": "alp",
+    "frequency": 207
+  },
+  {
+    "text": "minivan",
+    "frequency": 56
+  },
+  {
+    "text": "valley",
+    "frequency": 306
+  },
+  {
+    "text": "vale",
+    "frequency": 306
+  },
+  {
+    "text": "recreational vehicle",
+    "frequency": 25
+  },
+  {
+    "text": "RV",
+    "frequency": 25
+  },
+  {
+    "text": "R.V.",
+    "frequency": 25
+  },
+  {
+    "text": "tobacco shop",
+    "frequency": 222
+  },
+  {
+    "text": "tobacconist shop",
+    "frequency": 222
+  },
+  {
+    "text": "tobacconist",
+    "frequency": 222
+  },
+  {
+    "text": "rapeseed",
+    "frequency": 46
+  },
+  {
+    "text": "horse cart",
+    "frequency": 50
+  },
+  {
+    "text": "horse-cart",
+    "frequency": 50
+  },
+  {
+    "text": "thresher",
+    "frequency": 18
+  },
+  {
+    "text": "thrasher",
+    "frequency": 18
+  },
+  {
+    "text": "threshing machine",
+    "frequency": 18
+  },
+  {
+    "text": "oxcart",
+    "frequency": 28
+  },
+  {
+    "text": "cannon",
+    "frequency": 17
+  },
+  {
+    "text": "tractor",
+    "frequency": 22
+  },
+  {
+    "text": "paddlewheel",
+    "frequency": 45
+  },
+  {
+    "text": "paddle wheel",
+    "frequency": 45
+  },
+  {
+    "text": "bell cote",
+    "frequency": 488
+  },
+  {
+    "text": "bell cot",
+    "frequency": 488
+  },
+  {
+    "text": "streetcar",
+    "frequency": 193
+  },
+  {
+    "text": "tram",
+    "frequency": 193
+  },
+  {
+    "text": "tramcar",
+    "frequency": 193
+  },
+  {
+    "text": "trolley",
+    "frequency": 193
+  },
+  {
+    "text": "trolley car",
+    "frequency": 193
+  },
+  {
+    "text": "trolleybus",
+    "frequency": 27
+  },
+  {
+    "text": "trolley coach",
+    "frequency": 27
+  },
+  {
+    "text": "trackless trolley",
+    "frequency": 27
+  },
+  {
+    "text": "medicine chest",
+    "frequency": 85
+  },
+  {
+    "text": "medicine cabinet",
+    "frequency": 85
+  },
+  {
+    "text": "grille",
+    "frequency": 34
+  },
+  {
+    "text": "radiator grille",
+    "frequency": 34
+  },
+  {
+    "text": "beach wagon",
+    "frequency": 64
+  },
+  {
+    "text": "station wagon",
+    "frequency": 64
+  },
+  {
+    "text": "wagon",
+    "frequency": 68
+  },
+  {
+    "text": "estate car",
+    "frequency": 64
+  },
+  {
+    "text": "beach waggon",
+    "frequency": 64
+  },
+  {
+    "text": "station waggon",
+    "frequency": 64
+  },
+  {
+    "text": "waggon",
+    "frequency": 64
+  },
+  {
+    "text": "jeep",
+    "frequency": 35
+  },
+  {
+    "text": "landrover",
+    "frequency": 35
+  },
+  {
+    "text": "dome",
+    "frequency": 171
+  },
+  {
+    "text": "passenger car",
+    "frequency": 360
+  },
+  {
+    "text": "coach",
+    "frequency": 360
+  },
+  {
+    "text": "carriage",
+    "frequency": 360
+  },
+  {
+    "text": "spotlight",
+    "frequency": 76
+  },
+  {
+    "text": "spot",
+    "frequency": 76
+  },
+  {
+    "text": "bearskin",
+    "frequency": 13
+  },
+  {
+    "text": "busby",
+    "frequency": 13
+  },
+  {
+    "text": "shako",
+    "frequency": 13
+  },
+  {
+    "text": "toyshop",
+    "frequency": 35
+  },
+  {
+    "text": "confectionery",
+    "frequency": 30
+  },
+  {
+    "text": "confectionary",
+    "frequency": 30
+  },
+  {
+    "text": "candy store",
+    "frequency": 30
+  },
+  {
+    "text": "stone wall",
+    "frequency": 196
+  },
+  {
+    "text": "screen",
+    "frequency": 12
+  },
+  {
+    "text": "CRT screen",
+    "frequency": 12
+  },
+  {
+    "text": "moped",
+    "frequency": 8
+  },
+  {
+    "text": "motor scooter",
+    "frequency": 10
+  },
+  {
+    "text": "scooter",
+    "frequency": 10
+  },
+  {
+    "text": "unicycle",
+    "frequency": 100
+  },
+  {
+    "text": "monocycle",
+    "frequency": 100
+  },
+  {
+    "text": "tricycle",
+    "frequency": 39
+  },
+  {
+    "text": "trike",
+    "frequency": 39
+  },
+  {
+    "text": "velocipede",
+    "frequency": 39
+  },
+  {
+    "text": "turnstile",
+    "frequency": 195
+  },
+  {
+    "text": "umbrella",
+    "frequency": 55
+  },
+  {
+    "text": "hatchet",
+    "frequency": 16
+  },
+  {
+    "text": "bow",
+    "frequency": 14
+  },
+  {
+    "text": "shovel",
+    "frequency": 54
+  },
+  {
+    "text": "rifle",
+    "frequency": 38
+  },
+  {
+    "text": "birdhouse",
+    "frequency": 66
+  },
+  {
+    "text": "organ",
+    "frequency": 73
+  },
+  {
+    "text": "pipe organ",
+    "frequency": 73
+  },
+  {
+    "text": "bannister",
+    "frequency": 420
+  },
+  {
+    "text": "banister",
+    "frequency": 420
+  },
+  {
+    "text": "balustrade",
+    "frequency": 420
+  },
+  {
+    "text": "balusters",
+    "frequency": 420
+  },
+  {
+    "text": "handrail",
+    "frequency": 420
+  },
+  {
+    "text": "maze",
+    "frequency": 205
+  },
+  {
+    "text": "labyrinth",
+    "frequency": 205
+  },
+  {
+    "text": "cliff",
+    "frequency": 133
+  },
+  {
+    "text": "drop",
+    "frequency": 133
+  },
+  {
+    "text": "drop-off",
+    "frequency": 133
+  },
+  {
+    "text": "wreck",
+    "frequency": 35
+  },
+  {
+    "text": "shoji",
+    "frequency": 319
+  },
+  {
+    "text": "convertible",
+    "frequency": 19
+  },
+  {
+    "text": "sports car",
+    "frequency": 10
+  },
+  {
+    "text": "sport car",
+    "frequency": 10
+  },
+  {
+    "text": "limousine",
+    "frequency": 45
+  },
+  {
+    "text": "limo",
+    "frequency": 45
+  },
+  {
+    "text": "thatch",
+    "frequency": 120
+  },
+  {
+    "text": "thatched roof",
+    "frequency": 120
+  },
+  {
+    "text": "coil",
+    "frequency": 36
+  },
+  {
+    "text": "spiral",
+    "frequency": 36
+  },
+  {
+    "text": "volute",
+    "frequency": 36
+  },
+  {
+    "text": "whorl",
+    "frequency": 36
+  },
+  {
+    "text": "helix",
+    "frequency": 36
+  },
+  {
+    "text": "web site",
+    "frequency": 96
+  },
+  {
+    "text": "website",
+    "frequency": 96
+  },
+  {
+    "text": "internet site",
+    "frequency": 96
+  },
+  {
+    "text": "site",
+    "frequency": 96
+  },
+  {
+    "text": "book jacket",
+    "frequency": 188
+  },
+  {
+    "text": "dust cover",
+    "frequency": 188
+  },
+  {
+    "text": "dust jacket",
+    "frequency": 188
+  },
+  {
+    "text": "dust wrapper",
+    "frequency": 188
+  },
+  {
+    "text": "comic book",
+    "frequency": 101
+  },
+  {
+    "text": "loupe",
+    "frequency": 2
+  },
+  {
+    "text": "jeweler's loupe",
+    "frequency": 2
+  },
+  {
+    "text": "guillotine",
+    "frequency": 104
+  },
+  {
+    "text": "street sign",
+    "frequency": 214
+  },
+  {
+    "text": "patio",
+    "frequency": 119
+  },
+  {
+    "text": "terrace",
+    "frequency": 119
+  },
+  {
+    "text": "tub",
+    "frequency": 96
+  },
+  {
+    "text": "vat",
+    "frequency": 59
+  },
+  {
+    "text": "crane",
+    "frequency": 80
+  },
+  {
+    "text": "prayer rug",
+    "frequency": 70
+  },
+  {
+    "text": "prayer mat",
+    "frequency": 70
+  },
+  {
+    "text": "pickelhaube",
+    "frequency": 44
+  },
+  {
+    "text": "vase",
+    "frequency": 2
+  },
+  {
+    "text": "scabbard",
+    "frequency": 2
+  },
+  {
+    "text": "whiskey jug",
+    "frequency": 1
+  },
+  {
+    "text": "bolo tie",
+    "frequency": 5
+  },
+  {
+    "text": "bolo",
+    "frequency": 5
+  },
+  {
+    "text": "bola tie",
+    "frequency": 5
+  },
+  {
+    "text": "bola",
+    "frequency": 5
+  },
+  {
+    "text": "Arabian camel",
+    "frequency": 7
+  },
+  {
+    "text": "dromedary",
+    "frequency": 7
+  },
+  {
+    "text": "Camelus dromedarius",
+    "frequency": 7
+  },
+  {
+    "text": "hay",
+    "frequency": 65
+  },
+  {
+    "text": "airship",
+    "frequency": 40
+  },
+  {
+    "text": "dirigible",
+    "frequency": 40
+  },
+  {
+    "text": "vacuum",
+    "frequency": 23
+  },
+  {
+    "text": "vacuum cleaner",
+    "frequency": 23
+  },
+  {
+    "text": "space heater",
+    "frequency": 11
+  },
+  {
+    "text": "electric fan",
+    "frequency": 7
+  },
+  {
+    "text": "blower",
+    "frequency": 7
+  },
+  {
+    "text": "projector",
+    "frequency": 9
+  },
+  {
+    "text": "stretcher",
+    "frequency": 55
+  },
+  {
+    "text": "tow truck",
+    "frequency": 40
+  },
+  {
+    "text": "tow car",
+    "frequency": 40
+  },
+  {
+    "text": "wrecker",
+    "frequency": 40
+  },
+  {
+    "text": "cab",
+    "frequency": 90
+  },
+  {
+    "text": "hack",
+    "frequency": 90
+  },
+  {
+    "text": "taxi",
+    "frequency": 90
+  },
+  {
+    "text": "taxicab",
+    "frequency": 90
+  },
+  {
+    "text": "bullet train",
+    "frequency": 36
+  },
+  {
+    "text": "bullet",
+    "frequency": 36
+  },
+  {
+    "text": "basketball",
+    "frequency": 37
+  },
+  {
+    "text": "pomegranate",
+    "frequency": 1
+  },
+  {
+    "text": "lemon",
+    "frequency": 1
+  },
+  {
+    "text": "Granny Smith",
+    "frequency": 1
+  },
+  {
+    "text": "orange",
+    "frequency": 2
+  },
+  {
+    "text": "fig",
+    "frequency": 1
+  },
+  {
+    "text": "grocery store",
+    "frequency": 80
+  },
+  {
+    "text": "grocery",
+    "frequency": 80
+  },
+  {
+    "text": "food market",
+    "frequency": 80
+  },
+  {
+    "text": "market",
+    "frequency": 80
+  },
+  {
+    "text": "shopping basket",
+    "frequency": 23
+  },
+  {
+    "text": "china cabinet",
+    "frequency": 33
+  },
+  {
+    "text": "china closet",
+    "frequency": 33
+  },
+  {
+    "text": "rocking chair",
+    "frequency": 74
+  },
+  {
+    "text": "rocker",
+    "frequency": 74
+  },
+  {
+    "text": "electric locomotive",
+    "frequency": 152
+  },
+  {
+    "text": "steam locomotive",
+    "frequency": 132
+  },
+  {
+    "text": "pay-phone",
+    "frequency": 57
+  },
+  {
+    "text": "pay-station",
+    "frequency": 57
+  },
+  {
+    "text": "fire screen",
+    "frequency": 56
+  },
+  {
+    "text": "fireguard",
+    "frequency": 56
+  },
+  {
+    "text": "punching bag",
+    "frequency": 19
+  },
+  {
+    "text": "punch bag",
+    "frequency": 19
+  },
+  {
+    "text": "punching ball",
+    "frequency": 19
+  },
+  {
+    "text": "punchball",
+    "frequency": 19
+  },
+  {
+    "text": "apiary",
+    "frequency": 64
+  },
+  {
+    "text": "bee house",
+    "frequency": 64
+  },
+  {
+    "text": "timber wolf",
+    "frequency": 2
+  },
+  {
+    "text": "grey wolf",
+    "frequency": 2
+  },
+  {
+    "text": "gray wolf",
+    "frequency": 2
+  },
+  {
+    "text": "Canis lupus",
+    "frequency": 2
+  },
+  {
+    "text": "red wolf",
+    "frequency": 3
+  },
+  {
+    "text": "maned wolf",
+    "frequency": 3
+  },
+  {
+    "text": "Canis rufus",
+    "frequency": 3
+  },
+  {
+    "text": "Canis niger",
+    "frequency": 3
+  },
+  {
+    "text": "coyote",
+    "frequency": 6
+  },
+  {
+    "text": "prairie wolf",
+    "frequency": 6
+  },
+  {
+    "text": "brush wolf",
+    "frequency": 6
+  },
+  {
+    "text": "Canis latrans",
+    "frequency": 6
+  },
+  {
+    "text": "solar dish",
+    "frequency": 50
+  },
+  {
+    "text": "solar collector",
+    "frequency": 50
+  },
+  {
+    "text": "solar furnace",
+    "frequency": 50
+  },
+  {
+    "text": "triumphal arch",
+    "frequency": 112
+  },
+  {
+    "text": "carton",
+    "frequency": 11
+  },
+  {
+    "text": "barrow",
+    "frequency": 53
+  },
+  {
+    "text": "garden cart",
+    "frequency": 53
+  },
+  {
+    "text": "lawn cart",
+    "frequency": 53
+  },
+  {
+    "text": "wheelbarrow",
+    "frequency": 53
+  },
+  {
+    "text": "plastic bag",
+    "frequency": 13
+  },
+  {
+    "text": "toilet tissue",
+    "frequency": 21
+  },
+  {
+    "text": "toilet paper",
+    "frequency": 21
+  },
+  {
+    "text": "bathroom tissue",
+    "frequency": 21
+  },
+  {
+    "text": "promontory",
+    "frequency": 37
+  },
+  {
+    "text": "headland",
+    "frequency": 37
+  },
+  {
+    "text": "head",
+    "frequency": 37
+  },
+  {
+    "text": "foreland",
+    "frequency": 37
+  },
+  {
+    "text": "submarine",
+    "frequency": 18
+  },
+  {
+    "text": "pigboat",
+    "frequency": 18
+  },
+  {
+    "text": "sub",
+    "frequency": 18
+  },
+  {
+    "text": "U-boat",
+    "frequency": 18
+  },
+  {
+    "text": "minibus",
+    "frequency": 14
+  },
+  {
+    "text": "swing",
+    "frequency": 95
+  },
+  {
+    "text": "folding chair",
+    "frequency": 45
+  },
+  {
+    "text": "cowboy hat",
+    "frequency": 37
+  },
+  {
+    "text": "ten-gallon hat",
+    "frequency": 37
+  },
+  {
+    "text": "ski mask",
+    "frequency": 15
+  },
+  {
+    "text": "sweatshirt",
+    "frequency": 16
+  },
+  {
+    "text": "ballplayer",
+    "frequency": 37
+  },
+  {
+    "text": "baseball player",
+    "frequency": 37
+  },
+  {
+    "text": "gondola",
+    "frequency": 84
+  },
+  {
+    "text": "shower curtain",
+    "frequency": 24
+  },
+  {
+    "text": "assault rifle",
+    "frequency": 20
+  },
+  {
+    "text": "assault gun",
+    "frequency": 20
+  },
+  {
+    "text": "washer",
+    "frequency": 36
+  },
+  {
+    "text": "automatic washer",
+    "frequency": 36
+  },
+  {
+    "text": "washing machine",
+    "frequency": 36
+  },
+  {
+    "text": "balance beam",
+    "frequency": 18
+  },
+  {
+    "text": "beam",
+    "frequency": 18
+  },
+  {
+    "text": "lotion",
+    "frequency": 7
+  },
+  {
+    "text": "parking meter",
+    "frequency": 49
+  },
+  {
+    "text": "racer",
+    "frequency": 38
+  },
+  {
+    "text": "race car",
+    "frequency": 38
+  },
+  {
+    "text": "racing car",
+    "frequency": 38
+  },
+  {
+    "text": "golfcart",
+    "frequency": 4
+  },
+  {
+    "text": "golf cart",
+    "frequency": 4
+  },
+  {
+    "text": "shopping cart",
+    "frequency": 53
+  },
+  {
+    "text": "breakwater",
+    "frequency": 55
+  },
+  {
+    "text": "groin",
+    "frequency": 55
+  },
+  {
+    "text": "groyne",
+    "frequency": 55
+  },
+  {
+    "text": "mole",
+    "frequency": 55
+  },
+  {
+    "text": "bulwark",
+    "frequency": 55
+  },
+  {
+    "text": "seawall",
+    "frequency": 55
+  },
+  {
+    "text": "jetty",
+    "frequency": 55
+  },
+  {
+    "text": "dining table",
+    "frequency": 56
+  },
+  {
+    "text": "board",
+    "frequency": 56
+  },
+  {
+    "text": "wallaby",
+    "frequency": 4
+  },
+  {
+    "text": "brush kangaroo",
+    "frequency": 4
+  },
+  {
+    "text": "scoreboard",
+    "frequency": 34
+  },
+  {
+    "text": "racket",
+    "frequency": 21
+  },
+  {
+    "text": "racquet",
+    "frequency": 21
+  },
+  {
+    "text": "tennis ball",
+    "frequency": 13
+  },
+  {
+    "text": "croquet ball",
+    "frequency": 31
+  },
+  {
+    "text": "seashore",
+    "frequency": 60
+  },
+  {
+    "text": "coast",
+    "frequency": 60
+  },
+  {
+    "text": "seacoast",
+    "frequency": 60
+  },
+  {
+    "text": "sea-coast",
+    "frequency": 60
+  },
+  {
+    "text": "totem pole",
+    "frequency": 36
+  },
+  {
+    "text": "jackfruit",
+    "frequency": 1
+  },
+  {
+    "text": "jak",
+    "frequency": 1
+  },
+  {
+    "text": "jack",
+    "frequency": 1
+  },
+  {
+    "text": "nematode",
+    "frequency": 9
+  },
+  {
+    "text": "nematode worm",
+    "frequency": 9
+  },
+  {
+    "text": "roundworm",
+    "frequency": 9
+  },
+  {
+    "text": "matchstick",
+    "frequency": 7
+  },
+  {
+    "text": "digital clock",
+    "frequency": 11
+  },
+  {
+    "text": "jack-o'-lantern",
+    "frequency": 11
+  },
+  {
+    "text": "yurt",
+    "frequency": 32
+  },
+  {
+    "text": "stove",
+    "frequency": 22
+  },
+  {
+    "text": "home theater",
+    "frequency": 62
+  },
+  {
+    "text": "home theatre",
+    "frequency": 62
+  },
+  {
+    "text": "barber chair",
+    "frequency": 46
+  },
+  {
+    "text": "shoe shop",
+    "frequency": 36
+  },
+  {
+    "text": "shoe-shop",
+    "frequency": 36
+  },
+  {
+    "text": "shoe store",
+    "frequency": 36
+  },
+  {
+    "text": "traffic light",
+    "frequency": 88
+  },
+  {
+    "text": "traffic signal",
+    "frequency": 88
+  },
+  {
+    "text": "stoplight",
+    "frequency": 88
+  },
+  {
+    "text": "lawn mower",
+    "frequency": 15
+  },
+  {
+    "text": "mower",
+    "frequency": 15
+  },
+  {
+    "text": "malamute",
+    "frequency": 7
+  },
+  {
+    "text": "malemute",
+    "frequency": 7
+  },
+  {
+    "text": "Alaskan malamute",
+    "frequency": 7
+  },
+  {
+    "text": "bookcase",
+    "frequency": 55
+  },
+  {
+    "text": "upright",
+    "frequency": 56
+  },
+  {
+    "text": "upright piano",
+    "frequency": 56
+  },
+  {
+    "text": "military uniform",
+    "frequency": 68
+  },
+  {
+    "text": "tank",
+    "frequency": 15
+  },
+  {
+    "text": "army tank",
+    "frequency": 15
+  },
+  {
+    "text": "armored combat vehicle",
+    "frequency": 15
+  },
+  {
+    "text": "armoured combat vehicle",
+    "frequency": 15
+  },
+  {
+    "text": "cliff dwelling",
+    "frequency": 50
+  },
+  {
+    "text": "horizontal bar",
+    "frequency": 40
+  },
+  {
+    "text": "high bar",
+    "frequency": 40
+  },
+  {
+    "text": "baboon",
+    "frequency": 6
+  },
+  {
+    "text": "dogsled",
+    "frequency": 15
+  },
+  {
+    "text": "dog sled",
+    "frequency": 15
+  },
+  {
+    "text": "dog sleigh",
+    "frequency": 15
+  },
+  {
+    "text": "snowmobile",
+    "frequency": 16
+  },
+  {
+    "text": "vulture",
+    "frequency": 4
+  },
+  {
+    "text": "oscilloscope",
+    "frequency": 6
+  },
+  {
+    "text": "scope",
+    "frequency": 6
+  },
+  {
+    "text": "cathode-ray oscilloscope",
+    "frequency": 6
+  },
+  {
+    "text": "CRO",
+    "frequency": 6
+  },
+  {
+    "text": "microwave",
+    "frequency": 17
+  },
+  {
+    "text": "microwave oven",
+    "frequency": 17
+  },
+  {
+    "text": "radio",
+    "frequency": 3
+  },
+  {
+    "text": "wireless",
+    "frequency": 3
+  },
+  {
+    "text": "bighorn",
+    "frequency": 9
+  },
+  {
+    "text": "bighorn sheep",
+    "frequency": 9
+  },
+  {
+    "text": "cimarron",
+    "frequency": 9
+  },
+  {
+    "text": "Rocky Mountain bighorn",
+    "frequency": 9
+  },
+  {
+    "text": "Rocky Mountain sheep",
+    "frequency": 9
+  },
+  {
+    "text": "Ovis canadensis",
+    "frequency": 9
+  },
+  {
+    "text": "ram",
+    "frequency": 5
+  },
+  {
+    "text": "tup",
+    "frequency": 5
+  },
+  {
+    "text": "studio couch",
+    "frequency": 40
+  },
+  {
+    "text": "day bed",
+    "frequency": 40
+  },
+  {
+    "text": "desktop computer",
+    "frequency": 6
+  },
+  {
+    "text": "desk",
+    "frequency": 18
+  },
+  {
+    "text": "computer keyboard",
+    "frequency": 2
+  },
+  {
+    "text": "keypad",
+    "frequency": 2
+  },
+  {
+    "text": "monitor",
+    "frequency": 11
+  },
+  {
+    "text": "typewriter keyboard",
+    "frequency": 6
+  },
+  {
+    "text": "ski",
+    "frequency": 13
+  },
+  {
+    "text": "stupa",
+    "frequency": 38
+  },
+  {
+    "text": "tope",
+    "frequency": 38
+  },
+  {
+    "text": "volcano",
+    "frequency": 41
+  },
+  {
+    "text": "geyser",
+    "frequency": 39
+  },
+  {
+    "text": "wood rabbit",
+    "frequency": 1
+  },
+  {
+    "text": "cottontail",
+    "frequency": 1
+  },
+  {
+    "text": "cottontail rabbit",
+    "frequency": 1
+  },
+  {
+    "text": "patas",
+    "frequency": 2
+  },
+  {
+    "text": "hussar monkey",
+    "frequency": 2
+  },
+  {
+    "text": "Erythrocebus patas",
+    "frequency": 2
+  },
+  {
+    "text": "macaque",
+    "frequency": 2
+  },
+  {
+    "text": "toilet seat",
+    "frequency": 23
+  },
+  {
+    "text": "washbasin",
+    "frequency": 70
+  },
+  {
+    "text": "handbasin",
+    "frequency": 70
+  },
+  {
+    "text": "washbowl",
+    "frequency": 70
+  },
+  {
+    "text": "lavabo",
+    "frequency": 70
+  },
+  {
+    "text": "wash-hand basin",
+    "frequency": 70
+  },
+  {
+    "text": "water bottle",
+    "frequency": 20
+  },
+  {
+    "text": "hair spray",
+    "frequency": 10
+  },
+  {
+    "text": "sandbar",
+    "frequency": 60
+  },
+  {
+    "text": "sand bar",
+    "frequency": 60
+  },
+  {
+    "text": "chainlink fence",
+    "frequency": 100
+  },
+  {
+    "text": "milk can",
+    "frequency": 27
+  },
+  {
+    "text": "sundial",
+    "frequency": 64
+  },
+  {
+    "text": "garbage truck",
+    "frequency": 13
+  },
+  {
+    "text": "dustcart",
+    "frequency": 13
+  },
+  {
+    "text": "mountain tent",
+    "frequency": 53
+  },
+  {
+    "text": "gibbon",
+    "frequency": 3
+  },
+  {
+    "text": "Hylobates lar",
+    "frequency": 3
+  },
+  {
+    "text": "langur",
+    "frequency": 4
+  },
+  {
+    "text": "school bus",
+    "frequency": 15
+  },
+  {
+    "text": "tile roof",
+    "frequency": 110
+  },
+  {
+    "text": "groom",
+    "frequency": 53
+  },
+  {
+    "text": "bridegroom",
+    "frequency": 53
+  },
+  {
+    "text": "bicycle-built-for-two",
+    "frequency": 21
+  },
+  {
+    "text": "tandem bicycle",
+    "frequency": 21
+  },
+  {
+    "text": "tandem",
+    "frequency": 21
+  },
+  {
+    "text": "jinrikisha",
+    "frequency": 15
+  },
+  {
+    "text": "ricksha",
+    "frequency": 15
+  },
+  {
+    "text": "rickshaw",
+    "frequency": 15
+  },
+  {
+    "text": "Labrador retriever",
+    "frequency": 8
+  },
+  {
+    "text": "Staffordshire bullterrier",
+    "frequency": 3
+  },
+  {
+    "text": "Staffordshire bull terrier",
+    "frequency": 3
+  },
+  {
+    "text": "curly-coated retriever",
+    "frequency": 5
+  },
+  {
+    "text": "American Staffordshire terrier",
+    "frequency": 2
+  },
+  {
+    "text": "Staffordshire terrier",
+    "frequency": 2
+  },
+  {
+    "text": "American pit bull terrier",
+    "frequency": 2
+  },
+  {
+    "text": "pit bull terrier",
+    "frequency": 2
+  },
+  {
+    "text": "Chesapeake Bay retriever",
+    "frequency": 3
+  },
+  {
+    "text": "barbell",
+    "frequency": 22
+  },
+  {
+    "text": "lab coat",
+    "frequency": 31
+  },
+  {
+    "text": "laboratory coat",
+    "frequency": 31
+  },
+  {
+    "text": "stethoscope",
+    "frequency": 6
+  },
+  {
+    "text": "trench coat",
+    "frequency": 48
+  },
+  {
+    "text": "sax",
+    "frequency": 6
+  },
+  {
+    "text": "saxophone",
+    "frequency": 6
+  },
+  {
+    "text": "accordion",
+    "frequency": 8
+  },
+  {
+    "text": "piano accordion",
+    "frequency": 8
+  },
+  {
+    "text": "squeeze box",
+    "frequency": 8
+  },
+  {
+    "text": "water jug",
+    "frequency": 1
+  },
+  {
+    "text": "chime",
+    "frequency": 18
+  },
+  {
+    "text": "bell",
+    "frequency": 18
+  },
+  {
+    "text": "gong",
+    "frequency": 26
+  },
+  {
+    "text": "coffeepot",
+    "frequency": 2
+  },
+  {
+    "text": "standard poodle",
+    "frequency": 4
+  },
+  {
+    "text": "clog",
+    "frequency": 1
+  },
+  {
+    "text": "geta",
+    "frequency": 1
+  },
+  {
+    "text": "patten",
+    "frequency": 1
+  },
+  {
+    "text": "sabot",
+    "frequency": 1
+  },
+  {
+    "text": "canoe",
+    "frequency": 53
+  },
+  {
+    "text": "gown",
+    "frequency": 63
+  },
+  {
+    "text": "hoopskirt",
+    "frequency": 59
+  },
+  {
+    "text": "crinoline",
+    "frequency": 59
+  },
+  {
+    "text": "photocopier",
+    "frequency": 16
+  },
+  {
+    "text": "radio telescope",
+    "frequency": 21
+  },
+  {
+    "text": "radio reflector",
+    "frequency": 21
+  },
+  {
+    "text": "bobsled",
+    "frequency": 12
+  },
+  {
+    "text": "bobsleigh",
+    "frequency": 12
+  },
+  {
+    "text": "bob",
+    "frequency": 12
+  },
+  {
+    "text": "overskirt",
+    "frequency": 33
+  },
+  {
+    "text": "bonnet",
+    "frequency": 3
+  },
+  {
+    "text": "poke bonnet",
+    "frequency": 3
+  },
+  {
+    "text": "tusker",
+    "frequency": 7
+  },
+  {
+    "text": "impala",
+    "frequency": 15
+  },
+  {
+    "text": "Aepyceros melampus",
+    "frequency": 15
+  },
+  {
+    "text": "mountain bike",
+    "frequency": 79
+  },
+  {
+    "text": "all-terrain bike",
+    "frequency": 79
+  },
+  {
+    "text": "off-roader",
+    "frequency": 79
+  },
+  {
+    "text": "corkscrew",
+    "frequency": 2
+  },
+  {
+    "text": "bottle screw",
+    "frequency": 2
+  },
+  {
+    "text": "paper towel",
+    "frequency": 5
+  },
+  {
+    "text": "hen-of-the-woods",
+    "frequency": 21
+  },
+  {
+    "text": "hen of the woods",
+    "frequency": 21
+  },
+  {
+    "text": "Polyporus frondosus",
+    "frequency": 21
+  },
+  {
+    "text": "Grifola frondosa",
+    "frequency": 21
+  },
+  {
+    "text": "moving van",
+    "frequency": 22
+  },
+  {
+    "text": "cowboy boot",
+    "frequency": 12
+  },
+  {
+    "text": "planetarium",
+    "frequency": 126
+  },
+  {
+    "text": "toaster",
+    "frequency": 5
+  },
+  {
+    "text": "Bouvier des Flandres",
+    "frequency": 6
+  },
+  {
+    "text": "Bouviers des Flandres",
+    "frequency": 6
+  },
+  {
+    "text": "Loafer",
+    "frequency": 3
+  },
+  {
+    "text": "buckeye",
+    "frequency": 18
+  },
+  {
+    "text": "horse chestnut",
+    "frequency": 18
+  },
+  {
+    "text": "conker",
+    "frequency": 18
+  },
+  {
+    "text": "candle",
+    "frequency": 11
+  },
+  {
+    "text": "taper",
+    "frequency": 11
+  },
+  {
+    "text": "wax light",
+    "frequency": 11
+  },
+  {
+    "text": "forklift",
+    "frequency": 11
+  },
+  {
+    "text": "carpenter's kit",
+    "frequency": 5
+  },
+  {
+    "text": "tool kit",
+    "frequency": 5
+  },
+  {
+    "text": "paintbrush",
+    "frequency": 4
+  },
+  {
+    "text": "broom",
+    "frequency": 31
+  },
+  {
+    "text": "parallel bars",
+    "frequency": 65
+  },
+  {
+    "text": "bars",
+    "frequency": 65
+  },
+  {
+    "text": "bow tie",
+    "frequency": 32
+  },
+  {
+    "text": "bow-tie",
+    "frequency": 32
+  },
+  {
+    "text": "bowtie",
+    "frequency": 32
+  },
+  {
+    "text": "marimba",
+    "frequency": 13
+  },
+  {
+    "text": "xylophone",
+    "frequency": 13
+  },
+  {
+    "text": "hartebeest",
+    "frequency": 12
+  },
+  {
+    "text": "ibex",
+    "frequency": 6
+  },
+  {
+    "text": "Capra ibex",
+    "frequency": 6
+  },
+  {
+    "text": "sorrel",
+    "frequency": 14
+  },
+  {
+    "text": "throne",
+    "frequency": 28
+  },
+  {
+    "text": "Siberian husky",
+    "frequency": 6
+  },
+  {
+    "text": "Eskimo dog",
+    "frequency": 3
+  },
+  {
+    "text": "husky",
+    "frequency": 3
+  },
+  {
+    "text": "fur coat",
+    "frequency": 54
+  },
+  {
+    "text": "bikini",
+    "frequency": 12
+  },
+  {
+    "text": "two-piece",
+    "frequency": 12
+  },
+  {
+    "text": "maillot",
+    "frequency": 11
+  },
+  {
+    "text": "tank suit",
+    "frequency": 7
+  },
+  {
+    "text": "American egret",
+    "frequency": 2
+  },
+  {
+    "text": "great white heron",
+    "frequency": 2
+  },
+  {
+    "text": "Egretta albus",
+    "frequency": 2
+  },
+  {
+    "text": "plunger",
+    "frequency": 13
+  },
+  {
+    "text": "plumber's helper",
+    "frequency": 13
+  },
+  {
+    "text": "menu",
+    "frequency": 37
+  },
+  {
+    "text": "Saluki",
+    "frequency": 4
+  },
+  {
+    "text": "gazelle hound",
+    "frequency": 4
+  },
+  {
+    "text": "ox",
+    "frequency": 25
+  },
+  {
+    "text": "bluetick",
+    "frequency": 3
+  },
+  {
+    "text": "water buffalo",
+    "frequency": 14
+  },
+  {
+    "text": "water ox",
+    "frequency": 14
+  },
+  {
+    "text": "Asiatic buffalo",
+    "frequency": 14
+  },
+  {
+    "text": "Bubalus bubalis",
+    "frequency": 14
+  },
+  {
+    "text": "lighter",
+    "frequency": 9
+  },
+  {
+    "text": "light",
+    "frequency": 9
+  },
+  {
+    "text": "igniter",
+    "frequency": 9
+  },
+  {
+    "text": "ignitor",
+    "frequency": 9
+  },
+  {
+    "text": "half track",
+    "frequency": 8
+  },
+  {
+    "text": "ear",
+    "frequency": 7
+  },
+  {
+    "text": "spike",
+    "frequency": 7
+  },
+  {
+    "text": "capitulum",
+    "frequency": 7
+  },
+  {
+    "text": "corn",
+    "frequency": 7
+  },
+  {
+    "text": "dumbbell",
+    "frequency": 19
+  },
+  {
+    "text": "pot",
+    "frequency": 10
+  },
+  {
+    "text": "flowerpot",
+    "frequency": 10
+  },
+  {
+    "text": "spider monkey",
+    "frequency": 2
+  },
+  {
+    "text": "Ateles geoffroyi",
+    "frequency": 2
+  },
+  {
+    "text": "carousel",
+    "frequency": 14
+  },
+  {
+    "text": "carrousel",
+    "frequency": 14
+  },
+  {
+    "text": "merry-go-round",
+    "frequency": 14
+  },
+  {
+    "text": "roundabout",
+    "frequency": 14
+  },
+  {
+    "text": "whirligig",
+    "frequency": 14
+  },
+  {
+    "text": "sarong",
+    "frequency": 6
+  },
+  {
+    "text": "padlock",
+    "frequency": 30
+  },
+  {
+    "text": "jersey",
+    "frequency": 10
+  },
+  {
+    "text": "T-shirt",
+    "frequency": 10
+  },
+  {
+    "text": "tee shirt",
+    "frequency": 10
+  },
+  {
+    "text": "English setter",
+    "frequency": 11
+  },
+  {
+    "text": "hen",
+    "frequency": 1
+  },
+  {
+    "text": "West Highland white terrier",
+    "frequency": 5
+  },
+  {
+    "text": "potter's wheel",
+    "frequency": 7
+  },
+  {
+    "text": "chain",
+    "frequency": 12
+  },
+  {
+    "text": "brassiere",
+    "frequency": 7
+  },
+  {
+    "text": "bra",
+    "frequency": 7
+  },
+  {
+    "text": "bandeau",
+    "frequency": 7
+  },
+  {
+    "text": "tripod",
+    "frequency": 15
+  },
+  {
+    "text": "giant schnauzer",
+    "frequency": 9
+  },
+  {
+    "text": "schipperke",
+    "frequency": 11
+  },
+  {
+    "text": "kelpie",
+    "frequency": 11
+  },
+  {
+    "text": "American black bear",
+    "frequency": 5
+  },
+  {
+    "text": "black bear",
+    "frequency": 5
+  },
+  {
+    "text": "Ursus americanus",
+    "frequency": 5
+  },
+  {
+    "text": "Euarctos americanus",
+    "frequency": 5
+  },
+  {
+    "text": "groenendael",
+    "frequency": 9
+  },
+  {
+    "text": "fire engine",
+    "frequency": 13
+  },
+  {
+    "text": "fire truck",
+    "frequency": 13
+  },
+  {
+    "text": "maypole",
+    "frequency": 19
+  },
+  {
+    "text": "swimming trunks",
+    "frequency": 14
+  },
+  {
+    "text": "bathing trunks",
+    "frequency": 14
+  },
+  {
+    "text": "sea lion",
+    "frequency": 5
+  },
+  {
+    "text": "bathing cap",
+    "frequency": 7
+  },
+  {
+    "text": "swimming cap",
+    "frequency": 7
+  },
+  {
+    "text": "knot",
+    "frequency": 5
+  },
+  {
+    "text": "quilt",
+    "frequency": 19
+  },
+  {
+    "text": "comforter",
+    "frequency": 19
+  },
+  {
+    "text": "comfort",
+    "frequency": 19
+  },
+  {
+    "text": "puff",
+    "frequency": 19
+  },
+  {
+    "text": "miniskirt",
+    "frequency": 14
+  },
+  {
+    "text": "mini",
+    "frequency": 14
+  },
+  {
+    "text": "liner",
+    "frequency": 12
+  },
+  {
+    "text": "ocean liner",
+    "frequency": 12
+  },
+  {
+    "text": "mask",
+    "frequency": 41
+  },
+  {
+    "text": "space shuttle",
+    "frequency": 3
+  },
+  {
+    "text": "drilling platform",
+    "frequency": 11
+  },
+  {
+    "text": "offshore rig",
+    "frequency": 11
+  },
+  {
+    "text": "balloon",
+    "frequency": 24
+  },
+  {
+    "text": "backpack",
+    "frequency": 1
+  },
+  {
+    "text": "back pack",
+    "frequency": 1
+  },
+  {
+    "text": "knapsack",
+    "frequency": 1
+  },
+  {
+    "text": "packsack",
+    "frequency": 1
+  },
+  {
+    "text": "rucksack",
+    "frequency": 1
+  },
+  {
+    "text": "haversack",
+    "frequency": 1
+  },
+  {
+    "text": "magnetic compass",
+    "frequency": 2
+  },
+  {
+    "text": "jigsaw puzzle",
+    "frequency": 7
+  },
+  {
+    "text": "police van",
+    "frequency": 4
+  },
+  {
+    "text": "police wagon",
+    "frequency": 4
+  },
+  {
+    "text": "paddy wagon",
+    "frequency": 4
+  },
+  {
+    "text": "patrol wagon",
+    "frequency": 4
+  },
+  {
+    "text": "black Maria",
+    "frequency": 4
+  },
+  {
+    "text": "butcher shop",
+    "frequency": 9
+  },
+  {
+    "text": "meat market",
+    "frequency": 9
+  },
+  {
+    "text": "bucket",
+    "frequency": 17
+  },
+  {
+    "text": "pail",
+    "frequency": 17
+  },
+  {
+    "text": "airliner",
+    "frequency": 24
+  },
+  {
+    "text": "wing",
+    "frequency": 13
+  },
+  {
+    "text": "sleeping bag",
+    "frequency": 6
+  },
+  {
+    "text": "bathtub",
+    "frequency": 37
+  },
+  {
+    "text": "bathing tub",
+    "frequency": 37
+  },
+  {
+    "text": "bath",
+    "frequency": 37
+  },
+  {
+    "text": "pencil box",
+    "frequency": 1
+  },
+  {
+    "text": "pencil case",
+    "frequency": 1
+  },
+  {
+    "text": "starfish",
+    "frequency": 3
+  },
+  {
+    "text": "sea star",
+    "frequency": 3
+  },
+  {
+    "text": "hog",
+    "frequency": 9
+  },
+  {
+    "text": "pig",
+    "frequency": 9
+  },
+  {
+    "text": "grunter",
+    "frequency": 9
+  },
+  {
+    "text": "squealer",
+    "frequency": 9
+  },
+  {
+    "text": "Sus scrofa",
+    "frequency": 9
+  },
+  {
+    "text": "rain barrel",
+    "frequency": 11
+  },
+  {
+    "text": "wok",
+    "frequency": 1
+  },
+  {
+    "text": "scale",
+    "frequency": 13
+  },
+  {
+    "text": "weighing machine",
+    "frequency": 13
+  },
+  {
+    "text": "frying pan",
+    "frequency": 1
+  },
+  {
+    "text": "frypan",
+    "frequency": 1
+  },
+  {
+    "text": "skillet",
+    "frequency": 1
+  },
+  {
+    "text": "shield",
+    "frequency": 12
+  },
+  {
+    "text": "buckler",
+    "frequency": 12
+  },
+  {
+    "text": "fireboat",
+    "frequency": 3
+  },
+  {
+    "text": "loudspeaker",
+    "frequency": 9
+  },
+  {
+    "text": "speaker",
+    "frequency": 9
+  },
+  {
+    "text": "speaker unit",
+    "frequency": 9
+  },
+  {
+    "text": "loudspeaker system",
+    "frequency": 9
+  },
+  {
+    "text": "speaker system",
+    "frequency": 9
+  },
+  {
+    "text": "banjo",
+    "frequency": 6
+  },
+  {
+    "text": "violin",
+    "frequency": 7
+  },
+  {
+    "text": "fiddle",
+    "frequency": 7
+  },
+  {
+    "text": "acoustic guitar",
+    "frequency": 3
+  },
+  {
+    "text": "perfume",
+    "frequency": 3
+  },
+  {
+    "text": "essence",
+    "frequency": 3
+  },
+  {
+    "text": "mouse",
+    "frequency": 2
+  },
+  {
+    "text": "computer mouse",
+    "frequency": 2
+  },
+  {
+    "text": "soap dispenser",
+    "frequency": 8
+  },
+  {
+    "text": "breastplate",
+    "frequency": 8
+  },
+  {
+    "text": "aegis",
+    "frequency": 8
+  },
+  {
+    "text": "egis",
+    "frequency": 8
+  },
+  {
+    "text": "cuirass",
+    "frequency": 9
+  },
+  {
+    "text": "hook",
+    "frequency": 20
+  },
+  {
+    "text": "claw",
+    "frequency": 20
+  },
+  {
+    "text": "beer bottle",
+    "frequency": 4
+  },
+  {
+    "text": "aircraft carrier",
+    "frequency": 14
+  },
+  {
+    "text": "carrier",
+    "frequency": 14
+  },
+  {
+    "text": "flattop",
+    "frequency": 14
+  },
+  {
+    "text": "attack aircraft carrier",
+    "frequency": 14
+  },
+  {
+    "text": "packet",
+    "frequency": 8
+  },
+  {
+    "text": "toy poodle",
+    "frequency": 1
+  },
+  {
+    "text": "Maltese dog",
+    "frequency": 1
+  },
+  {
+    "text": "Maltese terrier",
+    "frequency": 1
+  },
+  {
+    "text": "Maltese",
+    "frequency": 1
+  },
+  {
+    "text": "miniature poodle",
+    "frequency": 1
+  },
+  {
+    "text": "binoculars",
+    "frequency": 3
+  },
+  {
+    "text": "field glasses",
+    "frequency": 3
+  },
+  {
+    "text": "opera glasses",
+    "frequency": 3
+  },
+  {
+    "text": "bolete",
+    "frequency": 2
+  },
+  {
+    "text": "bath towel",
+    "frequency": 11
+  },
+  {
+    "text": "zebra",
+    "frequency": 17
+  },
+  {
+    "text": "gazelle",
+    "frequency": 19
+  },
+  {
+    "text": "gasmask",
+    "frequency": 13
+  },
+  {
+    "text": "respirator",
+    "frequency": 13
+  },
+  {
+    "text": "gas helmet",
+    "frequency": 13
+  },
+  {
+    "text": "sunglasses",
+    "frequency": 9
+  },
+  {
+    "text": "dark glasses",
+    "frequency": 9
+  },
+  {
+    "text": "shades",
+    "frequency": 9
+  },
+  {
+    "text": "sunglass",
+    "frequency": 7
+  },
+  {
+    "text": "Windsor tie",
+    "frequency": 4
+  },
+  {
+    "text": "teapot",
+    "frequency": 1
+  },
+  {
+    "text": "cup",
+    "frequency": 1
+  },
+  {
+    "text": "ladle",
+    "frequency": 4
+  },
+  {
+    "text": "soup bowl",
+    "frequency": 1
+  },
+  {
+    "text": "velvet",
+    "frequency": 11
+  },
+  {
+    "text": "ping-pong ball",
+    "frequency": 21
+  },
+  {
+    "text": "ambulance",
+    "frequency": 9
+  },
+  {
+    "text": "wig",
+    "frequency": 20
+  },
+  {
+    "text": "giant panda",
+    "frequency": 1
+  },
+  {
+    "text": "panda",
+    "frequency": 1
+  },
+  {
+    "text": "panda bear",
+    "frequency": 1
+  },
+  {
+    "text": "coon bear",
+    "frequency": 1
+  },
+  {
+    "text": "Ailuropoda melanoleuca",
+    "frequency": 1
+  },
+  {
+    "text": "Model T",
+    "frequency": 18
+  },
+  {
+    "text": "bison",
+    "frequency": 23
+  },
+  {
+    "text": "koala",
+    "frequency": 1
+  },
+  {
+    "text": "koala bear",
+    "frequency": 1
+  },
+  {
+    "text": "kangaroo bear",
+    "frequency": 1
+  },
+  {
+    "text": "native bear",
+    "frequency": 1
+  },
+  {
+    "text": "Phascolarctos cinereus",
+    "frequency": 1
+  },
+  {
+    "text": "handkerchief",
+    "frequency": 3
+  },
+  {
+    "text": "hankie",
+    "frequency": 3
+  },
+  {
+    "text": "hanky",
+    "frequency": 3
+  },
+  {
+    "text": "hankey",
+    "frequency": 3
+  },
+  {
+    "text": "mosquito net",
+    "frequency": 11
+  },
+  {
+    "text": "notebook",
+    "frequency": 1
+  },
+  {
+    "text": "notebook computer",
+    "frequency": 1
+  },
+  {
+    "text": "Band Aid",
+    "frequency": 9
+  },
+  {
+    "text": "laptop",
+    "frequency": 1
+  },
+  {
+    "text": "laptop computer",
+    "frequency": 1
+  },
+  {
+    "text": "rule",
+    "frequency": 3
+  },
+  {
+    "text": "ruler",
+    "frequency": 3
+  },
+  {
+    "text": "sewing machine",
+    "frequency": 4
+  },
+  {
+    "text": "chest",
+    "frequency": 9
+  },
+  {
+    "text": "paddle",
+    "frequency": 19
+  },
+  {
+    "text": "boat paddle",
+    "frequency": 19
+  },
+  {
+    "text": "beagle",
+    "frequency": 2
+  },
+  {
+    "text": "kimono",
+    "frequency": 9
+  },
+  {
+    "text": "soft-coated wheaten terrier",
+    "frequency": 2
+  },
+  {
+    "text": "cocker spaniel",
+    "frequency": 1
+  },
+  {
+    "text": "English cocker spaniel",
+    "frequency": 1
+  },
+  {
+    "text": "cocker",
+    "frequency": 1
+  },
+  {
+    "text": "Shih-Tzu",
+    "frequency": 2
+  },
+  {
+    "text": "trombone",
+    "frequency": 7
+  },
+  {
+    "text": "speedboat",
+    "frequency": 4
+  },
+  {
+    "text": "amphibian",
+    "frequency": 3
+  },
+  {
+    "text": "amphibious vehicle",
+    "frequency": 3
+  },
+  {
+    "text": "lifeboat",
+    "frequency": 1
+  },
+  {
+    "text": "harvester",
+    "frequency": 22
+  },
+  {
+    "text": "reaper",
+    "frequency": 22
+  },
+  {
+    "text": "Irish setter",
+    "frequency": 4
+  },
+  {
+    "text": "red setter",
+    "frequency": 4
+  },
+  {
+    "text": "mortarboard",
+    "frequency": 11
+  },
+  {
+    "text": "chiffonier",
+    "frequency": 6
+  },
+  {
+    "text": "commode",
+    "frequency": 6
+  },
+  {
+    "text": "manhole cover",
+    "frequency": 11
+  },
+  {
+    "text": "puck",
+    "frequency": 4
+  },
+  {
+    "text": "hockey puck",
+    "frequency": 4
+  },
+  {
+    "text": "barrel",
+    "frequency": 8
+  },
+  {
+    "text": "cask",
+    "frequency": 8
+  },
+  {
+    "text": "hand blower",
+    "frequency": 6
+  },
+  {
+    "text": "blow dryer",
+    "frequency": 6
+  },
+  {
+    "text": "blow drier",
+    "frequency": 6
+  },
+  {
+    "text": "hair dryer",
+    "frequency": 6
+  },
+  {
+    "text": "hair drier",
+    "frequency": 6
+  },
+  {
+    "text": "warplane",
+    "frequency": 10
+  },
+  {
+    "text": "military plane",
+    "frequency": 10
+  },
+  {
+    "text": "lampshade",
+    "frequency": 11
+  },
+  {
+    "text": "lamp shade",
+    "frequency": 11
+  },
+  {
+    "text": "table lamp",
+    "frequency": 6
+  },
+  {
+    "text": "sombrero",
+    "frequency": 6
+  },
+  {
+    "text": "buckle",
+    "frequency": 2
+  },
+  {
+    "text": "schooner",
+    "frequency": 6
+  },
+  {
+    "text": "yawl",
+    "frequency": 3
+  },
+  {
+    "text": "pirate",
+    "frequency": 8
+  },
+  {
+    "text": "pirate ship",
+    "frequency": 8
+  },
+  {
+    "text": "neck brace",
+    "frequency": 5
+  },
+  {
+    "text": "wine bottle",
+    "frequency": 4
+  },
+  {
+    "text": "squirrel monkey",
+    "frequency": 1
+  },
+  {
+    "text": "Saimiri sciureus",
+    "frequency": 1
+  },
+  {
+    "text": "guenon",
+    "frequency": 1
+  },
+  {
+    "text": "guenon monkey",
+    "frequency": 1
+  },
+  {
+    "text": "tam-tam",
+    "frequency": 8
+  },
+  {
+    "text": "dock",
+    "frequency": 32
+  },
+  {
+    "text": "dockage",
+    "frequency": 32
+  },
+  {
+    "text": "docking facility",
+    "frequency": 32
+  },
+  {
+    "text": "African crocodile",
+    "frequency": 5
+  },
+  {
+    "text": "Nile crocodile",
+    "frequency": 5
+  },
+  {
+    "text": "Crocodylus niloticus",
+    "frequency": 5
+  },
+  {
+    "text": "Norwegian elkhound",
+    "frequency": 2
+  },
+  {
+    "text": "elkhound",
+    "frequency": 2
+  },
+  {
+    "text": "poncho",
+    "frequency": 7
+  },
+  {
+    "text": "quill",
+    "frequency": 4
+  },
+  {
+    "text": "quill pen",
+    "frequency": 4
+  },
+  {
+    "text": "stole",
+    "frequency": 12
+  },
+  {
+    "text": "drumstick",
+    "frequency": 3
+  },
+  {
+    "text": "Great Dane",
+    "frequency": 9
+  },
+  {
+    "text": "African hunting dog",
+    "frequency": 2
+  },
+  {
+    "text": "hyena dog",
+    "frequency": 2
+  },
+  {
+    "text": "Cape hunting dog",
+    "frequency": 2
+  },
+  {
+    "text": "Lycaon pictus",
+    "frequency": 2
+  },
+  {
+    "text": "Leonberg",
+    "frequency": 2
+  },
+  {
+    "text": "Komodo dragon",
+    "frequency": 1
+  },
+  {
+    "text": "Komodo lizard",
+    "frequency": 1
+  },
+  {
+    "text": "dragon lizard",
+    "frequency": 1
+  },
+  {
+    "text": "giant lizard",
+    "frequency": 1
+  },
+  {
+    "text": "Varanus komodoensis",
+    "frequency": 1
+  },
+  {
+    "text": "Gila monster",
+    "frequency": 1
+  },
+  {
+    "text": "Heloderma suspectum",
+    "frequency": 1
+  },
+  {
+    "text": "mushroom",
+    "frequency": 1
+  },
+  {
+    "text": "warthog",
+    "frequency": 10
+  },
+  {
+    "text": "seat belt",
+    "frequency": 4
+  },
+  {
+    "text": "seatbelt",
+    "frequency": 4
+  },
+  {
+    "text": "lipstick",
+    "frequency": 3
+  },
+  {
+    "text": "lip rouge",
+    "frequency": 3
+  },
+  {
+    "text": "missile",
+    "frequency": 26
+  },
+  {
+    "text": "projectile",
+    "frequency": 12
+  },
+  {
+    "text": "syringe",
+    "frequency": 4
+  },
+  {
+    "text": "crib",
+    "frequency": 4
+  },
+  {
+    "text": "cot",
+    "frequency": 4
+  },
+  {
+    "text": "cradle",
+    "frequency": 10
+  },
+  {
+    "text": "bassinet",
+    "frequency": 2
+  },
+  {
+    "text": "parachute",
+    "frequency": 4
+  },
+  {
+    "text": "chute",
+    "frequency": 4
+  },
+  {
+    "text": "rubber eraser",
+    "frequency": 2
+  },
+  {
+    "text": "rubber",
+    "frequency": 2
+  },
+  {
+    "text": "pencil eraser",
+    "frequency": 2
+  },
+  {
+    "text": "bubble",
+    "frequency": 10
+  },
+  {
+    "text": "harmonica",
+    "frequency": 7
+  },
+  {
+    "text": "mouth organ",
+    "frequency": 7
+  },
+  {
+    "text": "harp",
+    "frequency": 8
+  },
+  {
+    "text": "mouth harp",
+    "frequency": 7
+  },
+  {
+    "text": "flute",
+    "frequency": 2
+  },
+  {
+    "text": "transverse flute",
+    "frequency": 2
+  },
+  {
+    "text": "caldron",
+    "frequency": 6
+  },
+  {
+    "text": "cauldron",
+    "frequency": 6
+  },
+  {
+    "text": "hair slide",
+    "frequency": 2
+  },
+  {
+    "text": "bassoon",
+    "frequency": 3
+  },
+  {
+    "text": "oboe",
+    "frequency": 5
+  },
+  {
+    "text": "hautboy",
+    "frequency": 5
+  },
+  {
+    "text": "hautbois",
+    "frequency": 5
+  },
+  {
+    "text": "rotisserie",
+    "frequency": 7
+  },
+  {
+    "text": "space bar",
+    "frequency": 4
+  },
+  {
+    "text": "envelope",
+    "frequency": 8
+  },
+  {
+    "text": "American coot",
+    "frequency": 4
+  },
+  {
+    "text": "marsh hen",
+    "frequency": 4
+  },
+  {
+    "text": "mud hen",
+    "frequency": 4
+  },
+  {
+    "text": "water hen",
+    "frequency": 4
+  },
+  {
+    "text": "Fulica americana",
+    "frequency": 4
+  },
+  {
+    "text": "iron",
+    "frequency": 6
+  },
+  {
+    "text": "smoothing iron",
+    "frequency": 6
+  },
+  {
+    "text": "diaper",
+    "frequency": 3
+  },
+  {
+    "text": "nappy",
+    "frequency": 3
+  },
+  {
+    "text": "napkin",
+    "frequency": 3
+  },
+  {
+    "text": "dishwasher",
+    "frequency": 18
+  },
+  {
+    "text": "dish washer",
+    "frequency": 18
+  },
+  {
+    "text": "dishwashing machine",
+    "frequency": 18
+  },
+  {
+    "text": "pajama",
+    "frequency": 9
+  },
+  {
+    "text": "pyjama",
+    "frequency": 9
+  },
+  {
+    "text": "pj's",
+    "frequency": 9
+  },
+  {
+    "text": "jammies",
+    "frequency": 9
+  },
+  {
+    "text": "maraca",
+    "frequency": 2
+  },
+  {
+    "text": "apron",
+    "frequency": 2
+  },
+  {
+    "text": "barometer",
+    "frequency": 9
+  },
+  {
+    "text": "wallet",
+    "frequency": 1
+  },
+  {
+    "text": "billfold",
+    "frequency": 1
+  },
+  {
+    "text": "notecase",
+    "frequency": 1
+  },
+  {
+    "text": "pocketbook",
+    "frequency": 1
+  },
+  {
+    "text": "malinois",
+    "frequency": 1
+  },
+  {
+    "text": "Welsh springer spaniel",
+    "frequency": 1
+  },
+  {
+    "text": "Lhasa",
+    "frequency": 2
+  },
+  {
+    "text": "Lhasa apso",
+    "frequency": 2
+  },
+  {
+    "text": "Rhodesian ridgeback",
+    "frequency": 2
+  },
+  {
+    "text": "cassette player",
+    "frequency": 5
+  },
+  {
+    "text": "cassette",
+    "frequency": 9
+  },
+  {
+    "text": "German shepherd",
+    "frequency": 1
+  },
+  {
+    "text": "German shepherd dog",
+    "frequency": 1
+  },
+  {
+    "text": "German police dog",
+    "frequency": 1
+  },
+  {
+    "text": "alsatian",
+    "frequency": 1
+  },
+  {
+    "text": "miniature pinscher",
+    "frequency": 4
+  },
+  {
+    "text": "Doberman",
+    "frequency": 4
+  },
+  {
+    "text": "Doberman pinscher",
+    "frequency": 4
+  },
+  {
+    "text": "pop bottle",
+    "frequency": 5
+  },
+  {
+    "text": "soda bottle",
+    "frequency": 5
+  },
+  {
+    "text": "torch",
+    "frequency": 7
+  },
+  {
+    "text": "llama",
+    "frequency": 4
+  },
+  {
+    "text": "briard",
+    "frequency": 1
+  },
+  {
+    "text": "cairn",
+    "frequency": 3
+  },
+  {
+    "text": "cairn terrier",
+    "frequency": 3
+  },
+  {
+    "text": "Irish wolfhound",
+    "frequency": 2
+  },
+  {
+    "text": "Old English sheepdog",
+    "frequency": 1
+  },
+  {
+    "text": "bobtail",
+    "frequency": 1
+  },
+  {
+    "text": "knee pad",
+    "frequency": 10
+  },
+  {
+    "text": "bottlecap",
+    "frequency": 3
+  },
+  {
+    "text": "iPod",
+    "frequency": 1
+  },
+  {
+    "text": "stingray",
+    "frequency": 1
+  },
+  {
+    "text": "electric ray",
+    "frequency": 2
+  },
+  {
+    "text": "crampfish",
+    "frequency": 2
+  },
+  {
+    "text": "numbfish",
+    "frequency": 2
+  },
+  {
+    "text": "torpedo",
+    "frequency": 2
+  },
+  {
+    "text": "plow",
+    "frequency": 30
+  },
+  {
+    "text": "plough",
+    "frequency": 30
+  },
+  {
+    "text": "flatworm",
+    "frequency": 1
+  },
+  {
+    "text": "platyhelminth",
+    "frequency": 1
+  },
+  {
+    "text": "Petri dish",
+    "frequency": 1
+  },
+  {
+    "text": "pencil sharpener",
+    "frequency": 2
+  },
+  {
+    "text": "clumber",
+    "frequency": 1
+  },
+  {
+    "text": "clumber spaniel",
+    "frequency": 1
+  },
+  {
+    "text": "pillow",
+    "frequency": 1
+  },
+  {
+    "text": "holster",
+    "frequency": 1
+  },
+  {
+    "text": "revolver",
+    "frequency": 1
+  },
+  {
+    "text": "six-gun",
+    "frequency": 1
+  },
+  {
+    "text": "six-shooter",
+    "frequency": 1
+  },
+  {
+    "text": "African grey",
+    "frequency": 1
+  },
+  {
+    "text": "African gray",
+    "frequency": 1
+  },
+  {
+    "text": "Psittacus erithacus",
+    "frequency": 1
+  },
+  {
+    "text": "great grey owl",
+    "frequency": 2
+  },
+  {
+    "text": "great gray owl",
+    "frequency": 2
+  },
+  {
+    "text": "Strix nebulosa",
+    "frequency": 2
+  },
+  {
+    "text": "Rottweiler",
+    "frequency": 3
+  },
+  {
+    "text": "hyena",
+    "frequency": 2
+  },
+  {
+    "text": "hyaena",
+    "frequency": 2
+  },
+  {
+    "text": "go-kart",
+    "frequency": 7
+  },
+  {
+    "text": "skunk",
+    "frequency": 5
+  },
+  {
+    "text": "polecat",
+    "frequency": 6
+  },
+  {
+    "text": "wood pussy",
+    "frequency": 5
+  },
+  {
+    "text": "Walker hound",
+    "frequency": 4
+  },
+  {
+    "text": "Walker foxhound",
+    "frequency": 4
+  },
+  {
+    "text": "Boston bull",
+    "frequency": 7
+  },
+  {
+    "text": "Boston terrier",
+    "frequency": 7
+  },
+  {
+    "text": "dalmatian",
+    "frequency": 4
+  },
+  {
+    "text": "coach dog",
+    "frequency": 4
+  },
+  {
+    "text": "carriage dog",
+    "frequency": 4
+  },
+  {
+    "text": "mortar",
+    "frequency": 2
+  },
+  {
+    "text": "steel drum",
+    "frequency": 2
+  },
+  {
+    "text": "drum",
+    "frequency": 3
+  },
+  {
+    "text": "membranophone",
+    "frequency": 3
+  },
+  {
+    "text": "tympan",
+    "frequency": 3
+  },
+  {
+    "text": "abacus",
+    "frequency": 2
+  },
+  {
+    "text": "nail",
+    "frequency": 5
+  },
+  {
+    "text": "Pembroke",
+    "frequency": 3
+  },
+  {
+    "text": "Pembroke Welsh corgi",
+    "frequency": 3
+  },
+  {
+    "text": "Pomeranian",
+    "frequency": 1
+  },
+  {
+    "text": "golden retriever",
+    "frequency": 1
+  },
+  {
+    "text": "Cardigan",
+    "frequency": 4
+  },
+  {
+    "text": "Cardigan Welsh corgi",
+    "frequency": 4
+  },
+  {
+    "text": "bulletproof vest",
+    "frequency": 10
+  },
+  {
+    "text": "African elephant",
+    "frequency": 4
+  },
+  {
+    "text": "Loxodonta africana",
+    "frequency": 4
+  },
+  {
+    "text": "electric guitar",
+    "frequency": 2
+  },
+  {
+    "text": "cougar",
+    "frequency": 2
+  },
+  {
+    "text": "puma",
+    "frequency": 2
+  },
+  {
+    "text": "catamount",
+    "frequency": 5
+  },
+  {
+    "text": "mountain lion",
+    "frequency": 2
+  },
+  {
+    "text": "painter",
+    "frequency": 2
+  },
+  {
+    "text": "panther",
+    "frequency": 2
+  },
+  {
+    "text": "Felis concolor",
+    "frequency": 2
+  },
+  {
+    "text": "plate rack",
+    "frequency": 5
+  },
+  {
+    "text": "Dutch oven",
+    "frequency": 2
+  },
+  {
+    "text": "dugong",
+    "frequency": 1
+  },
+  {
+    "text": "Dugong dugon",
+    "frequency": 1
+  },
+  {
+    "text": "hippopotamus",
+    "frequency": 4
+  },
+  {
+    "text": "hippo",
+    "frequency": 4
+  },
+  {
+    "text": "river horse",
+    "frequency": 4
+  },
+  {
+    "text": "Hippopotamus amphibius",
+    "frequency": 4
+  },
+  {
+    "text": "killer whale",
+    "frequency": 2
+  },
+  {
+    "text": "killer",
+    "frequency": 2
+  },
+  {
+    "text": "orca",
+    "frequency": 2
+  },
+  {
+    "text": "grampus",
+    "frequency": 2
+  },
+  {
+    "text": "sea wolf",
+    "frequency": 2
+  },
+  {
+    "text": "Orcinus orca",
+    "frequency": 2
+  },
+  {
+    "text": "American alligator",
+    "frequency": 2
+  },
+  {
+    "text": "Alligator mississipiensis",
+    "frequency": 2
+  },
+  {
+    "text": "vizsla",
+    "frequency": 3
+  },
+  {
+    "text": "Hungarian pointer",
+    "frequency": 3
+  },
+  {
+    "text": "redbone",
+    "frequency": 1
+  },
+  {
+    "text": "lion",
+    "frequency": 1
+  },
+  {
+    "text": "king of beasts",
+    "frequency": 1
+  },
+  {
+    "text": "Panthera leo",
+    "frequency": 1
+  },
+  {
+    "text": "lynx",
+    "frequency": 3
+  },
+  {
+    "text": "tiger cat",
+    "frequency": 4
+  },
+  {
+    "text": "tiger",
+    "frequency": 4
+  },
+  {
+    "text": "Panthera tigris",
+    "frequency": 4
+  },
+  {
+    "text": "French horn",
+    "frequency": 1
+  },
+  {
+    "text": "horn",
+    "frequency": 5
+  },
+  {
+    "text": "cornet",
+    "frequency": 4
+  },
+  {
+    "text": "trumpet",
+    "frequency": 4
+  },
+  {
+    "text": "trump",
+    "frequency": 4
+  },
+  {
+    "text": "pug",
+    "frequency": 1
+  },
+  {
+    "text": "pug-dog",
+    "frequency": 1
+  },
+  {
+    "text": "indri",
+    "frequency": 3
+  },
+  {
+    "text": "indris",
+    "frequency": 3
+  },
+  {
+    "text": "Indri indri",
+    "frequency": 3
+  },
+  {
+    "text": "Indri brevicaudatus",
+    "frequency": 3
+  },
+  {
+    "text": "reel",
+    "frequency": 5
+  },
+  {
+    "text": "sunscreen",
+    "frequency": 4
+  },
+  {
+    "text": "sunblock",
+    "frequency": 4
+  },
+  {
+    "text": "sun blocker",
+    "frequency": 4
+  },
+  {
+    "text": "earthstar",
+    "frequency": 2
+  },
+  {
+    "text": "sea cucumber",
+    "frequency": 1
+  },
+  {
+    "text": "holothurian",
+    "frequency": 1
+  },
+  {
+    "text": "banana",
+    "frequency": 1
+  },
+  {
+    "text": "chain saw",
+    "frequency": 6
+  },
+  {
+    "text": "chainsaw",
+    "frequency": 6
+  },
+  {
+    "text": "cello",
+    "frequency": 4
+  },
+  {
+    "text": "violoncello",
+    "frequency": 4
+  },
+  {
+    "text": "tray",
+    "frequency": 2
+  },
+  {
+    "text": "binder",
+    "frequency": 6
+  },
+  {
+    "text": "ring-binder",
+    "frequency": 6
+  },
+  {
+    "text": "letter opener",
+    "frequency": 1
+  },
+  {
+    "text": "paper knife",
+    "frequency": 1
+  },
+  {
+    "text": "paperknife",
+    "frequency": 1
+  },
+  {
+    "text": "sock",
+    "frequency": 1
+  },
+  {
+    "text": "sea snake",
+    "frequency": 1
+  },
+  {
+    "text": "hognose snake",
+    "frequency": 1
+  },
+  {
+    "text": "puff adder",
+    "frequency": 1
+  },
+  {
+    "text": "sand viper",
+    "frequency": 1
+  },
+  {
+    "text": "vine snake",
+    "frequency": 1
+  },
+  {
+    "text": "night snake",
+    "frequency": 1
+  },
+  {
+    "text": "Hypsiglena torquata",
+    "frequency": 1
+  },
+  {
+    "text": "tench",
+    "frequency": 4
+  },
+  {
+    "text": "Tinca tinca",
+    "frequency": 4
+  },
+  {
+    "text": "barracouta",
+    "frequency": 4
+  },
+  {
+    "text": "snoek",
+    "frequency": 4
+  },
+  {
+    "text": "coho",
+    "frequency": 2
+  },
+  {
+    "text": "cohoe",
+    "frequency": 2
+  },
+  {
+    "text": "coho salmon",
+    "frequency": 2
+  },
+  {
+    "text": "blue jack",
+    "frequency": 2
+  },
+  {
+    "text": "silver salmon",
+    "frequency": 2
+  },
+  {
+    "text": "Oncorhynchus kisutch",
+    "frequency": 2
+  },
+  {
+    "text": "feather boa",
+    "frequency": 2
+  },
+  {
+    "text": "boa",
+    "frequency": 2
+  },
+  {
+    "text": "barn spider",
+    "frequency": 4
+  },
+  {
+    "text": "Araneus cavaticus",
+    "frequency": 4
+  },
+  {
+    "text": "hard disc",
+    "frequency": 2
+  },
+  {
+    "text": "hard disk",
+    "frequency": 2
+  },
+  {
+    "text": "fixed disk",
+    "frequency": 2
+  },
+  {
+    "text": "ballpoint",
+    "frequency": 1
+  },
+  {
+    "text": "ballpoint pen",
+    "frequency": 1
+  },
+  {
+    "text": "ballpen",
+    "frequency": 1
+  },
+  {
+    "text": "Biro",
+    "frequency": 1
+  },
+  {
+    "text": "shower cap",
+    "frequency": 5
+  },
+  {
+    "text": "Border collie",
+    "frequency": 1
+  },
+  {
+    "text": "collie",
+    "frequency": 2
+  },
+  {
+    "text": "English springer",
+    "frequency": 3
+  },
+  {
+    "text": "English springer spaniel",
+    "frequency": 3
+  },
+  {
+    "text": "Greater Swiss Mountain dog",
+    "frequency": 5
+  },
+  {
+    "text": "printer",
+    "frequency": 2
+  },
+  {
+    "text": "ice lolly",
+    "frequency": 1
+  },
+  {
+    "text": "lolly",
+    "frequency": 1
+  },
+  {
+    "text": "lollipop",
+    "frequency": 1
+  },
+  {
+    "text": "popsicle",
+    "frequency": 1
+  },
+  {
+    "text": "cheetah",
+    "frequency": 2
+  },
+  {
+    "text": "chetah",
+    "frequency": 2
+  },
+  {
+    "text": "Acinonyx jubatus",
+    "frequency": 2
+  },
+  {
+    "text": "reflex camera",
+    "frequency": 1
+  },
+  {
+    "text": "Polaroid camera",
+    "frequency": 1
+  },
+  {
+    "text": "Polaroid Land camera",
+    "frequency": 1
+  },
+  {
+    "text": "joystick",
+    "frequency": 2
+  },
+  {
+    "text": "whippet",
+    "frequency": 3
+  },
+  {
+    "text": "Italian greyhound",
+    "frequency": 2
+  },
+  {
+    "text": "safety pin",
+    "frequency": 1
+  },
+  {
+    "text": "kuvasz",
+    "frequency": 5
+  },
+  {
+    "text": "Great Pyrenees",
+    "frequency": 5
+  },
+  {
+    "text": "tape player",
+    "frequency": 4
+  },
+  {
+    "text": "Scotch terrier",
+    "frequency": 3
+  },
+  {
+    "text": "Scottish terrier",
+    "frequency": 3
+  },
+  {
+    "text": "Scottie",
+    "frequency": 3
+  },
+  {
+    "text": "jellyfish",
+    "frequency": 1
+  },
+  {
+    "text": "crash helmet",
+    "frequency": 1
+  },
+  {
+    "text": "disk brake",
+    "frequency": 1
+  },
+  {
+    "text": "disc brake",
+    "frequency": 1
+  },
+  {
+    "text": "honeycomb",
+    "frequency": 3
+  },
+  {
+    "text": "beaver",
+    "frequency": 2
+  },
+  {
+    "text": "porcupine",
+    "frequency": 1
+  },
+  {
+    "text": "hedgehog",
+    "frequency": 1
+  },
+  {
+    "text": "echidna",
+    "frequency": 3
+  },
+  {
+    "text": "spiny anteater",
+    "frequency": 3
+  },
+  {
+    "text": "anteater",
+    "frequency": 3
+  },
+  {
+    "text": "trilobite",
+    "frequency": 1
+  },
+  {
+    "text": "black widow",
+    "frequency": 1
+  },
+  {
+    "text": "Latrodectus mactans",
+    "frequency": 1
+  },
+  {
+    "text": "Afghan hound",
+    "frequency": 2
+  },
+  {
+    "text": "Afghan",
+    "frequency": 2
+  },
+  {
+    "text": "Gordon setter",
+    "frequency": 2
+  },
+  {
+    "text": "Kerry blue terrier",
+    "frequency": 1
+  },
+  {
+    "text": "dhole",
+    "frequency": 1
+  },
+  {
+    "text": "Cuon alpinus",
+    "frequency": 1
+  },
+  {
+    "text": "Weimaraner",
+    "frequency": 3
+  },
+  {
+    "text": "black-and-tan coonhound",
+    "frequency": 3
+  },
+  {
+    "text": "Appenzeller",
+    "frequency": 4
+  },
+  {
+    "text": "sea urchin",
+    "frequency": 1
+  },
+  {
+    "text": "miniature schnauzer",
+    "frequency": 1
+  },
+  {
+    "text": "ruddy turnstone",
+    "frequency": 1
+  },
+  {
+    "text": "Arenaria interpres",
+    "frequency": 1
+  },
+  {
+    "text": "Indian cobra",
+    "frequency": 1
+  },
+  {
+    "text": "Naja naja",
+    "frequency": 1
+  },
+  {
+    "text": "borzoi",
+    "frequency": 4
+  },
+  {
+    "text": "Russian wolfhound",
+    "frequency": 4
+  },
+  {
+    "text": "pill bottle",
+    "frequency": 1
+  },
+  {
+    "text": "EntleBucher",
+    "frequency": 5
+  },
+  {
+    "text": "pitcher",
+    "frequency": 1
+  },
+  {
+    "text": "ewer",
+    "frequency": 1
+  },
+  {
+    "text": "thimble",
+    "frequency": 1
+  },
+  {
+    "text": "microphone",
+    "frequency": 2
+  },
+  {
+    "text": "mike",
+    "frequency": 2
+  },
+  {
+    "text": "plane",
+    "frequency": 1
+  },
+  {
+    "text": "carpenter's plane",
+    "frequency": 1
+  },
+  {
+    "text": "woodworking plane",
+    "frequency": 1
+  },
+  {
+    "text": "Bernese mountain dog",
+    "frequency": 1
+  },
+  {
+    "text": "black stork",
+    "frequency": 2
+  },
+  {
+    "text": "Ciconia nigra",
+    "frequency": 2
+  },
+  {
+    "text": "goose",
+    "frequency": 2
+  },
+  {
+    "text": "cardigan",
+    "frequency": 1
+  },
+  {
+    "text": "cleaver",
+    "frequency": 2
+  },
+  {
+    "text": "meat cleaver",
+    "frequency": 2
+  },
+  {
+    "text": "chopper",
+    "frequency": 2
+  },
+  {
+    "text": "ocarina",
+    "frequency": 1
+  },
+  {
+    "text": "sweet potato",
+    "frequency": 1
+  },
+  {
+    "text": "basenji",
+    "frequency": 1
+  },
+  {
+    "text": "sidewinder",
+    "frequency": 1
+  },
+  {
+    "text": "horned rattlesnake",
+    "frequency": 1
+  },
+  {
+    "text": "Crotalus cerastes",
+    "frequency": 1
+  },
+  {
+    "text": "armadillo",
+    "frequency": 2
+  },
+  {
+    "text": "ostrich",
+    "frequency": 3
+  },
+  {
+    "text": "Struthio camelus",
+    "frequency": 3
+  },
+  {
+    "text": "frilled lizard",
+    "frequency": 1
+  },
+  {
+    "text": "Chlamydosaurus kingi",
+    "frequency": 1
+  },
+  {
+    "text": "lorikeet",
+    "frequency": 1
+  },
+  {
+    "text": "boxer",
+    "frequency": 1
+  },
+  {
+    "text": "English foxhound",
+    "frequency": 1
+  },
+  {
+    "text": "spider web",
+    "frequency": 3
+  },
+  {
+    "text": "spider's web",
+    "frequency": 3
+  },
+  {
+    "text": "Brittany spaniel",
+    "frequency": 2
+  },
+  {
+    "text": "Ibizan hound",
+    "frequency": 1
+  },
+  {
+    "text": "Ibizan Podenco",
+    "frequency": 1
+  },
+  {
+    "text": "pick",
+    "frequency": 1
+  },
+  {
+    "text": "plectrum",
+    "frequency": 1
+  },
+  {
+    "text": "plectron",
+    "frequency": 1
+  },
+  {
+    "text": "espresso maker",
+    "frequency": 1
+  },
+  {
+    "text": "hummingbird",
+    "frequency": 1
+  },
+  {
+    "text": "white wolf",
+    "frequency": 3
+  },
+  {
+    "text": "Arctic wolf",
+    "frequency": 3
+  },
+  {
+    "text": "Canis lupus tundrarum",
+    "frequency": 3
+  },
+  {
+    "text": "Arctic fox",
+    "frequency": 1
+  },
+  {
+    "text": "white fox",
+    "frequency": 1
+  },
+  {
+    "text": "Alopex lagopus",
+    "frequency": 1
+  },
+  {
+    "text": "container ship",
+    "frequency": 1
+  },
+  {
+    "text": "containership",
+    "frequency": 1
+  },
+  {
+    "text": "container vessel",
+    "frequency": 1
+  },
+  {
+    "text": "saltshaker",
+    "frequency": 1
+  },
+  {
+    "text": "salt shaker",
+    "frequency": 1
+  },
+  {
+    "text": "cock",
+    "frequency": 1
+  },
+  {
+    "text": "wool",
+    "frequency": 1
+  },
+  {
+    "text": "woolen",
+    "frequency": 1
+  },
+  {
+    "text": "woollen",
+    "frequency": 1
+  },
+  {
+    "text": "Samoyed",
+    "frequency": 1
+  },
+  {
+    "text": "Samoyede",
+    "frequency": 1
+  },
+  {
+    "text": "head cabbage",
+    "frequency": 1
+  },
+  {
+    "text": "hammer",
+    "frequency": 2
+  },
+  {
+    "text": "running shoe",
+    "frequency": 1
+  },
+  {
+    "text": "mongoose",
+    "frequency": 1
+  },
+  {
+    "text": "marmot",
+    "frequency": 1
+  },
+  {
+    "text": "otter",
+    "frequency": 1
+  },
+  {
+    "text": "dung beetle",
+    "frequency": 1
+  },
+  {
+    "text": "ringneck snake",
+    "frequency": 1
+  },
+  {
+    "text": "ring-necked snake",
+    "frequency": 1
+  },
+  {
+    "text": "ring snake",
+    "frequency": 1
+  },
+  {
+    "text": "thunder snake",
+    "frequency": 1
+  },
+  {
+    "text": "worm snake",
+    "frequency": 1
+  },
+  {
+    "text": "Carphophis amoenus",
+    "frequency": 1
+  },
+  {
+    "text": "eft",
+    "frequency": 1
+  },
+  {
+    "text": "teddy",
+    "frequency": 1
+  },
+  {
+    "text": "teddy bear",
+    "frequency": 1
+  },
+  {
+    "text": "Mexican hairless",
+    "frequency": 1
+  },
+  {
+    "text": "Indian elephant",
+    "frequency": 2
+  },
+  {
+    "text": "Elephas maximus",
+    "frequency": 2
+  },
+  {
+    "text": "wooden spoon",
+    "frequency": 2
+  },
+  {
+    "text": "tabby",
+    "frequency": 3
+  },
+  {
+    "text": "tabby cat",
+    "frequency": 3
+  },
+  {
+    "text": "Egyptian cat",
+    "frequency": 5
+  },
+  {
+    "text": "mousetrap",
+    "frequency": 1
+  },
+  {
+    "text": "oxygen mask",
+    "frequency": 1
+  },
+  {
+    "text": "slide rule",
+    "frequency": 2
+  },
+  {
+    "text": "slipstick",
+    "frequency": 2
+  },
+  {
+    "text": "rock python",
+    "frequency": 1
+  },
+  {
+    "text": "rock snake",
+    "frequency": 1
+  },
+  {
+    "text": "Python sebae",
+    "frequency": 1
+  },
+  {
+    "text": "water snake",
+    "frequency": 1
+  },
+  {
+    "text": "Tibetan mastiff",
+    "frequency": 1
+  },
+  {
+    "text": "tarantula",
+    "frequency": 1
+  },
+  {
+    "text": "wolf spider",
+    "frequency": 2
+  },
+  {
+    "text": "hunting spider",
+    "frequency": 2
+  },
+  {
+    "text": "plate",
+    "frequency": 1
+  },
+  {
+    "text": "hot pot",
+    "frequency": 1
+  },
+  {
+    "text": "hotpot",
+    "frequency": 1
+  },
+  {
+    "text": "walking stick",
+    "frequency": 1
+  },
+  {
+    "text": "walkingstick",
+    "frequency": 1
+  },
+  {
+    "text": "stick insect",
+    "frequency": 1
+  },
+  {
+    "text": "face powder",
+    "frequency": 1
+  },
+  {
+    "text": "flat-coated retriever",
+    "frequency": 1
+  },
+  {
+    "text": "German short-haired pointer",
+    "frequency": 1
+  },
+  {
+    "text": "coral reef",
+    "frequency": 1
+  },
+  {
+    "text": "komondor",
+    "frequency": 1
+  },
+  {
+    "text": "Scottish deerhound",
+    "frequency": 2
+  },
+  {
+    "text": "deerhound",
+    "frequency": 2
+  },
+  {
+    "text": "magpie",
+    "frequency": 1
+  },
+  {
+    "text": "black grouse",
+    "frequency": 2
+  },
+  {
+    "text": "chimpanzee",
+    "frequency": 3
+  },
+  {
+    "text": "chimp",
+    "frequency": 3
+  },
+  {
+    "text": "Pan troglodytes",
+    "frequency": 3
+  },
+  {
+    "text": "meerkat",
+    "frequency": 1
+  },
+  {
+    "text": "mierkat",
+    "frequency": 1
+  },
+  {
+    "text": "acorn",
+    "frequency": 1
+  },
+  {
+    "text": "basset",
+    "frequency": 2
+  },
+  {
+    "text": "basset hound",
+    "frequency": 2
+  },
+  {
+    "text": "terrapin",
+    "frequency": 1
+  },
+  {
+    "text": "weasel",
+    "frequency": 1
+  },
+  {
+    "text": "fitch",
+    "frequency": 1
+  },
+  {
+    "text": "foulmart",
+    "frequency": 1
+  },
+  {
+    "text": "foumart",
+    "frequency": 1
+  },
+  {
+    "text": "Mustela putorius",
+    "frequency": 1
+  },
+  {
+    "text": "badger",
+    "frequency": 2
+  },
+  {
+    "text": "Shetland sheepdog",
+    "frequency": 1
+  },
+  {
+    "text": "Shetland sheep dog",
+    "frequency": 1
+  },
+  {
+    "text": "Shetland",
+    "frequency": 1
+  },
+  {
+    "text": "orangutan",
+    "frequency": 1
+  },
+  {
+    "text": "orang",
+    "frequency": 1
+  },
+  {
+    "text": "orangutang",
+    "frequency": 1
+  },
+  {
+    "text": "Pongo pygmaeus",
+    "frequency": 1
+  },
+  {
+    "text": "tailed frog",
+    "frequency": 1
+  },
+  {
+    "text": "bell toad",
+    "frequency": 1
+  },
+  {
+    "text": "ribbed toad",
+    "frequency": 1
+  },
+  {
+    "text": "tailed toad",
+    "frequency": 1
+  },
+  {
+    "text": "Ascaphus trui",
+    "frequency": 1
+  },
+  {
+    "text": "bustard",
+    "frequency": 1
+  },
+  {
+    "text": "white stork",
+    "frequency": 1
+  },
+  {
+    "text": "Ciconia ciconia",
+    "frequency": 1
+  },
+  {
+    "text": "banded gecko",
+    "frequency": 1
+  },
+  {
+    "text": "whiptail",
+    "frequency": 1
+  },
+  {
+    "text": "whiptail lizard",
+    "frequency": 1
+  },
+  {
+    "text": "gorilla",
+    "frequency": 2
+  },
+  {
+    "text": "Gorilla gorilla",
+    "frequency": 2
+  },
+  {
+    "text": "little blue heron",
+    "frequency": 1
+  },
+  {
+    "text": "Egretta caerulea",
+    "frequency": 1
+  },
+  {
+    "text": "chain mail",
+    "frequency": 1
+  },
+  {
+    "text": "ring mail",
+    "frequency": 1
+  },
+  {
+    "text": "mail",
+    "frequency": 1
+  },
+  {
+    "text": "chain armor",
+    "frequency": 1
+  },
+  {
+    "text": "chain armour",
+    "frequency": 1
+  },
+  {
+    "text": "ring armor",
+    "frequency": 1
+  },
+  {
+    "text": "ring armour",
+    "frequency": 1
+  },
+  {
+    "text": "howler monkey",
+    "frequency": 1
+  },
+  {
+    "text": "howler",
+    "frequency": 1
+  },
+  {
+    "text": "siamang",
+    "frequency": 1
+  },
+  {
+    "text": "Hylobates syndactylus",
+    "frequency": 1
+  },
+  {
+    "text": "Symphalangus syndactylus",
+    "frequency": 1
+  },
+  {
+    "text": "spatula",
+    "frequency": 1
+  },
+  {
+    "text": "dough",
+    "frequency": 1
+  },
+  {
+    "text": "lens cap",
+    "frequency": 1
+  },
+  {
+    "text": "lens cover",
+    "frequency": 1
+  },
+  {
+    "text": "screwdriver",
+    "frequency": 1
+  },
+  {
+    "text": "macaw",
+    "frequency": 1
+  },
+  {
+    "text": "peacock",
+    "frequency": 1
+  },
+  {
+    "text": "beer glass",
+    "frequency": 1
+  },
+  {
+    "text": "drake",
+    "frequency": 1
+  },
+  {
+    "text": "French bulldog",
+    "frequency": 2
+  },
+  {
+    "text": "leopard",
+    "frequency": 1
+  },
+  {
+    "text": "Panthera pardus",
+    "frequency": 1
+  },
+  {
+    "text": "sulphur-crested cockatoo",
+    "frequency": 1
+  },
+  {
+    "text": "Kakatoe galerita",
+    "frequency": 1
+  },
+  {
+    "text": "Cacatua galerita",
+    "frequency": 1
+  },
+  {
+    "text": "power drill",
+    "frequency": 1
+  }
+]
