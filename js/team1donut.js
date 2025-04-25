@@ -1,4 +1,4 @@
-d3.json("/data/team1donut.json").then(function(data) {
+d3.json("data/team1donut.json").then(function(data) {
 chart = {
   const height = Math.min(width,700);
   const radius = Math.min(width, height) / 2;
