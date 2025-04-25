@@ -1,4 +1,4 @@
-data = 
+d3.json("/data/team1donut.json").then(function(data) {
 chart = {
   const height = Math.min(width,700);
   const radius = Math.min(width, height) / 2;
@@ -51,3 +51,7 @@ chart = {
 
   return svg.node();
 }
+}).catch(function(error) {
+  // Handle any errors that occur during loading
+  console.error("Error loading JSON file:", error);
+});
