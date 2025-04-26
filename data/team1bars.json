@@ -1,0 +1,102 @@
+[
+    {
+        "century": "-1699",
+        "tod": "morning",
+        "count": 0
+    },
+    {
+        "century": "-1699",
+        "tod": "day",
+        "count": 0
+    },
+    {
+        "century": "-1699",
+        "tod": "dusk",
+        "count": 3
+    },
+    {
+        "century": "-1699",
+        "tod": "night",
+        "count": 35
+    },
+    {
+        "century": "1700-1799",
+        "tod": "morning",
+        "count": 13
+    },
+    {
+        "century": "1700-1799",
+        "tod": "day",
+        "count": 1
+    },
+    {
+        "century": "1700-1799",
+        "tod": "dusk",
+        "count": 1
+    },
+    {
+        "century": "1700-1799",
+        "tod": "night",
+        "count": 52
+    },
+    {
+        "century": "1800-1899",
+        "tod": "morning",
+        "count": 46
+    },
+    {
+        "century": "1800-1899",
+        "tod": "day",
+        "count": 2
+    },
+    {
+        "century": "1800-1899",
+        "tod": "dusk",
+        "count": 19
+    },
+    {
+        "century": "1800-1899",
+        "tod": "night",
+        "count": 461
+    },
+    {
+        "century": "1900-1999",
+        "tod": "morning",
+        "count": 137
+    },
+    {
+        "century": "1900-1999",
+        "tod": "day",
+        "count": 7
+    },
+    {
+        "century": "1900-1999",
+        "tod": "dusk",
+        "count": 43
+    },
+    {
+        "century": "1900-1999",
+        "tod": "night",
+        "count": 751
+    },
+    {
+        "century": "2000-20024",
+        "tod": "morning",
+        "count": 51
+    },
+    {
+        "century": "2000-20024",
+        "tod": "day",
+        "count": 5
+    },
+    {
+        "century": "2000-20024",
+        "tod": "dusk",
+        "count": 29
+    },
+    {
+        "century": "2000-20024",
+        "tod": "night",
+        "count": 507
+    }
+]
