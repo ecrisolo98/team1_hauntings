@@ -62,14 +62,16 @@ d3.json("../data/team1bars.json").then(function(data) {
     .attr("x", (width - marginLeft - marginRight) / 2 + marginLeft)
     .attr("y", height)
     .attr("dy", "-0.5em")
-    .text("Century");
+    .text("Century")
+    .style("font-size", "20px");
 
   svg.append("text")
     .attr("text-anchor", "middle")
     .attr("transform", "rotate(-90)")
     .attr("x", -(height - marginTop - marginBottom) / 2 - marginTop)
     .attr("y", 12)
-    .text("Count");
+    .text("Total Hauntings")
+    .style("font-size", "20px");
   
   // Create a legend group above the chart
 const legend = svg.append("g")
