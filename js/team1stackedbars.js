@@ -1,3 +1,4 @@
+d3.json("data/team1bars.json").then(function(data) {
 chart = {
   // Specify the chart’s dimensions.
   const width = 928;
