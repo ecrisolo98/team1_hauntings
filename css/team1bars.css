@@ -69,3 +69,15 @@ svg rect:hover {
   pointer-events: none;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
+.legend {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.legend-item {
+  cursor: pointer;
+}
+
+.legend-item text {
+  alignment-baseline: middle;
+}
