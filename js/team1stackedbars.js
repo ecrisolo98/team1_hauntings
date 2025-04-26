@@ -1,4 +1,4 @@
-d3.json("data/team1bars.json").then(function(data) {
+d3.json("../data/team1bars.json").then(function(data) {
   const width = 928;
   const height = 500;
   const marginTop = 10;
