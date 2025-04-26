@@ -70,12 +70,7 @@ d3.json("../data/team1bars.json").then(function(data) {
     .attr("x", -(height - marginTop - marginBottom) / 2 - marginTop)
     .attr("y", 12)
     .text("Count");
-
-}).catch(function(error) {
-  console.error("Error loading data.json:", error);
-});
-
-// Create a legend group above the chart
+  // Create a legend group above the chart
 const legend = svg.append("g")
   .attr("class", "legend")
   .attr("transform", `translate(${marginLeft},${marginTop})`);
@@ -110,4 +105,10 @@ legendItems.append("text")
     .text(d => d)
     .style("font-size", "12px")
     .style("fill", "#333");
+
+}).catch(function(error) {
+  console.error("Error loading data.json:", error);
+});
+
+
 
