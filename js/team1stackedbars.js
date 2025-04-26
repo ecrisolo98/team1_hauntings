@@ -74,7 +74,7 @@ d3.json("../data/team1bars.json").then(function(data) {
   // Create a legend group above the chart
 const legend = svg.append("g")
   .attr("class", "legend")
-  .attr("transform", `translate(${marginLeft},${marginTop})`);
+  .attr("transform", `translate(${marginLeft},${marginTop /2})`);
 
 const legendItemSize = 30;
 const legendSpacing = 8;
