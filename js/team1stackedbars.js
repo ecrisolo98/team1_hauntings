@@ -74,3 +74,40 @@ d3.json("data.json").then(function(data) {
 }).catch(function(error) {
   console.error("Error loading data.json:", error);
 });
+
+// Create a legend group above the chart
+const legend = svg.append("g")
+  .attr("class", "legend")
+  .attr("transform", `translate(${marginLeft},${marginTop})`);
+
+const legendItemSize = 18;
+const legendSpacing = 8;
+
+// Flatten the color scale domain
+const legendData = color.domain();
+
+// Create one group per item
+const legendItems = legend.selectAll(".legend-item")
+  .data(legendData)
+  .enter()
+  .append("g")
+    .attr("class", "legend-item")
+    .attr("transform", (d, i) => `translate(${i * 120}, 0)`);
+
+// Add colored squares
+legendItems.append("rect")
+    .attr("width", legendItemSize)
+    .attr("height", legendItemSize)
+    .attr("fill", d => color(d))
+    .attr("rx", 4)
+    .attr("ry", 4);
+
+// Add text next to squares
+legendItems.append("text")
+    .attr("x", legendItemSize + 6)
+    .attr("y", legendItemSize / 2)
+    .attr("dy", "0.35em")
+    .text(d => d)
+    .style("font-size", "12px")
+    .style("fill", "#333");
+
