@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-		<title>Haunted Places heatmap visualization</title>
-	  	<link href="../css/team1bars.css" rel="stylesheet" type="text/css"/>
+<head>
+  <meta charset="utf-8">
+  <title>Haunted Places Stacked Barchart Visualization</title>
+  <link href="../css/team1bars.css" rel="stylesheet" type="text/css" />
+</head>
 
-	</head>
-	<body style="overflow: scroll">
-		<div class="header align" > 
-			Stacked Bar Charts Showing Hauntings by Time of Day per Century
-		</div>
-		<div id="chart"></div>
-		<script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.js"></script>
-		<script type="text/javascript" defer src="../js/team1stackedbars.js"></script>
-		
+<body>
+  <div class="header align">
+    Stacked Bar Charts Showing Hauntings by Time of Day per Century
+  </div>
 
-	</body>
+  <div id="chart"></div>
+
+  <!-- Libraries -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Your script -->
+  <script defer src="../js/team1stackedbars.js"></script>
+</body>
 </html>
+
