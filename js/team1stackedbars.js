@@ -1,8 +1,8 @@
 d3.json("../data/team1bars.json").then(function(data) {
-  const width = 928;
-  const height = 500;
-  const marginTop = 10;
-  const marginRight = 10;
+  const width = 1028;
+  const height = 600;
+  const marginTop = 40;
+  const marginRight = 40;
   const marginBottom = 40;
   const marginLeft = 40;
 
