@@ -1,0 +1,71 @@
+/* Base page styling */
+body {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  margin: 40px;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Title styling */
+h2 {
+  text-align: center;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* SVG base */
+svg {
+  font: 12px sans-serif;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Bars */
+svg rect {
+  stroke: white;
+  stroke-width: 1px;
+  transition: all 0.3s ease;
+  rx: 3px; /* rounded corners */
+  ry: 3px;
+}
+
+/* Bars hover effect */
+svg rect:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* Axis labels (x and y) */
+.axis-label {
+  font-size: 14px;
+  font-weight: bold;
+  fill: #555;
+}
+
+/* Axis ticks */
+.axis text {
+  fill: #666;
+  font-size: 11px;
+}
+
+/* Axis lines */
+.axis path,
+.axis line {
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+}
+
+/* Tooltip (if you ever want fancier tooltips later) */
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 6px 12px;
+  font-size: 12px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
