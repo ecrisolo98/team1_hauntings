@@ -2,9 +2,9 @@ d3.json("../data/team1bars.json").then(function(data) {
   const width = 1028;
   const height = 600;
   const marginTop = 40;
-  const marginRight = 40;
+  const marginRight = 10;
   const marginBottom = 40;
-  const marginLeft = 40;
+  const marginLeft = 50;
 
   const series = d3.stack()
     .keys(d3.union(data.map(d => d.tod)))
@@ -70,12 +70,13 @@ d3.json("../data/team1bars.json").then(function(data) {
     .attr("x", -(height - marginTop - marginBottom) / 2 - marginTop)
     .attr("y", 12)
     .text("Count");
+  
   // Create a legend group above the chart
 const legend = svg.append("g")
   .attr("class", "legend")
   .attr("transform", `translate(${marginLeft},${marginTop})`);
 
-const legendItemSize = 18;
+const legendItemSize = 30;
 const legendSpacing = 8;
 
 // Flatten the color scale domain
