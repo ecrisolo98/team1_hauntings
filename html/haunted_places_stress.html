@@ -1,111 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Haunted Places Stress Radial Bar Chart</title>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <meta charset="utf-8">
+  <title>Haunted Places Stress Radial Chart</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #eee;
-      text-align: center;
+      font: 12px sans-serif;
     }
+
     svg {
-      background-color: #222;
-      margin-top: 50px;
+      margin: 0px auto;
+      display: block;
     }
+
+    path.arc {
+      opacity: 0.9;
+      transition: opacity 0.5s;
+    }
+
+    path.arc:hover {
+      opacity: 0.7;
+    }
+
+    .tooltip {
+      position: absolute;
+      display: none;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 3px;
+      box-shadow: -3px 3px 15px #888;
+      color: white;
+      padding: 6px;
+    }
+
     .legend {
       display: inline-block;
       width: 20px;
       height: 20px;
       margin-right: 10px;
     }
+
     .legend-container {
       text-align: left;
       margin: 20px;
     }
   </style>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
+  <h1>Haunted Places Stress Radial Chart</h1>
+  <svg id="chart" width="960" height="500"></svg>
 
-<h1>Haunted Places vs State Stress - Radial Bar Chart</h1>
-
-<svg id="radial" width="800" height="800"></svg>
-
-<div class="legend-container">
-  <h3>Legend: Stress Rank</h3>
-  <div>
-    <div class="legend" style="background-color: #f7a4a4;"></div> Low Stress
-    <div class="legend" style="background-color: #d61e1e;"></div> High Stress
+  <div class="legend-container">
+    <h3>Legend: Stress Rank</h3>
+    <div>
+      <div class="legend" style="background-color: #f7a4a4;"></div> Low Stress
+      <div class="legend" style="background-color: #d61e1e;"></div> High Stress
+    </div>
   </div>
-</div>
 
-<script>
-// Load data from an external JSON file (ensure this JSON file is accessible)
-d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) {
+  <script>
+    const width = 960,
+          height = 500,
+          chartRadius = height / 2 - 40;
 
-  // Sort the data by haunted_places in descending order and take the top 10 states
-  const topStates = data.sort((a, b) => b.haunted_places - a.haunted_places).slice(0, 10);
+    const colorScale = d3.scaleSequential(d3.interpolateReds)
+      .domain([0, 50]);  // Assuming stress rank ranges from 0 to 50
 
-  // Dimensions of the chart
-  const width = 800;
-  const height = 800;
-  const radius = Math.min(width, height) / 2 - 50;  // Adjust the radius to match the new size
-  const padding = 50;
-  const barWidth = 20; // Set a constant bar width
+    const arcMinRadius = 10,
+          arcPadding = 10,
+          labelPadding = -5,
+          numTicks = 10;
 
-  // Color scale for stress rank (e.g., lighter for lower stress, darker for higher stress)
-  const colorScale = d3.scaleSequential(d3.interpolateReds)
-    .domain([0, 50]); // Assuming stress rank goes from 0 (low stress) to 50 (high stress)
+    let svg = d3.select('#chart')
+      .append('g')
+      .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
 
-  // Size scale for the radius (mapping haunted places count to radius size)
-  const radiusScale = d3.scaleLinear()
-    .domain([0, d3.max(topStates, d => d.haunted_places)])
-    .range([0, radius]); // Range for bar sizes (adjust the max size)
+    let tooltip = d3.select('body').append('div')
+      .attr('class', 'tooltip');
 
-  // Create SVG element
-  const svg = d3.select("#radial")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g")
-    .attr("transform", `translate(${width / 2}, ${height / 2})`);
+    // Load the haunted_stress.json data
+    d3.json('haunted_stress.json').then(function(data) {
 
-  // Create arc generator for radial bars
-  const arc = d3.arc()
-    .innerRadius(d => radiusScale(d.haunted_places) - barWidth) // Adjust bar width
-    .outerRadius(d => radiusScale(d.haunted_places)) // Adjust bar width
-    .startAngle((d, i) => (i * Math.PI * 2) / topStates.length)
-    .endAngle((d, i) => ((i + 1) * Math.PI * 2) / topStates.length)
-    .cornerRadius(5);  // Add rounded corners for smooth edges
+      const scale = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.haunted_places) * 1.1])
+        .range([0, 2 * Math.PI]);
 
-  // Create radial bars for each state
-  svg.selectAll("g")
-    .data(topStates)
-    .enter().append("g")
-    .each(function(d, i) {
-      const g = d3.select(this);
-      
-      // Create arc segments (bars)
-      g.append("path")
-        .attr("d", arc)
-        .attr("fill", d => colorScale(d.stress_rank));
+      let ticks = scale.ticks(numTicks).slice(0, -1);
+      const keys = data.map((d, i) => d.state);
+      const numArcs = keys.length;
+      const arcWidth = (chartRadius - arcMinRadius - numArcs * arcPadding) / numArcs;
 
-      // Add state names on top of each bar
-      g.append("text")
-        .attr("x", (d, i) => (radiusScale(d.haunted_places) + barWidth + 10) * Math.cos((i * Math.PI * 2) / topStates.length))  // Adjust position
-        .attr("y", (d, i) => (radiusScale(d.haunted_places) + barWidth + 10) * Math.sin((i * Math.PI * 2) / topStates.length))  // Adjust position
-        .attr("fill", "black")  // Change text color to black
-        .attr("text-anchor", "middle")
-        .attr("alignment-baseline", "middle")
+      let arc = d3.arc()
+        .innerRadius((d, i) => getInnerRadius(i))
+        .outerRadius((d, i) => getOuterRadius(i))
+        .startAngle(0)
+        .endAngle((d, i) => scale(d.haunted_places));
+
+      let radialAxis = svg.append('g')
+        .attr('class', 'r axis')
+        .selectAll('g')
+        .data(data)
+        .enter().append('g');
+
+      radialAxis.append('circle')
+        .attr('r', (d, i) => getOuterRadius(i) + arcPadding);
+
+      radialAxis.append('text')
+        .attr('x', labelPadding)
+        .attr('y', (d, i) => -getOuterRadius(i) + arcPadding)
         .text(d => d.state);
+
+      let axialAxis = svg.append('g')
+        .attr('class', 'a axis')
+        .selectAll('g')
+        .data(ticks)
+        .enter().append('g')
+        .attr('transform', d => 'rotate(' + (rad2deg(scale(d)) - 90) + ')');
+
+      axialAxis.append('line')
+        .attr('x2', chartRadius);
+
+      axialAxis.append('text')
+        .attr('x', chartRadius + 10)
+        .style('text-anchor', d => (scale(d) >= Math.PI && scale(d) < 2 * Math.PI ? 'end' : null))
+        .attr('transform', d => 'rotate(' + (90 - rad2deg(scale(d))) + ',' + (chartRadius + 10) + ',0)')
+        .text(d => d);
+
+      // Data arcs
+      let arcs = svg.append('g')
+        .attr('class', 'data')
+        .selectAll('path')
+        .data(data)
+        .enter().append('path')
+        .attr('class', 'arc')
+        .style('fill', d => colorScale(d.stress_rank));
+
+      arcs.transition()
+        .delay((d, i) => i * 200)
+        .duration(1000)
+        .attrTween('d', arcTween);
+
+      arcs.on('mousemove', showTooltip)
+        .on('mouseout', hideTooltip);
+
+      function arcTween(d, i) {
+        let interpolate = d3.interpolate(0, d.haunted_places);
+        return t => arc(interpolate(t), i);
+      }
+
+      function showTooltip(d) {
+        tooltip.style('left', (d3.event.pageX + 10) + 'px')
+          .style('top', (d3.event.pageY - 25) + 'px')
+          .style('display', 'inline-block')
+          .html('State: ' + d.state + '<br>Haunted Places: ' + d.haunted_places + '<br>Stress Rank: ' + d.stress_rank);
+      }
+
+      function hideTooltip() {
+        tooltip.style('display', 'none');
+      }
+
+      function rad2deg(angle) {
+        return angle * 180 / Math.PI;
+      }
+
+      function getInnerRadius(index) {
+        return arcMinRadius + (numArcs - (index + 1)) * (arcWidth + arcPadding);
+      }
+
+      function getOuterRadius(index) {
+        return getInnerRadius(index) + arcWidth;
+      }
+    }).catch(function(error) {
+      console.error('Error loading the JSON data: ', error);
     });
 
-}).catch(function(error) {
-  console.error("Error loading the JSON data: ", error);
-});
-
-</script>
-
+  </script>
 </body>
 </html>
+
