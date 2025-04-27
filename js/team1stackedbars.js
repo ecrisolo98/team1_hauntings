@@ -3,8 +3,8 @@ d3.json("../data/team1bars.json").then(function(data) {
   const height = 600;
   const marginTop = 40;
   const marginRight = 10;
-  const marginBottom = 40;
-  const marginLeft = 50;
+  const marginBottom = 60;
+  const marginLeft = 80;
 
   const series = d3.stack()
     .keys(d3.union(data.map(d => d.tod)))
