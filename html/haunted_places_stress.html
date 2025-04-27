@@ -27,8 +27,8 @@
 // Load data from an external JSON file (ensure this JSON file is accessible)
 d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) {
 
-  // Sort the data by haunted_places in descending order and take the top 20 states
-  const topStates = data.sort((a, b) => b.haunted_places - a.haunted_places).slice(0, 20);
+  // Sort the data by haunted_places in descending order and take the top 10 states
+  const topStates = data.sort((a, b) => b.haunted_places - a.haunted_places).slice(0, 10);
 
   // Dimensions of the chart
   const width = 800;
