@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Haunted Places Stress Radial Chart</title>
+  <title>Haunted Places Stress Radial Bar Chart</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <style>
     body {
@@ -29,7 +29,7 @@
 </head>
 <body>
 
-<h1>Haunted Places vs State Stress</h1>
+<h1>Haunted Places vs State Stress - Radial Bar Chart</h1>
 
 <svg id="radial" width="800" height="800"></svg>
 
@@ -61,7 +61,7 @@ d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) 
   // Size scale for the radius (mapping haunted places count to radius size)
   const radiusScale = d3.scaleLinear()
     .domain([0, d3.max(topStates, d => d.haunted_places)])
-    .range([20, 100]); // Range for circle sizes (adjust the max size)
+    .range([0, radius]); // Range for bar sizes (adjust the max size)
 
   // Create SVG element
   const svg = d3.select("#radial")
@@ -70,30 +70,33 @@ d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) 
     .append("g")
     .attr("transform", `translate(${width / 2}, ${height / 2})`);
 
-  // Create circles for each state
-  const numStates = topStates.length;
-  const angleStep = 2 * Math.PI / numStates;
+  // Create arc generator for radial bars
+  const arc = d3.arc()
+    .innerRadius(0)
+    .outerRadius(d => radiusScale(d.haunted_places))
+    .startAngle((d, i) => (i * Math.PI * 2) / topStates.length)
+    .endAngle((d, i) => ((i + 1) * Math.PI * 2) / topStates.length);
 
-  svg.selectAll("circle")
+  // Create radial bars for each state
+  svg.selectAll("g")
     .data(topStates)
-    .enter().append("circle")
-    .attr("cx", (d, i) => radius * Math.cos(i * angleStep))  // Position each circle in a circular pattern
-    .attr("cy", (d, i) => radius * Math.sin(i * angleStep))
-    .attr("r", d => radiusScale(d.haunted_places))  // Set circle size based on haunted places
-    .attr("fill", d => colorScale(d.stress_rank))  // Set circle color based on stress rank
-    .attr("stroke", "white")
-    .attr("stroke-width", 2);
+    .enter().append("g")
+    .each(function(d, i) {
+      const g = d3.select(this);
+      
+      // Create arc segments (bars)
+      g.append("path")
+        .attr("d", arc)
+        .attr("fill", d => colorScale(d.stress_rank));
 
-  // Add state names next to each circle
-  svg.selectAll("text")
-    .data(topStates)
-    .enter().append("text")
-    .attr("x", (d, i) => radius * Math.cos(i * angleStep))  // Position text to match circles
-    .attr("y", (d, i) => radius * Math.sin(i * angleStep))
-    .attr("dy", 5)  // Offset slightly from the circle
-    .attr("text-anchor", "middle")
-    .attr("fill", "white")
-    .text(d => d.state);
+      // Add state names in the center of each bar
+      g.append("text")
+        .attr("x", (d, i) => (radiusScale(d.haunted_places) + 10) * Math.cos((i * Math.PI * 2) / topStates.length))
+        .attr("y", (d, i) => (radiusScale(d.haunted_places) + 10) * Math.sin((i * Math.PI * 2) / topStates.length))
+        .attr("fill", "white")
+        .attr("text-anchor", "middle")
+        .text(d => d.state);
+    });
 
 }).catch(function(error) {
   console.error("Error loading the JSON data: ", error);
@@ -103,4 +106,3 @@ d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) 
 
 </body>
 </html>
-
