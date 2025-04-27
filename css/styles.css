@@ -190,11 +190,17 @@ body {
     font-size: 15px;
     font-weight: bold;
     font-family: futura;
+     background-color: white;
+     padding: 8px 12px;
+     border-radius: 8px;
 }
 
 #visualization_page_title_txt {
     color: #455a64;
     font-size: 22px;
+     background-color: white;
+     padding: 10px 15px;
+     border-radius: 10px;
 }
 
 .vis_page_choice_reason {
@@ -202,6 +208,9 @@ body {
     font-style: italic;
     max-width: 800px;
     margin: auto;
+     background-color: white;
+     padding: 10px 15px;
+     border-radius: 10px;
 }
 
 .center, .center-align {
