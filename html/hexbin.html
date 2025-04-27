@@ -46,8 +46,8 @@ d3.json('../data/hexbin_map.json').then(data => {
   // generate hexbin bins
   const bins = hexbin(points);
 
-  // create more colorful color scale
-  const color = d3.scaleSequential(d3.interpolateRainbow)
+  // create color scale based on number of points in bin
+  const color = d3.scaleSequential(d3.interpolateYlOrRd)
     .domain([0, d3.max(bins, d => d.length)]);
 
   // draw hexagons
@@ -60,47 +60,6 @@ d3.json('../data/hexbin_map.json').then(data => {
     .attr('transform', d => `translate(${d.x},${d.y})`)
     .attr('fill', d => color(d.length))
     .attr('stroke', 'black');
-
-  // Create a color legend
-  const defs = svg.append("defs");
-
-  const linearGradient = defs.append("linearGradient")
-    .attr("id", "linear-gradient");
-
-  linearGradient
-    .attr("x1", "0%")
-    .attr("y1", "0%")
-    .attr("x2", "100%")
-    .attr("y2", "0%");
-
-  linearGradient.selectAll("stop")
-    .data(d3.range(0, 1.01, 0.01))
-    .enter().append("stop")
-    .attr("offset", d => d * 100 + "%")
-    .attr("stop-color", d => color(d * d3.max(bins, d => d.length)));
-
-  // draw the legend rectangle
-  svg.append("rect")
-    .attr("x", 20)
-    .attr("y", height - 50)
-    .attr("width", 300)
-    .attr("height", 10)
-    .style("fill", "url(#linear-gradient)");
-
-  // add legend labels
-  svg.append("text")
-    .attr("x", 20)
-    .attr("y", height - 55)
-    .style("fill", "white")
-    .style("font-size", "12px")
-    .text("Low Density");
-
-  svg.append("text")
-    .attr("x", 320)
-    .attr("y", height - 55)
-    .style("fill", "white")
-    .style("font-size", "12px")
-    .text("High Density");
 });
 
 </script>
