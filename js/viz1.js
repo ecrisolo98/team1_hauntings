@@ -1,12 +1,12 @@
-import define1 from "./450051d7f1174df8@255.js";
+import define1 from "./viz1scrubber.js";
 
-// function _1(md){return(
-// md`<div style="color: grey; font: 13px/25.5px var(--sans-serif); text-transform: uppercase;"><h1 style="display: none;">Walmart’s growth</h1><a href="https://d3js.org/">D3</a> › <a href="/@d3/gallery">Gallery</a></div>
+function _1(md){return(
+md`<div style="color: grey; font: 13px/25.5px var(--sans-serif); text-transform: uppercase;"><h1 style="display: none;">Haunted Place Sightings Spread Over Time</h1></div>
 
-// # Walmart’s growth
+# Haunted Place Sightings Spread Over Time
 
-// This animation shows the expansion of Walmart over the last fifty years. On July 2, 1962 in [Rogers, Arkansas](https://en.wikipedia.org/wiki/Rogers,_Arkansas), the first Walton’s <svg width=8 height=16><circle cx=4 cy=10 r=4 fill=blue></circle></svg> opened. [This dataset](http://users.econ.umn.edu/~holmes/data/WalMart/index.html) from 2006 includes about 3,100 Walmart locations <svg width=8 height=16><circle cx=4 cy=10 r=3.5 fill=none stroke=black></circle></svg> in the continguous United States.`
-// )}
+This animation shows the spread of Haunted Place Sightings over the six centuries. The first Haunted Place Sighting <svg width=8 height=16><circle cx=4 cy=10 r=4 fill=blue></circle></svg> occurred in the 15th century in Edgewater, New Jersey.`
+)}
 
 function _date(Scrubber,d3,data){return(
 Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {format: d3.utcFormat("%Y %b %-d"), loop: false})
@@ -64,18 +64,18 @@ chart.update(date)
 )}
 
 async function _data(FileAttachment,projection,parseDate){return(
-(await FileAttachment("viz1data.csv").csv())
+(await FileAttachment("viz1data.tsv").tsv())
   .map(d => {
     const p = projection(d);
-    p.date = parseDate(d.date);
+    p.date = parseDate(d.Haunting_Occurred);
     return p;
   })
   .sort((a, b) => a.date - b.date)
 )}
 
 function _parseDate(d3){return(
-d3.utcParse("%Y-%m-%d")
-)}
+  d3.utcParse("%Y-%m-%d")
+  )}
 
 function _projection(d3){return(
 d3.geoAlbersUsa().scale(1280).translate([480, 300])
@@ -96,7 +96,7 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["viz1data.csv", {url: new URL("../data/viz1data.csv", import.meta.url), mimeType: "text/tab-separated-values", toString}]
+    ["viz1data.tsv", {url: new URL("../data/viz1data.tsv", import.meta.url), mimeType: "text/tab-separated-values", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
