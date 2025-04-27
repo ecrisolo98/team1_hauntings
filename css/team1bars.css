@@ -4,18 +4,6 @@ body {
   background: #f5f7fa;
   color: #333;
 }
-html, body {
-}
-
-html {
-    display: table;
-    margin: auto;
-}
-
-body {
-    display: table-cell;
-    vertical-align: middle;
-}
 /* Title styling */
 h2 {
   text-align: center;
