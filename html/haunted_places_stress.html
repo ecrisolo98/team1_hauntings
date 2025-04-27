@@ -79,7 +79,7 @@
       .attr('class', 'tooltip');
 
     // Load the haunted_stress.json data
-    d3.json('haunted_stress.json').then(function(data) {
+    d3.json('/team1_hauntings/data/haunted_places_stress.json').then(function(data) {
 
       const scale = d3.scaleLinear()
         .domain([0, d3.max(data, d => d.haunted_places) * 1.1])
