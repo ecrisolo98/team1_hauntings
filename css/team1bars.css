@@ -1,11 +1,21 @@
-/* Base page styling */
 body {
   font-family: 'Inter', 'Helvetica Neue', sans-serif;
   margin: 40px;
   background: #f5f7fa;
   color: #333;
 }
+html, body {
+}
 
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
 /* Title styling */
 h2 {
   text-align: center;
