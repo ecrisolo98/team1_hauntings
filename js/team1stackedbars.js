@@ -50,7 +50,8 @@ d3.json("../data/team1bars.json").then(function(data) {
   svg.append("g")
     .attr("transform", `translate(0,${height - marginBottom})`)
     .call(d3.axisBottom(x).tickSizeOuter(0))
-    .call(g => g.selectAll(".domain").remove());
+    .call(g => g.selectAll(".domain").remove())
+    .call(g => g.selectAll(".tick text").style("font-size", "16px"));
 
   svg.append("g")
     .attr("transform", `translate(${marginLeft},0)`)
@@ -69,7 +70,7 @@ d3.json("../data/team1bars.json").then(function(data) {
     .attr("text-anchor", "middle")
     .attr("transform", "rotate(-90)")
     .attr("x", -(height - marginTop - marginBottom) / 2 - marginTop)
-    .attr("y", 12)
+    .attr("y", 20)
     .text("Total Hauntings")
     .style("font-size", "20px");
   
