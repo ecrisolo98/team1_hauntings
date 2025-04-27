@@ -31,8 +31,8 @@ d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) 
   const topStates = data.sort((a, b) => b.haunted_places - a.haunted_places).slice(0, 10);
 
   // Dimensions of the chart
-  const width = 800;
-  const height = 800;
+  const width = 1500;
+  const height = 1500;
   const radius = Math.min(width, height) / 2 - 50;  // Adjust the radius to match the new size
   const padding = 50;
 
@@ -69,7 +69,7 @@ d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) 
       g.append("rect")
         .attr("x", 0)
         .attr("y", -radiusScale(d.haunted_places))
-        .attr("width", 20)
+        .attr("width", 10)
         .attr("height", radiusScale(d.haunted_places))
         .attr("fill", colorScale(d.stress_rank));
       
