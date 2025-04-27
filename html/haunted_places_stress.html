@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haunted Places Stress Radial Chart</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+    }
+    svg {
+      background-color: #222;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Haunted Places vs State Stress</h1>
+
+<svg id="radial" width="600" height="600"></svg>
+
+<script>
+// Load data from an external JSON file (ensure this JSON file is accessible)
+d3.json("team1)hauntings/data/haunted_places_stress.json").then(function(data) {
+
+  // Dimensions of the chart
+  const width = 600;
+  const height = 600;
+  const radius = Math.min(width, height) / 2;
+  const padding = 50;
+
+  // Create SVG element
+  const svg = d3.select("#radial")
+    .attr("width", width)
+    .attr("height", height)
+    .append("g")
+    .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+  // Scale for the angle (mapping stress rank to angle on circle)
+  const angleScale = d3.scaleLinear()
+    .domain([0, 50])  // Assuming stress rank range is from 0 to 50
+    .range([0, 2 * Math.PI]);
+
+  // Scale for the radius (mapping haunted places count to radius size)
+  const radiusScale = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.haunted_places)])
+    .range([0, radius]);
+
+  // Color scale for stress rank (e.g., darker for higher stress)
+  const colorScale = d3.scaleSequential(d3.interpolateReds)
+    .domain([0, 50]); // Assuming stress rank goes from 0 (low stress) to 50 (high stress)
+
+  // Create bars for each state around the circle
+  svg.selectAll("g")
+    .data(data)
+    .enter().append("g")
+    .attr("transform", d => `rotate(${angleScale(d.stress_rank) * 180 / Math.PI})`)
+    .each(function(d) {
+      const g = d3.select(this);
+      
+      // Create bars (circular segments)
+      g.append("rect")
+        .attr("x", 0)
+        .attr("y", -radiusScale(d.haunted_places))
+        .attr("width", 20)
+        .attr("height", radiusScale(d.haunted_places))
+        .attr("fill", colorScale(d.stress_rank));
+      
+      // Add state names at the bottom of each bar
+      g.append("text")
+        .attr("x", 25)
+        .attr("y", 10)
+        .attr("fill", "white")
+        .text(d.state);
+    });
+}).catch(function(error) {
+  console.error("Error loading the JSON data: ", error);
+});
+
+</script>
+
+</body>
+</html>
