@@ -30,27 +30,27 @@ const projection = d3.geoMercator()
   .scale(1000)
   .translate([width / 2, height / 2]);
 
-// Create hexbin generator
+// create hexbin generator
 const hexbin = d3.hexbin()
   .radius(15) // adjust for bigger/smaller hexes
   .x(d => d.x)
   .y(d => d.y);
 
 d3.json('hexbin_map.json').then(data => {
-  // Convert lat/lng to x/y
+  // convert lat/lng to x/y
   const points = data.map(d => {
     const [x, y] = projection([d.lng, d.lat]);
     return { x, y };
   });
 
-  // Generate hexbin bins
+  // generate hexbin bins
   const bins = hexbin(points);
 
-  // Create color scale based on number of points in bin
+  // create color scale based on number of points in bin
   const color = d3.scaleSequential(d3.interpolateYlOrRd)
     .domain([0, d3.max(bins, d => d.length)]);
 
-  // Draw hexagons
+  // draw hexagons
   svg.append('g')
     .selectAll('.hex')
     .data(bins)
