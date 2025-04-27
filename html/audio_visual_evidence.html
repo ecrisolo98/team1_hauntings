@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haunted Places Evidence Scatter Plot</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+    }
+    svg {
+      background-color: #222;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Haunted Places: Audio vs Visual Evidence</h1>
+
+<svg id="scatter" width="600" height="600"></svg>
+
+<script>
+// Load the JSON file
+d3.json("/team1_hauntings/data/haunted_places_evidence.json").then(function(data) {
+
+  const width = 600;
+  const height = 600;
+  const padding = 50;
+
+  const svg = d3.select("#scatter")
+    .attr("width", width)
+    .attr("height", height);
+
+  const xScale = d3.scalePoint()
+    .domain([false, true])
+    .range([padding, width - padding]);
+
+  const yScale = d3.scalePoint()
+    .domain([false, true])
+    .range([height - padding, padding]);
+
+  // Draw circles
+  svg.selectAll("circle")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("cx", d => xScale(d.audio))
+    .attr("cy", d => yScale(d.visual))
+    .attr("r", 10)
+    .attr("fill", "orange")
+    .attr("stroke", "white");
+
+  // Add X axis label
+  svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", height - 10)
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text("Audio Evidence");
+
+  // Add Y axis label
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -height / 2)
+    .attr("y", 20)
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text("Visual Evidence");
+
+}).catch(function(error) {
+  console.error("Error loading the JSON file:", error);
+});
+</script>
+
+</body>
+</html>
