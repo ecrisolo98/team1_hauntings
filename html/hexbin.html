@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haunted Places Hexbin Map</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+  <style>
+    body { background: #222; }
+    svg { width: 100%; height: 100vh; }
+    .hexbin { fill-opacity: 0.6; stroke: #000; }
+  </style>
+</head>
+<body>
+
+<script>
+
+// Set up the SVG
+const width = 960;
+const height = 600;
+
+const svg = d3.select('body')
+  .append('svg')
+  .attr('width', width)
+  .attr('height', height);
+
+// Projection to turn lat/lng into x/y
+const projection = d3.geoMercator()
+  .center([-95, 40])  // Centered on USA
+  .scale(1000)
+  .translate([width / 2, height / 2]);
+
+// Create hexbin generator
+const hexbin = d3.hexbin()
+  .radius(15) // adjust for bigger/smaller hexes
+  .x(d => d.x)
+  .y(d => d.y);
+
+d3.json('hexbin_map.json').then(data => {
+  // Convert lat/lng to x/y
+  const points = data.map(d => {
+    const [x, y] = projection([d.lng, d.lat]);
+    return { x, y };
+  });
+
+  // Generate hexbin bins
+  const bins = hexbin(points);
+
+  // Create color scale based on number of points in bin
+  const color = d3.scaleSequential(d3.interpolateYlOrRd)
+    .domain([0, d3.max(bins, d => d.length)]);
+
+  // Draw hexagons
+  svg.append('g')
+    .selectAll('.hex')
+    .data(bins)
+    .join('path')
+    .attr('class', 'hexbin')
+    .attr('d', hexbin.hexagon())
+    .attr('transform', d => `translate(${d.x},${d.y})`)
+    .attr('fill', d => color(d.length))
+    .attr('stroke', 'black');
+});
+
+</script>
+
+</body>
+</html>
