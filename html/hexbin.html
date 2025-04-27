@@ -15,7 +15,7 @@
 
 <script>
 
-// Set up the SVG
+// set up the SVG
 const width = 960;
 const height = 600;
 
@@ -24,7 +24,7 @@ const svg = d3.select('body')
   .attr('width', width)
   .attr('height', height);
 
-// Projection to turn lat/lng into x/y
+// projection to turn lat/lng into x/y
 const projection = d3.geoMercator()
   .center([-95, 40])  // Centered on USA
   .scale(1000)
@@ -36,7 +36,7 @@ const hexbin = d3.hexbin()
   .x(d => d.x)
   .y(d => d.y);
 
-d3.json('hexbin_map.json').then(data => {
+d3.json('/data/hexbin_map.json').then(data => {
   // convert lat/lng to x/y
   const points = data.map(d => {
     const [x, y] = projection([d.lng, d.lat]);
