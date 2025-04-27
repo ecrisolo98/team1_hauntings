@@ -56,7 +56,8 @@ d3.json("../data/team1bars.json").then(function(data) {
   svg.append("g")
     .attr("transform", `translate(${marginLeft},0)`)
     .call(d3.axisLeft(y).ticks(null, "s"))
-    .call(g => g.selectAll(".domain").remove());
+    .call(g => g.selectAll(".domain").remove())
+    .call(g => g.selectAll(".tick text").style("font-size", "12px"));
 
   svg.append("text")
     .attr("text-anchor", "middle")
