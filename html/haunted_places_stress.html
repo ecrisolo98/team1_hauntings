@@ -53,7 +53,8 @@ d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) 
   const height = 800;
   const radius = Math.min(width, height) / 2 - 50;  // Adjust the radius to match the new size
   const padding = 50;
-  
+  const barWidth = 20; // Set a constant bar width
+
   // Color scale for stress rank (e.g., lighter for lower stress, darker for higher stress)
   const colorScale = d3.scaleSequential(d3.interpolateReds)
     .domain([0, 50]); // Assuming stress rank goes from 0 (low stress) to 50 (high stress)
@@ -72,10 +73,11 @@ d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) 
 
   // Create arc generator for radial bars
   const arc = d3.arc()
-    .innerRadius(0)
-    .outerRadius(d => radiusScale(d.haunted_places))
+    .innerRadius(d => radiusScale(d.haunted_places) - barWidth) // Adjust bar width
+    .outerRadius(d => radiusScale(d.haunted_places)) // Adjust bar width
     .startAngle((d, i) => (i * Math.PI * 2) / topStates.length)
-    .endAngle((d, i) => ((i + 1) * Math.PI * 2) / topStates.length);
+    .endAngle((d, i) => ((i + 1) * Math.PI * 2) / topStates.length)
+    .cornerRadius(5);  // Add rounded corners for smooth edges
 
   // Create radial bars for each state
   svg.selectAll("g")
@@ -89,12 +91,13 @@ d3.json("/team1_hauntings/data/haunted_places_stress.json").then(function(data) 
         .attr("d", arc)
         .attr("fill", d => colorScale(d.stress_rank));
 
-      // Add state names in the center of each bar
+      // Add state names on top of each bar
       g.append("text")
-        .attr("x", (d, i) => (radiusScale(d.haunted_places) + 10) * Math.cos((i * Math.PI * 2) / topStates.length))
-        .attr("y", (d, i) => (radiusScale(d.haunted_places) + 10) * Math.sin((i * Math.PI * 2) / topStates.length))
-        .attr("fill", "white")
+        .attr("x", (d, i) => (radiusScale(d.haunted_places) + barWidth + 10) * Math.cos((i * Math.PI * 2) / topStates.length))  // Adjust position
+        .attr("y", (d, i) => (radiusScale(d.haunted_places) + barWidth + 10) * Math.sin((i * Math.PI * 2) / topStates.length))  // Adjust position
+        .attr("fill", "black")  // Change text color to black
         .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "middle")
         .text(d => d.state);
     });
 
