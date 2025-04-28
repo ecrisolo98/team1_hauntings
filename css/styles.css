@@ -222,7 +222,7 @@ body {
 max-height: 900px;
   margin: auto; 
   display: block;
-background-color: #f5f5f5;
+background-color: gray;
 }
 #controls {
   margin: 10px;
