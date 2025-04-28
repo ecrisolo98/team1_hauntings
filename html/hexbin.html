@@ -75,7 +75,7 @@ function drawHexbin() {
   const bins = hexbin(points);
 
   // create color scale
-  const color = d3.scaleSequential(d3.interpolateRainbow)
+  const color = d3.scaleSequential(d3.interpolateInferno)
     .domain([0, d3.max(bins, d => d.length)]);
 
   // draw hexagons
