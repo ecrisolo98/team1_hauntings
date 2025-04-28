@@ -39,6 +39,7 @@
   <div class="row" style="margin-top: 100px;">
     <div class="col s12 center-align">
       <p id="visualization_page_title_txt" class="center-align">DETECTED OBJECTS WORD CLOUD</p>
+      <div id="wordcloud"></div>
     </div>
   </div>
 
@@ -52,13 +53,14 @@
     console.log("d3.wordcloud exists:", typeof d3.wordcloud !== 'undefined');
 
     d3.wordcloud()
-      .size([1500, 1300])
-      .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
-      .words(words)
-      .onwordclick(function(d, i) {
-        if (d.href) { window.location = d.href; }
-      })
-      .start();
+  .size([1500, 1300])
+  .selector("#wordcloud")  // 👈 Tell D3 where to put it
+  .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
+  .words(words)
+  .onwordclick(function(d, i) {
+    if (d.href) { window.location = d.href; }
+  })
+  .start();
   </script>
 
 </body>
