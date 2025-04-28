@@ -8,9 +8,6 @@
   <link href="../css/scrolling-nav.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
-    <script src="/team1_hauntings/js/d3.wordcloud.js"></script>
-    <script src="/team1_hauntings/data/haunted_places_object_count.js"></script>
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="background-image: url(../images/haunted-landing.jpeg); background-size:cover;">
   <!-- Header -->
@@ -37,6 +34,9 @@
     <p>This is a word cloud of our detected objects in our Haunted Places dataset.</p>
     <p><a href="https://github.com/wvengen/d3-wordcloud">https://github.com/wvengen/d3-wordcloud</a></p>
     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+    <script src="/team1_hauntings/js/d3.wordcloud.js"></script>
+    <script src="/team1_hauntings/data/haunted_places_object_count.js"></script>
     <script>
       console.log("Words array:", typeof words !== 'undefined' ? words : "NOT FOUND");
       console.log("d3.wordcloud exists:", typeof d3.wordcloud !== 'undefined');
