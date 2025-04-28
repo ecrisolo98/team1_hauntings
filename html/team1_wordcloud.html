@@ -13,7 +13,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://d3js.org/d3.v3.min.js"></script>
 </head>
-https://github.com/ecrisolo98/team1_hauntings/blob/master/html/team1_wordcloud.html
+<!--https://github.com/ecrisolo98/team1_hauntings/blob/master/html/team1_wordcloud.html-->
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="background-image: url(../images/haunted-landing.jpeg); background-size:cover;">
 
   <!-- Navigation Bar -->
@@ -53,7 +53,7 @@ https://github.com/ecrisolo98/team1_hauntings/blob/master/html/team1_wordcloud.h
     console.log("d3.wordcloud exists:", typeof d3.wordcloud !== 'undefined');
 
     d3.wordcloud()
-  .size([1000, 800])
+  .size([1300,1100])
   .selector("#wordcloud")  // 👈 Tell D3 where to put it
   .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
   .words(words)
