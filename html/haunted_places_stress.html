@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Haunted Places Stress Radial Chart</title>
@@ -64,7 +64,7 @@
           chartRadius = height / 2 - 40;
 
     const colorScale = d3.scaleSequential(d3.interpolateReds)
-      .domain([0, 50]);  // Assuming stress rank ranges from 0 to 50
+      .domain([0, 2]);  // Stress rank ranges from 0 to 2 based on audio/visual evidence
 
     const arcMinRadius = 10,
           arcPadding = 10,
@@ -78,15 +78,20 @@
     let tooltip = d3.select('body').append('div')
       .attr('class', 'tooltip');
 
-    // Load the haunted_stress.json data
-    d3.json('/team1_hauntings/data/haunted_places_stress.json').then(function(data) {
+    // Load the JSON data using the raw URL on GitHub
+    d3.json('https://raw.githubusercontent.com/ecrisolo98/team1_hauntings/master/data/haunted_places_stress.json').then(function(data) {
+
+      // Calculate stress rank based on the audio and visual attributes
+      data.forEach(d => {
+        d.stress_rank = (d.audio ? 1 : 0) + (d.visual ? 1 : 0); // Simple sum of audio and visual evidence
+      });
 
       const scale = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.haunted_places) * 1.1])
+        .domain([0, d3.max(data, d => d.stress_rank) * 1.1])
         .range([0, 2 * Math.PI]);
 
       let ticks = scale.ticks(numTicks).slice(0, -1);
-      const keys = data.map((d, i) => d.state);
+      const keys = data.map((d, i) => d.location); // Using location as the label
       const numArcs = keys.length;
       const arcWidth = (chartRadius - arcMinRadius - numArcs * arcPadding) / numArcs;
 
@@ -94,7 +99,7 @@
         .innerRadius((d, i) => getInnerRadius(i))
         .outerRadius((d, i) => getOuterRadius(i))
         .startAngle(0)
-        .endAngle((d, i) => scale(d.haunted_places));
+        .endAngle((d, i) => scale(d.stress_rank));
 
       let radialAxis = svg.append('g')
         .attr('class', 'r axis')
@@ -108,7 +113,7 @@
       radialAxis.append('text')
         .attr('x', labelPadding)
         .attr('y', (d, i) => -getOuterRadius(i) + arcPadding)
-        .text(d => d.state);
+        .text(d => d.location);
 
       let axialAxis = svg.append('g')
         .attr('class', 'a axis')
@@ -144,15 +149,15 @@
         .on('mouseout', hideTooltip);
 
       function arcTween(d, i) {
-        let interpolate = d3.interpolate(0, d.haunted_places);
+        let interpolate = d3.interpolate(0, d.stress_rank);
         return t => arc(interpolate(t), i);
       }
 
       function showTooltip(d) {
-        tooltip.style('left', (d3.event.pageX + 10) + 'px')
-          .style('top', (d3.event.pageY - 25) + 'px')
+        tooltip.style('left', (d3.pointer(event)[0] + 10) + 'px')
+          .style('top', (d3.pointer(event)[1] - 25) + 'px')
           .style('display', 'inline-block')
-          .html('State: ' + d.state + '<br>Haunted Places: ' + d.haunted_places + '<br>Stress Rank: ' + d.stress_rank);
+          .html('Location: ' + d.location + '<br>Audio: ' + d.audio + '<br>Visual: ' + d.visual + '<br>Stress Rank: ' + d.stress_rank);
       }
 
       function hideTooltip() {
@@ -177,4 +182,3 @@
   </script>
 </body>
 </html>
-
