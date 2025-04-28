@@ -217,6 +217,11 @@ body {
 .center, .center-align {
     text-align: center;
 }
+#hexbin svg {
+  max-width: 800px;
+  margin: auto; 
+  display: block;
+}
 
 svg { 
     background-color: #f9f9f9; margin: 20px; 
