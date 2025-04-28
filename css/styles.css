@@ -223,7 +223,21 @@ max-height: 900px;
   margin: auto; 
   display: block;
 }
+#controls {
+  margin: 10px;
+}
 
+#controls label {
+  font-size: 18px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#controls input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
 svg { 
     background-color: #f9f9f9; margin: 20px; 
 }
