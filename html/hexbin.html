@@ -6,12 +6,23 @@
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
   <style>
-    body { background: #222; }
-    svg { width: 100%; height: 100vh; }
+    body { background: #222; color: white; font-family: sans-serif; }
+    svg { width: 100%; height: 90vh; }
+    #controls { margin: 10px; }
+    #controls label { margin-right: 15px; }
     .hexbin { fill-opacity: 0.6; stroke: #000; }
   </style>
 </head>
 <body>
+
+<div id="controls">
+  <label><input type="checkbox" class="event-type" value="Death" checked> Death</label>
+  <label><input type="checkbox" class="event-type" value="Death/Supernatural" checked> Death/Supernatural</label>
+  <label><input type="checkbox" class="event-type" value="Murder" checked> Murder</label>
+  <label><input type="checkbox" class="event-type" value="Murder/Supernatural" checked> Murder/Supernatural</label>
+  <label><input type="checkbox" class="event-type" value="Supernatural Phenomenon" checked> Supernatural Phenomenon</label>
+  <label><input type="checkbox" class="event-type" value="Unknown" checked> Unknown</label>
+</div>
 
 <script>
 
@@ -24,30 +35,47 @@ const svg = d3.select('body')
   .attr('width', width)
   .attr('height', height);
 
-// projection to turn lat/lng into x/y
+// projection
 const projection = d3.geoMercator()
-  .center([-95, 40])  // Centered on USA
+  .center([-95, 40])
   .scale(1000)
   .translate([width / 2, height / 2]);
 
-// create hexbin generator
 const hexbin = d3.hexbin()
-  .radius(15) // adjust for bigger/smaller hexes
+  .radius(15)
   .x(d => d.x)
   .y(d => d.y);
 
+let allData;
+
+// load data
 d3.json('../data/hexbin_map.json').then(data => {
-  // convert lat/lng to x/y
-  const points = data.map(d => {
+  allData = data;
+  drawHexbin();
+});
+
+// draw hexbin function
+function drawHexbin() {
+  svg.selectAll("*").remove(); // clear previous hexbin and legend
+
+  // get selected event types
+  const selectedTypes = Array.from(document.querySelectorAll(".event-type:checked"))
+    .map(cb => cb.value);
+
+  // filter data
+  const filteredData = allData.filter(d => selectedTypes.includes(d.event));
+
+  // project lat/lng
+  const points = filteredData.map(d => {
     const [x, y] = projection([d.lng, d.lat]);
     return { x, y };
   });
 
-  // generate hexbin bins
+  // create bins
   const bins = hexbin(points);
 
-  // create color scale based on number of points in bin
-  const color = d3.scaleSequential(d3.interpolateYlOrRd)
+  // create color scale
+  const color = d3.scaleSequential(d3.interpolateRainbow)
     .domain([0, d3.max(bins, d => d.length)]);
 
   // draw hexagons
@@ -60,6 +88,51 @@ d3.json('../data/hexbin_map.json').then(data => {
     .attr('transform', d => `translate(${d.x},${d.y})`)
     .attr('fill', d => color(d.length))
     .attr('stroke', 'black');
+
+  // create Legend
+  const defs = svg.append("defs");
+  const linearGradient = defs.append("linearGradient")
+    .attr("id", "linear-gradient");
+
+  linearGradient
+    .attr("x1", "0%")
+    .attr("y1", "0%")
+    .attr("x2", "100%")
+    .attr("y2", "0%");
+
+  linearGradient.selectAll("stop")
+    .data(d3.range(0, 1.01, 0.01))
+    .enter().append("stop")
+    .attr("offset", d => d * 100 + "%")
+    .attr("stop-color", d => color(d * d3.max(bins, d => d.length)));
+
+  svg.append("rect")
+    .attr("x", 20)
+    .attr("y", height - 30)
+    .attr("width", 300)
+    .attr("height", 10)
+    .style("fill", "url(#linear-gradient)");
+
+  svg.append("text")
+    .attr("x", 20)
+    .attr("y", height - 35)
+    .style("fill", "white")
+    .style("font-size", "12px")
+    .text("Low Density");
+
+  svg.append("text")
+    .attr("x", 320)
+    .attr("y", height - 35)
+    .style("fill", "white")
+    .style("font-size", "12px")
+    .text("High Density");
+}
+
+// update map when any box is clicked
+document.querySelectorAll(".event-type").forEach(cb => {
+  cb.addEventListener("change", () => {
+    drawHexbin();
+  });
 });
 
 </script>
