@@ -222,13 +222,7 @@ body {
 max-height: 900px;
   margin: auto; 
   display: block;
-}
-#hexbin {
-  background-color: black;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  margin: auto;
-  max-width: 1000px;
+background-color: black;
 }
 #controls {
   margin: 10px;
