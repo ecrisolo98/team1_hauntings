@@ -218,7 +218,8 @@ body {
     text-align: center;
 }
 #hexbin svg {
-  max-width: 800px;
+  max-width: 900px;
+max-height: 500px;
   margin: auto; 
   display: block;
 }
