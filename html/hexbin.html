@@ -19,7 +19,39 @@
     .hexbin { fill-opacity: 0.6; stroke: #000; }
   </style>
 </head>
-<body>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" style="background-image: url(../images/haunted-landing.jpeg); background-size:cover;">
+  <!-- Header -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="../index.html#page-top" style="color:white">Home</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <a href="http://usc.edu" class="pull-right">
+              <img src="../images/usc-primary-logotype.svg" width="176px" height="38px"></img>
+            </a>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    <!-- /.container -->
+    </nav>
+    <div class="row">
+      <div class="col s12">
+          <p id="visualization_page_title_txt" class="center-align">BREAKING DOWN HAUNTINGS BY TIME OF DAY PER CENTURY</p>
+      </div>
+      <div class="col s12">
+          <div>
+              <p class="vis_page_choice_reason">
+                  This vizualization shows how haunted place sightings are broken down by time of day across the centuries. However, this does not reflect the total count of haunted sightings since only sightings with a known time of day and date were considered. 
+              </p>
+          </div>
+      </div>
+  </div>
 
 <div id="controls">
   <label><input type="checkbox" class="event-type" value="Death" checked> Death</label>
