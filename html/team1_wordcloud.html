@@ -1,57 +1,65 @@
 <!DOCTYPE html>
-<html>
-    <meta charset="UTF-8">
-    <title>Haunted Places Detected Objects Word Cloud</title>
-    <script src="../js/jquery.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Haunted Places Detected Objects Word Cloud</title>
+
+  <!-- CSS files -->
   <link href="../css/styles.css" rel="stylesheet">
   <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/scrolling-nav.css" rel="stylesheet">
+
+  <!-- JavaScript libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-  </head>
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <!-- Header -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="../index.html#page-top" style="color:white">Home</a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <a href="http://usc.edu" class="pull-right">
-              <img src="../images/usc-primary-logotype.svg" width="176px" height="38px"></img>
-            </a>
-        </div>
-        <!-- /.navbar-collapse -->
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand page-scroll" href="../index.html#page-top" style="color:white">Home</a>
       </div>
-    <!--
-    <h1>Detected Objects Word Cloud</h1>
-    <div id='wordcloud'></div>
-    <p>This is a word cloud of our detected objects in our Haunted Places dataset.</p>
-    <p><a href="https://github.com/wvengen/d3-wordcloud">https://github.com/wvengen/d3-wordcloud</a></p>
-    -->
-    </nav>
-    <div class="row">
-      <div class="col s12">
-          <p id="visualization_page_title_txt" class="center-align">DETECTED OBJECTS WORD CLOUD</p>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <a href="http://usc.edu" class="pull-right">
+          <img src="../images/usc-primary-logotype.svg" width="176px" height="38px" alt="USC Logo">
+        </a>
       </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
-    <script src="/team1_hauntings/js/d3.wordcloud.js"></script>
-    <script src="/team1_hauntings/data/haunted_places_object_count.js"></script>
-    <script>
-      console.log("Words array:", typeof words !== 'undefined' ? words : "NOT FOUND");
-      console.log("d3.wordcloud exists:", typeof d3.wordcloud !== 'undefined');
-      d3.wordcloud()
-        .size([1500, 1300])
-        .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
-        .words(words)
-        .onwordclick(function(d, i) {
-          if (d.href) { window.location = d.href; }
-        })
-        .start();
-    </script>
-  </body>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="row" style="margin-top: 100px;">
+    <div class="col s12 center-align">
+      <p id="visualization_page_title_txt" class="center-align">DETECTED OBJECTS WORD CLOUD</p>
+    </div>
+  </div>
+
+  <!-- Scripts at the bottom -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
+  <script src="/team1_hauntings/js/d3.wordcloud.js"></script>
+  <script src="/team1_hauntings/data/haunted_places_object_count.js"></script>
+
+  <script>
+    console.log("Words array:", typeof words !== 'undefined' ? words : "NOT FOUND");
+    console.log("d3.wordcloud exists:", typeof d3.wordcloud !== 'undefined');
+
+    d3.wordcloud()
+      .size([1500, 1300])
+      .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
+      .words(words)
+      .onwordclick(function(d, i) {
+        if (d.href) { window.location = d.href; }
+      })
+      .start();
+  </script>
+
+</body>
+</html>
