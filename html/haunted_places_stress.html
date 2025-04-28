@@ -43,6 +43,14 @@
       text-align: left;
       margin: 20px;
     }
+
+    #error-message {
+      color: red;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+      display: none;
+    }
   </style>
   <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
@@ -57,6 +65,8 @@
       <div class="legend" style="background-color: #d61e1e;"></div> High Stress
     </div>
   </div>
+
+  <div id="error-message">Error: Failed to load data. Please check the data source.</div>
 
   <script>
     const width = 960,
@@ -85,6 +95,7 @@
 
         if (!data || data.length === 0) {
           console.error("No data loaded.");
+          document.getElementById("error-message").style.display = "block"; // Show error message
           return;
         }
 
@@ -182,6 +193,7 @@
       })
       .catch(function(error) {
         console.error('Error loading the JSON data: ', error);
+        document.getElementById("error-message").style.display = "block"; // Show error message
       });
   </script>
 </body>
