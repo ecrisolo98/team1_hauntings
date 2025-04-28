@@ -93,8 +93,9 @@
       .then(function(data) {
         console.log("Loaded data:", data); // Debugging log
 
-        if (!data || data.length === 0) {
-          console.error("No data loaded.");
+        // Check if the data is valid
+        if (!data || !Array.isArray(data) || data.length === 0) {
+          console.error("No valid data loaded:", data); // More detailed error
           document.getElementById("error-message").style.display = "block"; // Show error message
           return;
         }
@@ -192,7 +193,7 @@
         }
       })
       .catch(function(error) {
-        console.error('Error loading the JSON data: ', error);
+        console.error('Error loading the JSON data: ', error); // Log error if data fails to load
         document.getElementById("error-message").style.display = "block"; // Show error message
       });
   </script>
