@@ -239,6 +239,11 @@ background-color: gray;
   height: 20px;
   margin-right: 8px;
 }
+.inline-icon {
+  width: 0.75em;
+  height: 0.75em;
+  vertical-align: middle;
+}
 svg { 
     background-color: #f9f9f9; margin: 20px; 
 }
