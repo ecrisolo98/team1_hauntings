@@ -1,12 +1,12 @@
 import define1 from "./viz1scrubber.js";
 
-function _1(md){return(
-md`<div style="color: grey; font: 13px/25.5px var(--sans-serif); text-transform: uppercase;"><h1 style="display: none;">Haunted Place Sightings Spread Over Time</h1></div>
+// function _1(md){return(
+// md`<div style="color: grey; font: 13px/25.5px var(--sans-serif); text-transform: uppercase;"><h1 style="display: none;">Haunted Place Sightings Spread Over Time</h1></div>
 
-# Haunted Place Sightings Spread Over Time
+// # Haunted Place Sightings Spread Over Time
 
-This animation shows the spread of Haunted Place Sightings over the six centuries. The first Haunted Place Sighting <svg width=8 height=16><circle cx=4 cy=10 r=4 fill=blue></circle></svg> occurred in the 15th century in Edgewater, New Jersey.`
-)}
+// This animation shows the spread of Haunted Place Sightings over the six centuries. The first Haunted Place Sighting <svg width=8 height=16><circle cx=4 cy=10 r=4 fill=blue></circle></svg> occurred in the 15th century in Edgewater, New Jersey.`
+// )}
 
 function _date(Scrubber,d3,data){return(
 Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {format: d3.utcFormat("%Y %b %-d"), loop: false})
@@ -99,7 +99,7 @@ export default function define(runtime, observer) {
     ["viz1data.tsv", {url: new URL("../data/viz1data.tsv", import.meta.url), mimeType: "text/tab-separated-values", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
-  main.variable(observer()).define(["md"], _1);
+  // main.variable(observer()).define(["md"], _1);
   main.variable(observer("viewof date")).define("viewof date", ["Scrubber","d3","data"], _date);
   main.variable(observer("date")).define("date", ["Generators", "viewof date"], (G, _) => G.input(_));
   main.variable(observer("chart")).define("chart", ["d3","topojson","us","data"], _chart);
