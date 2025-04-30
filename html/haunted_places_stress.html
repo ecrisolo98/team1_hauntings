@@ -1,201 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Haunted Places Stress Radial Chart</title>
-  <style>
-    body {
-      font: 12px sans-serif;
-    }
+<meta charset="utf-8">
+<title>Haunted Places Stress Radial Chart</title>
+<style>
+body {
+  font: 12px sans-serif;
+}
 
-    svg {
-      margin: 0px auto;
-      display: block;
-    }
+svg {
+  margin: 0px auto;
+  display: block;
+}
 
-    path.arc {
-      opacity: 0.9;
-      transition: opacity 0.5s;
-    }
+path.arc {
+  opacity: 0.9;
+  transition: opacity 0.5s;
+}
 
-    path.arc:hover {
-      opacity: 0.7;
-    }
+path.arc:hover {
+  opacity: 0.7;
+}
 
-    .tooltip {
-      position: absolute;
-      display: none;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 3px;
-      box-shadow: -3px 3px 15px #888;
-      color: white;
-      padding: 6px;
-    }
+.axis line, .axis circle  {
+  stroke: #cccccc;
+  stroke-width: 1px
+}
 
-    .legend {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-    }
+.axis circle {
+  fill: none;
+}
 
-    .legend-container {
-      text-align: left;
-      margin: 20px;
-    }
+.r.axis text {
+  text-anchor: end
+}
 
-    #error-message {
-      color: red;
-      font-weight: bold;
-      text-align: center;
-      padding: 20px;
-      display: none;
-    }
-  </style>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
+.tooltip {
+  position: absolute;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  box-shadow: -3px 3px 15px #888;
+  color: white;
+  padding: 6px;
+}
+</style>
+<script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 <body>
-  <h1>Haunted Places Stress Radial Chart</h1>
-  <svg id="chart" width="960" height="500"></svg>
+<script>
+const width = 960,
+  height = 500,
+  chartRadius = height / 2 - 40;
 
-  <div class="legend-container">
-    <h3>Legend: Stress Rank</h3>
-    <div>
-      <div class="legend" style="background-color: #f7a4a4;"></div> Low Stress
-      <div class="legend" style="background-color: #d61e1e;"></div> High Stress
-    </div>
-  </div>
+const color = d3.scaleOrdinal(d3.schemeCategory10);
 
-  <div id="error-message">Error: Failed to load data. Please check the data source.</div>
+let svg = d3.select('body').append('svg')
+  .attr('width', width)
+  .attr('height', height)
+  .append('g')
+    .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
 
-  <script>
-    const width = 960,
-          height = 500,
-          chartRadius = height / 2 - 40;
+let tooltip = d3.select('body').append('div')
+  .attr('class', 'tooltip');
 
-    const colorScale = d3.scaleSequential(d3.interpolateReds)
-      .domain([0, 50]);  // Adjusting the domain to fit stress rank values
+const PI = Math.PI,
+  arcMinRadius = 10,
+  arcPadding = 10,
+  labelPadding = -5,
+  numTicks = 10;
 
-    const arcMinRadius = 10,
-          arcPadding = 10,
-          labelPadding = -5,
-          numTicks = 10;
 
-    let svg = d3.select('#chart')
-      .append('g')
-      .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+d3.json('../data/viz5data.json', (error, data) => {
 
-    let tooltip = d3.select('body').append('div')
-      .attr('class', 'tooltip');
+  let scale = d3.scaleLinear()
+    .domain([0, d3.max(data, d => parseInt(d.counts)) * 1.1])
+    .range([0, 2 * PI]);
 
-    // Load the JSON data using the raw URL on GitHub
-    d3.json('https://raw.githubusercontent.com/ecrisolo98/team1_hauntings/master/data/haunted_places_stress.json')
-      .then(function(data) {
-        console.log("Loaded data:", data); // Debugging log
+  let ticks = scale.ticks(numTicks).slice(0, -1);
+  let keys = data.map((d, i) => d.state);
+  // let keys = d3.union(data.map(d => d.state));
+  //number of arcs
+  const numArcs = keys.length;
+  const arcWidth = (chartRadius - arcMinRadius - numArcs * arcPadding) / numArcs;
 
-        // Check if the data is valid
-        if (!data || !Array.isArray(data) || data.length === 0) {
-          console.error("No valid data loaded:", data); // More detailed error
-          document.getElementById("error-message").style.display = "block"; // Show error message
-          return;
-        }
+  let arc = d3.arc()
+    .innerRadius((d, i) => getInnerRadius(i))
+    .outerRadius((d, i) => getOuterRadius(i))
+    .startAngle(0)
+    .endAngle((d, i) => scale(d))
 
-        // Proceed with chart generation
+  let radialAxis = svg.append('g')
+    .attr('class', 'r axis')
+    .selectAll('g')
+      .data(data)
+      .enter().append('g');
 
-        const scale = d3.scaleLinear()
-          .domain([0, d3.max(data, d => d.haunted_places) * 1.1])
-          .range([0, 2 * Math.PI]);
+  radialAxis.append('circle')
+    .attr('r', (d, i) => getOuterRadius(i) + arcPadding);
 
-        let ticks = scale.ticks(numTicks).slice(0, -1);
-        const keys = data.map((d, i) => d.state); // Use state as the label
-        const numArcs = keys.length;
-        const arcWidth = (chartRadius - arcMinRadius - numArcs * arcPadding) / numArcs;
+  radialAxis.append('text')
+    .attr('x', labelPadding)
+    .attr('y', (d, i) => -getOuterRadius(i) + arcPadding)
+    .text(d => d.state);
 
-        let arc = d3.arc()
-          .innerRadius((d, i) => getInnerRadius(i))
-          .outerRadius((d, i) => getOuterRadius(i))
-          .startAngle(0)
-          .endAngle((d, i) => scale(d.haunted_places));
+  let axialAxis = svg.append('g')
+    .attr('class', 'a axis')
+    .selectAll('g')
+      .data(ticks)
+      .enter().append('g')
+        .attr('transform', d => 'rotate(' + (rad2deg(scale(d)) - 90) + ')');
 
-        let radialAxis = svg.append('g')
-          .attr('class', 'r axis')
-          .selectAll('g')
-          .data(data)
-          .enter().append('g');
+  axialAxis.append('line')
+    .attr('x2', chartRadius);
 
-        radialAxis.append('circle')
-          .attr('r', (d, i) => getOuterRadius(i) + arcPadding);
+  axialAxis.append('text')
+    .attr('x', chartRadius + 10)
+    .style('text-anchor', d => (scale(d) >= PI && scale(d) < 2 * PI ? 'end' : null))
+    .attr('transform', d => 'rotate(' + (90 - rad2deg(scale(d))) + ',' + (chartRadius + 10) + ',0)')
+    .text(d => d);
 
-        radialAxis.append('text')
-          .attr('x', labelPadding)
-          .attr('y', (d, i) => -getOuterRadius(i) + arcPadding)
-          .text(d => d.state);
+  //data arcs
+  let arcs = svg.append('g')
+    .attr('class', 'data')
+    .selectAll('path')
+      .data(data)
+      .enter().append('path')
+      .attr('class', 'arc')
+      .style('fill', (d, i) => color(i))
 
-        let axialAxis = svg.append('g')
-          .attr('class', 'a axis')
-          .selectAll('g')
-          .data(ticks)
-          .enter().append('g')
-          .attr('transform', d => 'rotate(' + (rad2deg(scale(d)) - 90) + ')');
+  arcs.transition()
+    .delay((d, i) => i * 200)
+    .duration(1000)
+    .attrTween('d', arcTween);
 
-        axialAxis.append('line')
-          .attr('x2', chartRadius);
+  arcs.on('mousemove', showTooltip)
+  arcs.on('mouseout', hideTooltip)
 
-        axialAxis.append('text')
-          .attr('x', chartRadius + 10)
-          .style('text-anchor', d => (scale(d) >= Math.PI && scale(d) < 2 * Math.PI ? 'end' : null))
-          .attr('transform', d => 'rotate(' + (90 - rad2deg(scale(d))) + ',' + (chartRadius + 10) + ',0)')
-          .text(d => d);
 
-        // Data arcs
-        let arcs = svg.append('g')
-          .attr('class', 'data')
-          .selectAll('path')
-          .data(data)
-          .enter().append('path')
-          .attr('class', 'arc')
-          .style('fill', d => colorScale(d.stress_rank));
+  function arcTween(d, i) {
+    let interpolate = d3.interpolate(0, parseInt(d.counts));
+    return t => arc(interpolate(t), i);
+  }
 
-        arcs.transition()
-          .delay((d, i) => i * 200)
-          .duration(1000)
-          .attrTween('d', arcTween);
+  function showTooltip(d) {
+    tooltip.style('left', (d3.event.pageX + 10) + 'px')
+      .style('top', (d3.event.pageY - 25) + 'px')
+      .style('display', 'inline-block')
+      .html(d.counts);
+  }
 
-        arcs.on('mousemove', showTooltip)
-          .on('mouseout', hideTooltip);
+  function hideTooltip() {
+    tooltip.style('display', 'none');
+  }
 
-        function arcTween(d, i) {
-          let interpolate = d3.interpolate(0, d.haunted_places);
-          return t => arc(interpolate(t), i);
-        }
+  function rad2deg(angle) {
+    return angle * 180 / PI;
+  }
 
-        function showTooltip(d) {
-          tooltip.style('left', (d3.pointer(event)[0] + 10) + 'px')
-            .style('top', (d3.pointer(event)[1] - 25) + 'px')
-            .style('display', 'inline-block')
-            .html('State: ' + d.state + '<br>Haunted Places: ' + d.haunted_places + '<br>Stress Rank: ' + d.stress_rank);
-        }
+  function getInnerRadius(index) {
+    return arcMinRadius + (numArcs - (index + 1)) * (arcWidth + arcPadding);
+  }
 
-        function hideTooltip() {
-          tooltip.style('display', 'none');
-        }
-
-        function rad2deg(angle) {
-          return angle * 180 / Math.PI;
-        }
-
-        function getInnerRadius(index) {
-          return arcMinRadius + (numArcs - (index + 1)) * (arcWidth + arcPadding);
-        }
-
-        function getOuterRadius(index) {
-          return getInnerRadius(index) + arcWidth;
-        }
-      })
-      .catch(function(error) {
-        console.error('Error loading the JSON data: ', error); // Log error if data fails to load
-        document.getElementById("error-message").style.display = "block"; // Show error message
-      });
-  </script>
+  function getOuterRadius(index) {
+    return getInnerRadius(index) + arcWidth;
+  }
+});
+</script>
 </body>
 </html>
