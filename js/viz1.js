@@ -1,6 +1,17 @@
 import define1 from "./viz1scrubber.js";
 
 function _chart(d3, topojson, us, data, Scrubber) {
+  // Ensure a single container
+  const containerId = "haunted-chart-container";
+  let container = document.getElementById(containerId);
+  if (!container) {
+    container = document.createElement("div");
+    container.id = containerId;
+    document.body.appendChild(container);
+  } else {
+    container.innerHTML = ""; // Clear previous content
+  }
+
   const svg = d3.create("svg")
     .attr("viewBox", [0, 0, 960, 600]);
 
@@ -32,7 +43,6 @@ function _chart(d3, topojson, us, data, Scrubber) {
 
   let previousDate = -Infinity;
 
-  // Create wrapper
   const wrapper = document.createElement("div");
   wrapper.style.display = "flex";
   wrapper.style.flexDirection = "column";
@@ -40,7 +50,6 @@ function _chart(d3, topojson, us, data, Scrubber) {
   wrapper.style.maxWidth = "960px";
   wrapper.style.margin = "0 auto";
 
-  // Create and style Scrubber
   const scrubber = Scrubber(
     d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)),
     { format: d3.utcFormat("%Y %b %-d"), loop: false }
@@ -50,20 +59,21 @@ function _chart(d3, topojson, us, data, Scrubber) {
   scrubber.style.padding = "6px 12px";
   scrubber.style.borderRadius = "4px";
 
-  // Force inner span (date display) to white
+  // Fix date color
   const observer = new MutationObserver(() => {
     const span = scrubber.querySelector("span");
     if (span) span.style.color = "white";
   });
   observer.observe(scrubber, { childList: true, subtree: true });
 
-  // Hook scrubber to update the chart
+  // Wire scrubber to chart
   scrubber.addEventListener("input", () => {
     wrapper.update(scrubber.value);
   });
 
   wrapper.appendChild(scrubber);
   wrapper.appendChild(svg.node());
+  container.appendChild(wrapper);
 
   return Object.assign(wrapper, {
     update(date) {
@@ -78,8 +88,11 @@ function _chart(d3, topojson, us, data, Scrubber) {
   });
 }
 
-function _update(chart) {
-  return chart; // hook into reactive runtime only
+function _update(chart, Scrubber, d3, data) {
+  chart.update(Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {
+    format: d3.utcFormat("%Y %b %-d"),
+    loop: false
+  }).value);
 }
 
 async function _data(FileAttachment, projection, parseDate) {
@@ -118,7 +131,7 @@ export default function define(runtime, observer) {
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
 
   main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
-  main.variable(observer("update")).define("update", ["chart"], _update);
+  main.variable(observer("update")).define("update", ["chart", "Scrubber", "d3", "data"], _update);
   main.variable(observer("data")).define("data", ["FileAttachment", "projection", "parseDate"], _data);
   main.variable(observer("parseDate")).define("parseDate", ["d3"], _parseDate);
   main.variable(observer("projection")).define("projection", ["d3"], _projection);
