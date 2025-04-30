@@ -37,24 +37,23 @@
       </div>
     </div>
   </nav>
-<div class="row">
-      <div class="col s12">
-          <p id="visualization_page_title_txt" class="center-align">HAUNTED PLACES BY LOCATION OVER TIME</p>
+
+  <!-- Page Title -->
+  <div class="row">
+    <div class="col s12">
+      <p id="visualization_page_title_txt" class="center-align">HAUNTED PLACES BY LOCATION OVER TIME</p>
+    </div>
+    <div class="col s12">
+      <div>
+        <p class="vis_page_choice_reason">
+          This animation shows the spread of Haunted Place Sightings over the six centuries. The first Haunted Place Sighting occurred in the 15th century in Edgewater, New Jersey
+          <svg class="inline-icon" viewBox="0 0 8 16">
+            <circle cx="4" cy="10" r="4" fill="blue"></circle>
+          </svg>
+        </p>
       </div>
-      <div class="col s12">
-          <div>
-              <p class="vis_page_choice_reason">
-                  This animation shows the spread of Haunted Place Sightings over the six centuries. The first Haunted Place Sighting occurred in the 15th century in Edgewater, New Jersey
-                  <svg class="inline-icon" viewBox="0 0 8 16">
-                    <circle cx="4" cy="10" r="4" fill="blue"></circle>
-                  </svg> 
-                  
-              </p>
-          </div>
-      </div>
+    </div>
   </div>
-  <!-- Visualization Target -->
-  <div id="chart" style="margin-top: 120px;"></div>
 
   <!-- Script AFTER content -->
   <script type="module">
@@ -62,7 +61,7 @@
     import {Runtime, Library, Inspector} from "../js/runtime.js";
 
     const runtime = new Runtime();
-    const main = runtime.module(define, Inspector.into(document.querySelector("#chart")));
+    const main = runtime.module(define);
   </script>
 
 </body>
