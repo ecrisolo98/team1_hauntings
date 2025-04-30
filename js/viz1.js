@@ -1,5 +1,3 @@
-import define1 from "./viz1scrubber.js";
-
 function _chart(d3, topojson, us, data, Scrubber) {
   const svg = d3.create("svg")
     .attr("viewBox", [0, 0, 960, 600]);
@@ -47,13 +45,15 @@ function _chart(d3, topojson, us, data, Scrubber) {
   );
   scrubber.style.marginBottom = "12px";
 
+  // Make the date display white
+  const dateDisplay = scrubber.querySelector("span");
+  if (dateDisplay) {
+    dateDisplay.style.color = "white";
+  }
+
   // Wire scrubber to update
   scrubber.addEventListener("input", () => {
     wrapper.update(scrubber.value);
-
-  const dateDisplay = scrubber.querySelector("span");
-  if (dateDisplay) {
-  dateDisplay.style.color = "white";
   });
 
   wrapper.appendChild(scrubber);
@@ -70,51 +70,4 @@ function _chart(d3, topojson, us, data, Scrubber) {
       previousDate = date;
     }
   });
-}
-
-async function _data(FileAttachment, projection, parseDate) {
-  return (await FileAttachment("viz1data.tsv").tsv())
-    .map(d => {
-      const p = projection(d);
-      p.date = parseDate(d.Haunting_Occurred);
-      return p;
-    })
-    .sort((a, b) => a.date - b.date);
-}
-
-function _parseDate(d3) {
-  return d3.utcParse("%Y-%m-%d");
-}
-
-function _projection(d3) {
-  return d3.geoAlbersUsa().scale(1280).translate([480, 300]);
-}
-
-async function _us(d3) {
-  const us = await d3.json("https://cdn.jsdelivr.net/npm/us-atlas@1/us/10m.json");
-  us.objects.lower48 = {
-    type: "GeometryCollection",
-    geometries: us.objects.states.geometries.filter(d => d.id !== "02" && d.id !== "15")
-  };
-  return us;
-}
-
-export default function define(runtime, observer) {
-  const main = runtime.module();
-  function toString() { return this.url; }
-  const fileAttachments = new Map([
-    ["viz1data.tsv", { url: new URL("../data/viz1data.tsv", import.meta.url), mimeType: "text/tab-separated-values", toString }]
-  ]);
-  main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
-
-  main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
-  main.variable(observer("data")).define("data", ["FileAttachment", "projection", "parseDate"], _data);
-  main.variable(observer("parseDate")).define("parseDate", ["d3"], _parseDate);
-  main.variable(observer("projection")).define("projection", ["d3"], _projection);
-  main.variable(observer("us")).define("us", ["d3"], _us);
-
-  const child1 = runtime.module(define1);
-  main.import("Scrubber", child1);
-
-  return main;
 }
