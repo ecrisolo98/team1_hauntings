@@ -57,7 +57,7 @@ function _chart(d3, topojson, us, data, Scrubber) {
   });
   observer.observe(scrubber, { childList: true, subtree: true });
 
-  // Update chart on scrubber input
+  // Hook scrubber to update the chart
   scrubber.addEventListener("input", () => {
     wrapper.update(scrubber.value);
   });
@@ -76,6 +76,10 @@ function _chart(d3, topojson, us, data, Scrubber) {
       previousDate = date;
     }
   });
+}
+
+function _update(chart) {
+  return chart; // hook into reactive runtime only
 }
 
 async function _data(FileAttachment, projection, parseDate) {
@@ -114,6 +118,7 @@ export default function define(runtime, observer) {
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
 
   main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
+  main.variable(observer("update")).define("update", ["chart"], _update);
   main.variable(observer("data")).define("data", ["FileAttachment", "projection", "parseDate"], _data);
   main.variable(observer("parseDate")).define("parseDate", ["d3"], _parseDate);
   main.variable(observer("projection")).define("projection", ["d3"], _projection);
