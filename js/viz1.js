@@ -46,13 +46,11 @@ function _chart(d3, topojson, us, data, Scrubber) {
     { format: d3.utcFormat("%Y %b %-d"), loop: false }
   );
   scrubber.style.marginBottom = "12px";
+  scrubber.style.background = "rgba(0, 0, 0, 0.6)";
+  scrubber.style.padding = "6px 12px";
+  scrubber.style.borderRadius = "4px";
+  scrubber.style.color = "white";
 
-  const observer = new MutationObserver(() => {
-  const span = scrubber.querySelector("span");
-  if (span) {
-    span.style.color = "white";
-  }
-});
 observer.observe(scrubber, { childList: true, subtree: true });
 
   wrapper.appendChild(scrubber);
