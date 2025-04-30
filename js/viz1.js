@@ -47,10 +47,13 @@ function _chart(d3, topojson, us, data, Scrubber) {
   );
   scrubber.style.marginBottom = "12px";
 
-  const dateDisplay = scrubber.querySelector("span");
-  if (dateDisplay) {
-    dateDisplay.style.color = "white";
+  const observer = new MutationObserver(() => {
+  const span = scrubber.querySelector("span");
+  if (span) {
+    span.style.color = "white";
   }
+});
+observer.observe(scrubber, { childList: true, subtree: true });
 
   wrapper.appendChild(scrubber);
   wrapper.appendChild(svg.node());
