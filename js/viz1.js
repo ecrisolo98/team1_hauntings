@@ -49,8 +49,7 @@ function _chart(d3, topojson, us, data, Scrubber) {
   scrubber.style.background = "rgba(0, 0, 0, 0.6)";
   scrubber.style.padding = "6px 12px";
   scrubber.style.borderRadius = "4px";
-  scrubber.style.color = "white";
-
+  
   wrapper.appendChild(scrubber);
   wrapper.appendChild(svg.node());
 
