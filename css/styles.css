@@ -233,6 +233,15 @@ background-color: gray;
 width: 100%;
   height: auto;
 }
+#chart svg {
+  width: 100%;          
+  height: auto;         
+  max-width: 1000px;     
+  margin: 0 auto;        
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 #controls {
   margin: 10px;
 }
