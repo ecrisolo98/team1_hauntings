@@ -221,19 +221,15 @@ svg {
   color: #0d47a1;
 }
 
-/* === Fixes for Observable empty box issue === */
-.observablehq {
+#haunted-map-page .observablehq {
   display: contents !important;
 }
-.observablehq > div:empty,
-.observablehq > span:empty,
-.observablehq > :not(svg):not(g):not(path):not(circle):not(text):empty {
+#haunted-map-page .observablehq > div:empty,
+#haunted-map-page .observablehq > span:empty,
+#haunted-map-page .observablehq > :not(svg):not(g):not(path):not(circle):not(text):empty {
   display: none !important;
   height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
   border: none !important;
-}
-.chart-wrapper + div:empty {
-  display: none !important;
 }
