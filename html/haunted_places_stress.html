@@ -69,8 +69,7 @@ const PI = Math.PI,
   numTicks = 10;
 
 
-d3.json('../data/viz5data.json', (error, data) => {
-  if (error) throw error; // always handle error first
+d3.json('../data/viz5data.json').then(data => {
   
   const color = d3.scaleSequential()
   .domain([d3.max(data, d => d.Overall_Stress_Rank), d3.min(data, d => d.Overall_Stress_Rank)])
