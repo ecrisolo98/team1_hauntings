@@ -49,8 +49,8 @@ function _chart(d3, topojson, us, data, Scrubber) {
   scrubber.style.background = "rgba(0, 0, 0, 0.6)";
   scrubber.style.padding = "6px 12px";
   scrubber.style.borderRadius = "4px";
-  
-  // Force inner span (date display) to white as well
+
+  // Force inner span (date display) to white
   const observer = new MutationObserver(() => {
     const span = scrubber.querySelector("span");
     if (span) span.style.color = "white";
@@ -76,13 +76,6 @@ function _chart(d3, topojson, us, data, Scrubber) {
       previousDate = date;
     }
   });
-}
-
-function _update(chart, Scrubber, d3, data) {
-  chart.update(Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {
-    format: d3.utcFormat("%Y %b %-d"),
-    loop: false
-  }).value);
 }
 
 async function _data(FileAttachment, projection, parseDate) {
@@ -121,7 +114,6 @@ export default function define(runtime, observer) {
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
 
   main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
-  main.variable(observer("update")).define("update", ["chart", "Scrubber", "d3", "data"], _update);
   main.variable(observer("data")).define("data", ["FileAttachment", "projection", "parseDate"], _data);
   main.variable(observer("parseDate")).define("parseDate", ["d3"], _parseDate);
   main.variable(observer("projection")).define("projection", ["d3"], _projection);
