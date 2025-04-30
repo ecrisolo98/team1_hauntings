@@ -105,13 +105,13 @@ export default function define(runtime, observer) {
   // Scrubber
   const child1 = runtime.module(define1);
   main.import("Scrubber", child1);
-  main.variable(observer("viewof date")).define("viewof date", ["Scrubber", "d3", "data"], (Scrubber, d3, data) =>
-    Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {
-      format: d3.utcFormat("%Y %b %-d"),
-      loop: false
-    })
-  );
-  main.variable(observer("date")).define("date", ["Generators", "viewof date"], (G, _) => G.input(_));
+  main.variable().define("viewof date", ["Scrubber", "d3", "data"], (Scrubber, d3, data) =>
+  Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {
+    format: d3.utcFormat("%Y %b %-d"),
+    loop: false
+  })
+);
+main.variable().define("date", ["Generators", "viewof date"], (G, _) => G.input(_));
 
   // Chart receives the existing scrubber
   main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "viewof date"], _chart);
