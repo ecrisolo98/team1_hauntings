@@ -273,9 +273,12 @@ svg {
 .chart_type {
     color: #0d47a1;
 }
-div.observablehq > :empty {
+.observablehq > div:empty,
+.observablehq > span:empty,
+.observablehq > :not(svg):not(g):not(path):not(circle):not(text):empty {
   display: none !important;
   height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
+  border: none !important;
 }
