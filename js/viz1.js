@@ -46,6 +46,7 @@ function _chart(d3, topojson, us, data, Scrubber) {
     { format: d3.utcFormat("%Y %b %-d"), loop: false }
   );
   scrubber.style.marginBottom = "12px";
+  scrubber.style.color = "white";
 
   // Wire scrubber to update
   scrubber.addEventListener("input", () => {
