@@ -1,29 +1,29 @@
 @font-face {
-     font-family: National; src: url('//www.usc.edu/assets/fonts/NationalWeb-Regular.eot'); src: local(':)'), url('//www.usc.edu/assets/fonts/NationalWeb-Regular.woff') format('woff'), url('//www.usc.edu/assets/fonts/NationalWeb-Regular.ttf') format('truetype'), url('//www.usc.edu/assets/fonts/NationalWeb-Regular.svg') format('svg');
-     font-weight: 500;
-     font-style: normal;
- }
+  font-family: National;
+  src: url('//www.usc.edu/assets/fonts/NationalWeb-Regular.eot');
+  src: local(':)'), url('//www.usc.edu/assets/fonts/NationalWeb-Regular.woff') format('woff'), url('//www.usc.edu/assets/fonts/NationalWeb-Regular.ttf') format('truetype'), url('//www.usc.edu/assets/fonts/NationalWeb-Regular.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
 
 /* Custom CSS */
 
 /* Navbar */
-
 .navbar .navbar-nav > .active > a,
 .navbar .navbar-nav > .active > a:hover,
 .navbar .navbar-nav > .active > a:focus {
-    color: #fff;
-    background-color: rgba(227,190,66,0.8);
+  color: #fff;
+  background-color: rgba(227,190,66,0.8);
 }
-
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-      background-color: rgba(227,190,66,0.8);
+  background-color: rgba(227,190,66,0.8);
 }
 
 body {
-    overflow-y: scroll;
-  padding-top: 70px; /* pushes content below fixed navbar */
+  overflow-y: scroll;
+  padding-top: 70px;
   margin: 0;
   font-family: National, Arial, sans-serif;
 }
@@ -39,219 +39,167 @@ body {
 
 /* Buttons */
 .btn-primary {
-    background-color: #ffcc00;
-    border: none;
+  background-color: #ffcc00;
+  border: none;
 }
-
-#nav-secondary {
-  margin-top: 50px;
-  max-height: 50px;
-  height: 64px;
-  background-color: #000;
-}
-
 .btn-primary:hover {
-    background-color: #ffdb4d;
+  background-color: #ffdb4d;
 }
-
-.navbar-collapse { background:#990000;  }
-
+.navbar-collapse { background:#990000; }
 .btn-default {
-    color: #fff;
-    background-color: transparent;
-    border-color: #fff;
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
 }
-
 .btn-default:hover {
-    color: #fff;
-    background-color: #FFCC00;
-    border-color: #fff;
+  color: #fff;
+  background-color: #FFCC00;
+  border-color: #fff;
 }
-
 .btn-default:focus,
 .btn-default.focus {
-    color: #fff;
-    background-color: transparent;
-    border-color: #fff;
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
 }
 
 /* Other classes */
-
 .vertical-center {
-    min-height: 100%;
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
-
 .media-object {
-    max-width:64px;
-    max-height:64px;
+  max-width:64px;
+  max-height:64px;
 }
-
 .media-body {
-    text-align: left;
+  text-align: left;
 }
 
 #intro .title {
-    font-size: 70px;
-    margin-top: 4.5cm;
+  font-size: 70px;
+  margin-top: 4.5cm;
 }
-
 .thumbnail h3{
-   padding: 3mm 0cm 0cm 0cm;
+  padding: 3mm 0cm 0cm 0cm;
 }
 
-#mime-viz .thumbnail img{
-    height: 200px;
-    width: 400px;
+#mime-viz .thumbnail img,
+#regular-viz .thumbnail img,
+#dynamic-viz .thumbnail img,
+#sce-viz .thumbnail img,
+#eval-viz .thumbnail img,
+#d3-other .thumbnail img {
+  height: 200px;
+  width: 400px;
 }
-
-#regular-viz .thumbnail img{
-    height: 200px;
-    width: 400px;
-}
-
-#dynamic-viz .thumbnail img{
-    height: 200px;
-    width: 400px;
-}
-
-#sce-viz .thumbnail img{
-    height: 200px;
-    width: 400px;
-}
-
-#sce-viz .thumbnail{
-    height: 30%;
-}
-
-#eval-viz .thumbnail img{
-    height: 200px;
-    width: 400px;
-}
-
-#eval-viz .thumbnail{
-    height: 30%;
-}
-
-
-#d3-other .thumbnail img{
-    height: 200px;
-    width: 400px;
+#sce-viz .thumbnail,
+#eval-viz .thumbnail {
+  height: 30%;
 }
 
 #about .stylish-panel {
-    padding: 20px 0;
-    text-align: center;
+  padding: 20px 0;
+  text-align: center;
 }
-#about .stylish-panel > div > div{
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    transition: 0.2s;
+#about .stylish-panel > div > div {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.2s;
 }
-#about .stylish-panel > div:hover > div{
-    margin-top: -10px;
-    border: 1px solid rgb(200, 200, 200);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-    background: rgba(200, 200, 200, 0.1);
-    transition: 0.5s;
+#about .stylish-panel > div:hover > div {
+  margin-top: -10px;
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+  background: rgba(200, 200, 200, 0.1);
+  transition: 0.5s;
 }
-
 #about .stylish-panel > div:hover img {
-    border-radius: 50%;
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
+  border-radius: 50%;
+  transform: rotate(360deg);
 }
 
-#learn-more .panel .panel-body{
-    min-height:280px;
+#learn-more .panel .panel-body {
+  min-height:280px;
 }
 
-
-#irdsgroup{
-    color:white;
-    text-decoration: none;
+#irdsgroup {
+  color:white;
+  text-decoration: none;
 }
-
-#irdsgroup:hover{
-    color:#FFCC00;
+#irdsgroup:hover {
+  color:#FFCC00;
 }
 
 .vis_page_sub_title {
-    color: #0d47a1;
-    font-size: 15px;
-    font-weight: bold;
-    font-family: futura;
-     background-color: white;
-     padding: 8px 12px;
-     border-radius: 8px;
+  color: #0d47a1;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: futura;
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
 
 #visualization_page_title_txt {
-    color: #455a64;
-    font-size: 22px;
-     background-color: white;
-     padding: 10px 15px;
-     border-radius: 10px;
-     margin-top: 40px;
-      max-width: 1000px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    text-align: center;
+  color: #455a64;
+  font-size: 22px;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 40px;
+  max-width: 1000px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .vis_page_choice_reason {
-    color: #9e9e9e;
-    font-style: italic;
-    max-width: 800px;
-    margin: auto;
-     background-color: white;
-     padding: 10px 15px;
-     border-radius: 10px;
-     width: 80%;
-    box-sizing: border-box;
-    text-align: center;
+  color: #9e9e9e;
+  font-style: italic;
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 80%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .center, .center-align {
-    text-align: center;
+  text-align: center;
 }
 #hexbin svg {
   max-width: 1300px;
-max-height: 900px;
-  margin: auto; 
+  max-height: 900px;
+  margin: auto;
   display: block;
-background-color: gray;
-width: 100%;
+  background-color: gray;
+  width: 100%;
   height: auto;
 }
 #chart svg {
-  width: 100%;          
-  height: auto;         
-  max-width: 1000px;     
-  margin: 0 auto;        
-  display: block;
   width: 100%;
+  height: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: block;
   text-align: center;
 }
 #controls {
   margin: 10px;
 }
-
 #controls label {
   font-size: 18px;
   margin-right: 20px;
   cursor: pointer;
 }
-
 #controls input[type="checkbox"] {
   width: 20px;
   height: 20px;
@@ -262,16 +210,20 @@ width: 100%;
   height: 0.75em;
   vertical-align: middle;
 }
-svg { 
-    background-color: #f9f9f9; margin: 20px; 
+svg {
+  background-color: #f9f9f9;
+  margin: 20px;
 }
- 
 .question_element {
-    color: #90caf9;
+  color: #90caf9;
+}
+.chart_type {
+  color: #0d47a1;
 }
 
-.chart_type {
-    color: #0d47a1;
+/* === Fixes for Observable empty box issue === */
+.observablehq {
+  display: contents !important;
 }
 .observablehq > div:empty,
 .observablehq > span:empty,
@@ -281,4 +233,7 @@ svg {
   margin: 0 !important;
   padding: 0 !important;
   border: none !important;
+}
+.chart-wrapper + div:empty {
+  display: none !important;
 }
