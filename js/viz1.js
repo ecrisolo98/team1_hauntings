@@ -7,7 +7,7 @@ if (!container) {
   throw new Error("Element with id 'chart' not found.");
 }
 container.innerHTML = "";
-  }
+
 
   const svg = d3.create("svg")
     .attr("viewBox", [0, 0, 960, 600]);
