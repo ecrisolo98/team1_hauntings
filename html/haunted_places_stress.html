@@ -53,10 +53,6 @@ const width = 960,
   height = 500,
   chartRadius = height / 2 - 40;
 
-const color = d3.scaleSequential()
-  .domain([d3.max(data, d => d.Overall_Stress_Rank), d3.min(data, d => d.Overall_Stress_Rank)])
-  .interpolator(d3.interpolateCool);
-
 let svg = d3.select('body').append('svg')
   .attr('width', width)
   .attr('height', height)
@@ -74,6 +70,11 @@ const PI = Math.PI,
 
 
 d3.json('../data/viz5data.json', (error, data) => {
+  if (error) throw error; // always handle error first
+  
+  const color = d3.scaleSequential()
+  .domain([d3.max(data, d => d.Overall_Stress_Rank), d3.min(data, d => d.Overall_Stress_Rank)])
+  .interpolator(d3.interpolateCool);
 
   let scale = d3.scaleLinear()
     .domain([0, d3.max(data, d => parseInt(d.counts)) * 1.1])
