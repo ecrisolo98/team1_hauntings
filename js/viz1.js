@@ -1,7 +1,6 @@
 import define1 from "./viz1scrubber.js";
 
 function _chart(d3, topojson, us, data, Scrubber) {
-  // Ensure a single container
   const containerId = "haunted-chart-container";
   let container = document.getElementById(containerId);
   if (!container) {
@@ -66,7 +65,6 @@ function _chart(d3, topojson, us, data, Scrubber) {
   });
   observer.observe(scrubber, { childList: true, subtree: true });
 
-  // Wire scrubber to chart
   scrubber.addEventListener("input", () => {
     wrapper.update(scrubber.value);
   });
@@ -126,16 +124,21 @@ export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["viz1data.tsv", { url: new URL("../data/viz1data.tsv", import.meta.url), mimeType: "text/tab-separated-values", toString }]
+    ["viz1data.tsv", {
+      url: new URL("../data/viz1data.tsv", import.meta.url),
+      mimeType: "text/tab-separated-values",
+      toString
+    }]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
 
-  main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
-  main.variable(observer("update")).define("update", ["chart", "Scrubber", "d3", "data"], _update);
-  main.variable(observer("data")).define("data", ["FileAttachment", "projection", "parseDate"], _data);
-  main.variable(observer("parseDate")).define("parseDate", ["d3"], _parseDate);
-  main.variable(observer("projection")).define("projection", ["d3"], _projection);
-  main.variable(observer("us")).define("us", ["d3"], _us);
+  // Suppressed outputs (no observer)
+  main.variable().define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
+  main.variable().define("update", ["chart", "Scrubber", "d3", "data"], _update);
+  main.variable().define("data", ["FileAttachment", "projection", "parseDate"], _data);
+  main.variable().define("parseDate", ["d3"], _parseDate);
+  main.variable().define("projection", ["d3"], _projection);
+  main.variable().define("us", ["d3"], _us);
 
   const child1 = runtime.module(define1);
   main.import("Scrubber", child1);
