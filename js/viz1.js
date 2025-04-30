@@ -1,6 +1,7 @@
 import define1 from "./viz1scrubber.js";
 
 function _chart(d3, topojson, us, data, Scrubber) {
+  // Ensure a single container
   const containerId = "haunted-chart-container";
   let container = document.getElementById(containerId);
   if (!container) {
@@ -58,7 +59,6 @@ function _chart(d3, topojson, us, data, Scrubber) {
   scrubber.style.padding = "6px 12px";
   scrubber.style.borderRadius = "4px";
 
-  // Fix date color
   const observer = new MutationObserver(() => {
     const span = scrubber.querySelector("span");
     if (span) span.style.color = "white";
@@ -132,8 +132,10 @@ export default function define(runtime, observer) {
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
 
-  // Suppressed outputs (no observer)
-  main.variable().define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
+  // Only show the chart (which includes the scrubber)
+  main.variable(observer()).define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
+
+  // Helpers (hidden)
   main.variable().define("update", ["chart", "Scrubber", "d3", "data"], _update);
   main.variable().define("data", ["FileAttachment", "projection", "parseDate"], _data);
   main.variable().define("parseDate", ["d3"], _parseDate);
