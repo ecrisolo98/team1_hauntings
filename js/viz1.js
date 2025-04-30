@@ -51,8 +51,6 @@ function _chart(d3, topojson, us, data, Scrubber) {
   scrubber.style.borderRadius = "4px";
   scrubber.style.color = "white";
 
-observer.observe(scrubber, { childList: true, subtree: true });
-
   wrapper.appendChild(scrubber);
   wrapper.appendChild(svg.node());
 
