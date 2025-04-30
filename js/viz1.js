@@ -1,6 +1,6 @@
 import define1 from "./viz1scrubber.js";
 
-function _chart(d3, topojson, us, data, Scrubber) {
+function _chart(d3, topojson, us, data, scrubber) {
   const svg = d3.create("svg")
     .attr("viewBox", [0, 0, 960, 600]);
 
@@ -32,7 +32,7 @@ function _chart(d3, topojson, us, data, Scrubber) {
 
   let previousDate = -Infinity;
 
-  // Create wrapper
+  // Create wrapper div
   const wrapper = document.createElement("div");
   wrapper.style.display = "flex";
   wrapper.style.flexDirection = "column";
@@ -40,16 +40,14 @@ function _chart(d3, topojson, us, data, Scrubber) {
   wrapper.style.maxWidth = "960px";
   wrapper.style.margin = "0 auto";
 
-  // Create and style Scrubber
-  const scrubber = Scrubber(
-    d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)),
-    { format: d3.utcFormat("%Y %b %-d"), loop: false }
-  );
+  // Style existing scrubber
   scrubber.style.marginBottom = "12px";
   scrubber.style.background = "rgba(0, 0, 0, 0.6)";
   scrubber.style.padding = "6px 12px";
   scrubber.style.borderRadius = "4px";
-  
+  scrubber.style.color = "white";
+
+  // Append scrubber and chart
   wrapper.appendChild(scrubber);
   wrapper.appendChild(svg.node());
 
@@ -105,7 +103,19 @@ export default function define(runtime, observer) {
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
 
-  main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
+  // Scrubber
+  const child1 = runtime.module(define1);
+  main.import("Scrubber", child1);
+  main.variable(observer("viewof date")).define("viewof date", ["Scrubber", "d3", "data"], (Scrubber, d3, data) =>
+    Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {
+      format: d3.utcFormat("%Y %b %-d"),
+      loop: false
+    })
+  );
+  main.variable(observer("date")).define("date", ["Generators", "viewof date"], (G, _) => G.input(_));
+
+  // Chart receives the existing scrubber
+  main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "viewof date"], _chart);
   main.variable(observer("update")).define("update", ["chart", "date"], _update);
   main.variable(observer("data")).define("data", ["FileAttachment", "projection", "parseDate"], _data);
   main.variable(observer("parseDate")).define("parseDate", ["d3"], _parseDate);
