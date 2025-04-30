@@ -2,14 +2,11 @@ import define1 from "./viz1scrubber.js";
 
 function _chart(d3, topojson, us, data, Scrubber) {
   // Ensure a single container
-  const containerId = "haunted-chart-container";
-  let container = document.getElementById(containerId);
-  if (!container) {
-    container = document.createElement("div");
-    container.id = containerId;
-    document.body.appendChild(container);
-  } else {
-    container.innerHTML = ""; // Clear previous content
+  const container = document.getElementById("chart");
+if (!container) {
+  throw new Error("Element with id 'chart' not found.");
+}
+container.innerHTML = "";
   }
 
   const svg = d3.create("svg")
