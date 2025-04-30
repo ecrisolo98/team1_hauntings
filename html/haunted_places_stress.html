@@ -53,9 +53,7 @@ const width = 960,
   height = 500,
   chartRadius = height / 2 - 40;
 
-const color = d3.scaleSequential()
-  .domain([d3.max(data, d => d.Overall_Stress_Rank), d3.min(data, d => d.Overall_Stress_Rank)])
-  .interpolator(d3.interpolateCool);
+const color = d3.scaleOrdinal(d3.schemeCategory10);
 
 let svg = d3.select('body').append('svg')
   .attr('width', width)
@@ -129,7 +127,7 @@ d3.json('../data/viz5data.json', (error, data) => {
       .data(data)
       .enter().append('path')
       .attr('class', 'arc')
-      .style('fill', d => color(d.Overall_Stress_Rank))
+      .style('fill', (d, i) => color(i))
 
   arcs.transition()
     .delay((d, i) => i * 200)
