@@ -13,6 +13,54 @@ svg {
   display: block;
 }
 
+let legendWidth = 300,
+    legendHeight = 10;
+
+let defs = svg.append("defs");
+
+let linearGradient = defs.append("linearGradient")
+  .attr("id", "legend-gradient");
+
+linearGradient
+  .attr("x1", "0%")
+  .attr("y1", "0%")
+  .attr("x2", "100%")
+  .attr("y2", "0%");
+
+linearGradient.selectAll("stop")
+  .data([
+    {offset: "0%", color: color.range()[0]},
+    {offset: "100%", color: color.range()[1]}
+  ])
+  .enter().append("stop")
+  .attr("offset", d => d.offset)
+  .attr("stop-color", d => d.color);
+
+svg.append("rect")
+  .attr("x", -legendWidth / 2)
+  .attr("y", chartRadius + 40)
+  .attr("width", legendWidth)
+  .attr("height", legendHeight)
+  .style("fill", "url(#legend-gradient)");
+
+svg.append("text")
+  .attr("x", -legendWidth / 2)
+  .attr("y", chartRadius + 65)
+  .attr("text-anchor", "start")
+  .text(d3.max(data, d => d.Overall_Stress_Rank));
+
+svg.append("text")
+  .attr("x", legendWidth / 2)
+  .attr("y", chartRadius + 65)
+  .attr("text-anchor", "end")
+  .text(d3.min(data, d => d.Overall_Stress_Rank));
+
+svg.append("text")
+  .attr("x", 0)
+  .attr("y", chartRadius + 85)
+  .attr("text-anchor", "middle")
+  .text("Overall Stress Rank");
+
 path.arc {
   opacity: 0.9;
   transition: opacity 0.5s;
