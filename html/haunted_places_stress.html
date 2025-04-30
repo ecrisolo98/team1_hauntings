@@ -184,7 +184,7 @@
         .duration(1000)
         .attrTween('d', arcTween);
 
-      arcs.on('mousemove', showTooltip)
+      arcs.on('mousemove', (event, d) => showTooltip(event, d))
           .on('mouseout', hideTooltip);
 
       function arcTween(d, i) {
