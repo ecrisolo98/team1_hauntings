@@ -273,3 +273,9 @@ svg {
 .chart_type {
     color: #0d47a1;
 }
+div.observablehq > :empty {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
