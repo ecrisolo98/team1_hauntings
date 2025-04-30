@@ -46,11 +46,14 @@ function _chart(d3, topojson, us, data, Scrubber) {
     { format: d3.utcFormat("%Y %b %-d"), loop: false }
   );
   scrubber.style.marginBottom = "12px";
-  scrubber.style.color = "white";
 
   // Wire scrubber to update
   scrubber.addEventListener("input", () => {
     wrapper.update(scrubber.value);
+
+  const dateDisplay = scrubber.querySelector("span");
+  if (dateDisplay) {
+  dateDisplay.style.color = "white";
   });
 
   wrapper.appendChild(scrubber);
