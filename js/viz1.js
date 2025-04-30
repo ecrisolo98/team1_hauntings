@@ -1,6 +1,6 @@
 import define1 from "./viz1scrubber.js";
 
-function _chart(d3, topojson, us, data, scrubber) {
+function _chart(d3, topojson, us, data, Scrubber) {
   const svg = d3.create("svg")
     .attr("viewBox", [0, 0, 960, 600]);
 
@@ -32,7 +32,7 @@ function _chart(d3, topojson, us, data, scrubber) {
 
   let previousDate = -Infinity;
 
-  // Create wrapper div
+  // Create wrapper
   const wrapper = document.createElement("div");
   wrapper.style.display = "flex";
   wrapper.style.flexDirection = "column";
@@ -40,13 +40,29 @@ function _chart(d3, topojson, us, data, scrubber) {
   wrapper.style.maxWidth = "960px";
   wrapper.style.margin = "0 auto";
 
-  // Style existing scrubber
+  // Create and style Scrubber
+  const scrubber = Scrubber(
+    d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)),
+    { format: d3.utcFormat("%Y %b %-d"), loop: false }
+  );
   scrubber.style.marginBottom = "12px";
   scrubber.style.background = "rgba(0, 0, 0, 0.6)";
   scrubber.style.padding = "6px 12px";
   scrubber.style.borderRadius = "4px";
+  scrubber.style.color = "white";
 
-  // Append scrubber and chart
+  // Force inner span (date display) to white as well
+  const observer = new MutationObserver(() => {
+    const span = scrubber.querySelector("span");
+    if (span) span.style.color = "white";
+  });
+  observer.observe(scrubber, { childList: true, subtree: true });
+
+  // Update chart on scrubber input
+  scrubber.addEventListener("input", () => {
+    wrapper.update(scrubber.value);
+  });
+
   wrapper.appendChild(scrubber);
   wrapper.appendChild(svg.node());
 
@@ -63,8 +79,11 @@ function _chart(d3, topojson, us, data, scrubber) {
   });
 }
 
-function _update(chart, date) {
-  return chart.update(date);
+function _update(chart, Scrubber, d3, data) {
+  chart.update(Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {
+    format: d3.utcFormat("%Y %b %-d"),
+    loop: false
+  }).value);
 }
 
 async function _data(FileAttachment, projection, parseDate) {
@@ -102,14 +121,15 @@ export default function define(runtime, observer) {
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
 
-
-  // Chart receives the existing scrubber
-  main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "viewof date"], _chart);
-  main.variable(observer("update")).define("update", ["chart", "date"], _update);
+  main.variable(observer("chart")).define("chart", ["d3", "topojson", "us", "data", "Scrubber"], _chart);
+  main.variable(observer("update")).define("update", ["chart", "Scrubber", "d3", "data"], _update);
   main.variable(observer("data")).define("data", ["FileAttachment", "projection", "parseDate"], _data);
   main.variable(observer("parseDate")).define("parseDate", ["d3"], _parseDate);
   main.variable(observer("projection")).define("projection", ["d3"], _projection);
   main.variable(observer("us")).define("us", ["d3"], _us);
+
+  const child1 = runtime.module(define1);
+  main.import("Scrubber", child1);
 
   return main;
 }
