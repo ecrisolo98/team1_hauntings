@@ -25,8 +25,9 @@ d3.json("../data/team1bars.json").then(function(data) {
     .range(d3.schemeSpectral[series.length])
     .unknown("#ccc");
 
-  const svg = d3.select("body")
-    .append("svg")
+  const container = d3.select("#chart");
+  const svg = container
+  .append("svg")
     .attr("width", width)
     .attr("height", height)
     .attr("viewBox", [0, 0, width, height])
