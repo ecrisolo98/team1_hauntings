@@ -45,7 +45,6 @@ function _chart(d3, topojson, us, data, scrubber) {
   scrubber.style.background = "rgba(0, 0, 0, 0.6)";
   scrubber.style.padding = "6px 12px";
   scrubber.style.borderRadius = "4px";
-  scrubber.style.color = "white";
 
   // Append scrubber and chart
   wrapper.appendChild(scrubber);
