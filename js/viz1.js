@@ -112,15 +112,5 @@ export default function define(runtime, observer) {
   main.variable(observer("projection")).define("projection", ["d3"], _projection);
   main.variable(observer("us")).define("us", ["d3"], _us);
 
-  const child1 = runtime.module(define1);
-  main.import("Scrubber", child1);
-  main.variable(observer("viewof date")).define("viewof date", ["Scrubber", "d3", "data"], (Scrubber, d3, data) =>
-    Scrubber(d3.utcWeek.every(2).range(...d3.extent(data, d => d.date)), {
-      format: d3.utcFormat("%Y %b %-d"),
-      loop: false
-    })
-  );
-  main.variable(observer("date")).define("date", ["Generators", "viewof date"], (G, _) => G.input(_));
-
   return main;
 }
