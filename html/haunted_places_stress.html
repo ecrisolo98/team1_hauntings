@@ -92,39 +92,14 @@
       in the state and the color of the arc represents the state's stress rank based on <a href="https://wallethub.com/edu/most-stressful-states/32218">this study by WalletHub.</a></p>
   </div>
 
-  <!-- Radial Chart Container -->
-  <div class="container" id="radial-chart-container">
+  <!-- Radial Chart Legend -->
+  <div class="container" id="radial-chart-legend-container">
     <script>
-      const width = 960,
-            height = 500,
-            chartRadius = height / 2 - 40;
-
-      const svg = d3.select("#radial-chart-container")
-        .append("svg")
-        .attr("viewBox", `0 0 ${width} ${height}`)
-        .attr("width", "100%")
-        .attr("height", "auto")
-        .append("g")
-        .attr("transform", `translate(${width / 2},${height / 2})`);
-
-      const tooltip = d3.select("body").append("div")
-        .attr("class", "tooltip");
-
-      const PI = Math.PI,
-            arcMinRadius = 10,
-            arcPadding = 10,
-            labelPadding = -5,
-            numTicks = 10;
-
       d3.json('../data/viz5data.json').then(data => {
-        const color = d3.scaleSequential()
+        let color = d3.scaleSequential()
           .domain([d3.max(data, d => d.Overall_Stress_Rank), d3.min(data, d => d.Overall_Stress_Rank)])
           .interpolator(d3.interpolateCool);
-
-        // Legend
-        const legendWidth = 300,
-              legendHeight = 10;
-
+          
         const defs = svg.append("defs");
         const linearGradient = defs.append("linearGradient")
           .attr("id", "legend-gradient")
@@ -143,50 +118,79 @@
           .attr("stop-color", d => d.color);
 
         svg.append("rect")
-          .attr("x", -legendWidth / 2)
-          .attr("y", chartRadius + 40)
-          .attr("width", legendWidth)
-          .attr("height", legendHeight)
+          .attr("x", -460)
+          .attr("y", 220)
+          .attr("width", 300)
+          .attr("height", 15)
           .style("fill", "url(#legend-gradient)");
 
         svg.append("text")
-          .attr("x", -legendWidth / 2)
-          .attr("y", chartRadius + 65)
+          .attr("x", -190)
+          .attr("y", 210)
           .attr("text-anchor", "start")
-          .style("fill", "#fff")
-          .text(d3.max(data, d => d.Overall_Stress_Rank));
+          .text("High Stress");
 
         svg.append("text")
-          .attr("x", legendWidth / 2)
-          .attr("y", chartRadius + 65)
+          .attr("x", -400)
+          .attr("y", 210)
           .attr("text-anchor", "end")
-          .style("fill", "#fff")
-          .text(d3.min(data, d => d.Overall_Stress_Rank));
+          .text("Low Stress");
 
-        svg.append("text")
-          .attr("x", 0)
-          .attr("y", chartRadius + 85)
-          .attr("text-anchor", "middle")
-          .style("fill", "#fff")
-          .text("Overall Stress Rank");
+        // svg.append("text")
+        //   .attr("x", -310)
+        //   .attr("y", 210)
+        //   .attr("text-anchor", "middle")
+        //   .text("Overall Stress Rank");
+      });
+    </script>
+  </div>
+
+  <!-- Radial Chart Container -->
+  <div class="container" id="radial-chart-container">
+    <script>
+      const width = 960,
+            height = 500,
+            chartRadius = height / 2 - 40;
+
+      const svg = d3.select("#radial-chart-container")
+        .append("svg")
+        .attr("viewBox", `0 0 ${width} ${height}`)
+        .attr("width", "100%")
+        .attr("height", "100%")
+        .append("g")
+        .attr("transform", `translate(${width / 2},${height / 2})`);
+
+      const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip");
+
+      const PI = Math.PI,
+            arcMinRadius = 10,
+            arcPadding = 10,
+            labelPadding = -5,
+            numTicks = 10;
+
+      d3.json('../data/viz5data.json').then(data => {
+        let color = d3.scaleSequential()
+          .domain([d3.max(data, d => d.Overall_Stress_Rank), d3.min(data, d => d.Overall_Stress_Rank)])
+          .interpolator(d3.interpolateCool);
 
         // Chart
-        const scale = d3.scaleLinear()
+        let scale = d3.scaleLinear()
           .domain([0, d3.max(data, d => parseInt(d.counts)) * 1.1])
           .range([0, 2 * PI]);
 
-        const ticks = scale.ticks(numTicks).slice(0, -1);
-        const keys = data.map((d, i) => d.state);
+        let ticks = scale.ticks(numTicks).slice(0, -1);
+        let keys = data.map((d, i) => d.state);
         const numArcs = keys.length;
         const arcWidth = (chartRadius - arcMinRadius - numArcs * arcPadding) / numArcs;
 
-        const arc = d3.arc()
+        let arc = d3.arc()
           .innerRadius((d, i) => getInnerRadius(i))
           .outerRadius((d, i) => getOuterRadius(i))
           .startAngle(0)
           .endAngle((d, i) => scale(d));
 
-        const radialAxis = svg.append('g')
+        let radialAxis = svg.append('g')
           .attr('class', 'r axis')
           .selectAll('g')
           .data(data)
@@ -200,7 +204,7 @@
           .attr('y', (d, i) => -getOuterRadius(i) + arcPadding)
           .text(d => d.state);
 
-        const axialAxis = svg.append('g')
+        let axialAxis = svg.append('g')
           .attr('class', 'a axis')
           .selectAll('g')
           .data(ticks)
@@ -216,7 +220,7 @@
           .attr('transform', d => `rotate(${90 - rad2deg(scale(d))},${chartRadius + 10},0)`)
           .text(d => d);
 
-        const arcs = svg.append('g')
+        let arcs = svg.append('g')
           .attr('class', 'data')
           .selectAll('path')
           .data(data)
